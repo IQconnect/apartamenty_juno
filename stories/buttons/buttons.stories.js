@@ -1,65 +1,77 @@
-import { storiesOf } from '@storybook/html';
+import { storiesOf } from "@storybook/html";
 
-import '../../resources/assets/styles/main.scss';
+import "../../resources/assets/styles/main.scss";
 
-const buttonprimary = `
+const buttonblue = `
 <div class="button">
-    <a href="#" class="button button-special">Lorem ipsum</a>
+    <a href="#" class="button button-blue text  main text--thin">Lorem ipsum</a>
     
 </div>`;
 const buttonlight = `
 <div class="button">
-    <a href="#" class="button button-light">Lorem ipsum</a>
+    <a href="#" class="button button-light text  main text--thin">Lorem ipsum</a>
     
 </div>`;
 
-const buttondark = `
+const buttonwhite = `
 <div class="button">
-    <a href="#" class="button button-dark">Lorem ipsum</a>
+    <a href="#" class="button button-white button--secondary text  main text--thin">Lorem ipsum</a>
     
 </div>`;
 
+const buttonicon = `
+<div class="button">
+    <a href="#" class="button button-blue text main text--thin">
+    <i class="fa fa-cloud"></i>Lorem ipsum</a>
+    
+</div>`;
 
-
-
-
-
-storiesOf('Elementy/przyciski', module)
-    .add('button', () => `
+storiesOf("Elementy/przyciski", module).add(
+  "buttonforsite",
+  () => `
     <h2 class="subtitle bold">Button-primary</h2>
     <hr>
     <br>
     <br>
-    ${ buttonprimary}
+    ${buttonblue}
     <br>
     <br>
     <xmp>
-        ${ buttonprimary}
+        ${buttonblue}
     </xmp>
     <h2 class="subtitle bold">Button-light</h2>
     <hr>
     <br>
     <br>
-    ${ buttonlight}
+    ${buttonlight}
     <br>
     <br>
     <xmp>
-        ${ buttonlight}
+     ${buttonlight}
     </xmp>
-    <h2 class="subtitle bold">Button-dark</h2>
+    <h2 class="subtitle bold">Button-white</h2>
     <hr>
     <br>
     <br>
-    ${ buttondark}
+    ${buttonwhite}
     <br>
     <br>
     <xmp>
-        ${ buttondark}
+    ${buttonwhite}
+    </xmp>
+    <h2 class="subtitle bold">Button-icon</h2>
+    <hr>
+    <br>
+    <br>
+    ${buttonicon}
+    <br>
+    <br>
+    <xmp>
+    ${buttonicon}
     </xmp>
 
 
-  `);
+  `
+);
 
-
-
-export default  buttonprimary;
+export default buttonprimary;

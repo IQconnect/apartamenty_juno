@@ -11,19 +11,23 @@
 
 .button {
   color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-family: "Open Sans", cursive;
-  font-size: 1em;
+    text-decoration: none;
+  padding: $gutter $gutter*5;
+  border-radius: $gutter*3;
+  font-size: $gutter*2 ;
+
+  &--secondary{
+    color: map-get($theme-colors, secondary);
+
+  }
 }
 
-.button-special {
-  @include button-bg( map-get($theme-colors, special));
+.button-blue {
+  @include button-bg( map-get($theme-colors, primary));
 }
 .button-light {
-    @include button-bg( map-get($theme-colors, light));
+    @include button-bg( map-get($theme-colors, secondary));
   }
-  .button-dark {
-    @include button-bg( map-get($theme-colors, dark));
+  .button-white {
+    @include button-bg( map-get($theme-colors, light));
   }
