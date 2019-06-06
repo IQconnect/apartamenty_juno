@@ -5,44 +5,83 @@ import '../../resources/assets/styles/main.scss';
 
 storiesOf('Texts', module)
   .add('Text', () => `
-  <h2 class="text bold">
-    Text - Light
+  <h2 class="subtitle">
+    Text
   </h2>
   <hr />
-  <p class="text light" style="max-width: 600px; margin: 20px 0;">
-    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada.
-  </p>
-  <xmp> 
-    <p class="text light">
-      ...
-    </p> 
-  </xmp>
-  <br><br>
-
-  <h2 class="text bold">
-    Text - Regular
-  </h2>
-  <hr />
-  <p class="text" style="max-width: 600px; margin: 20px 0;">
-    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada.
+  <p class="text">
+    Lorem ipsum
   </p>
   <xmp> 
     <p class="text">
-      ...
+      Lorem ipsum
     </p> 
   </xmp>
   <br><br>
-
-  <h2 class="text bold">
-    Text - Bold
+  <h2 class="subtitle">
+    Text left
   </h2>
   <hr />
-  <p class="text bold" style="max-width: 600px; margin: 20px 0;">
-    Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla quis lorem ut libero malesuada feugiat. Vivamus suscipit tortor eget felis porttitor volutpat.Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt. Donec sollicitudin molestie malesuada.
+  <p class="text text--left">
+    Lorem ipsum
   </p>
   <xmp> 
-    <p class="text bold">
-      ...
+    <p class="text text--left">
+      Lorem ipsum
+    </p> 
+  </xmp>
+  <br><br>
+  <h2 class="subtitle">
+    Text center
+  </h2>
+  <hr />
+  <p class="text text--center">
+    Lorem ipsum
+  </p>
+  <xmp> 
+    <p class="text text--center">
+      Lorem ipsum
+    </p> 
+  </xmp>
+  <br><br>
+  <h2 class="subtitle">
+    Text Light
+  </h2>
+  <hr />
+  <p class="text text--light" style="background: #364ea2">
+    Lorem ipsum
+  </p>
+
+  <xmp> 
+    <p class="text text--light">
+      Lorem ipsum
+    </p> 
+  </xmp>
+  <br><br>
+  <h2 class="subtitle">
+    Text Primary
+  </h2>
+  <hr />
+  <p class="text text--primary">
+    Lorem ipsum
+  </p>
+
+  <xmp> 
+    <p class="text text--primary">
+      Lorem ipsum
+    </p> 
+  </xmp>
+  <br><br>
+  <h2 class="subtitle">
+    Text Thin
+  </h2>
+  <hr />
+  <p class="text text--thin">
+    Lorem ipsum
+  </p>
+  <xmp> 
+    <p class="text text--thin">
+      Lorem ipsum
     </p> 
   </xmp>
   <br><br>

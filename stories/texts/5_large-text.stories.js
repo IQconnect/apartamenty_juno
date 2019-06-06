@@ -1,16 +1,19 @@
-import { storiesOf } from '@storybook/html';
+
+  import { storiesOf } from '@storybook/html';
 
 import '../../resources/assets/styles/main.scss';
 
 storiesOf('Texts', module)
-  .add('Headline', () => `
+  .add('Large text', () => `
   <h2 class="subtitle">
-    Headline
+    Large text
   </h2>
   <hr />
-  <p class="headline">Lorem ipsum</p>
+  <p class="large-text">
+    Lorem ipsum
+  </p>
   <xmp> 
-    <p class="headline">
+    <p class="large-text">
       Lorem ipsum
     </p> 
   </xmp>

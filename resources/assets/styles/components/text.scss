@@ -1,35 +1,89 @@
 %text {
   margin: 0;
   padding: 0;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .headline {
   @include cssLock("font-size", 360, 1440, (20, 80));
+  color: map-get($theme-colors, primary);
+  font-family: map-get($font-family, title);
+  font-weight: 800;
 
   @extend %text;
 }
 
 .title {
-  @include cssLock("font-size", 360, 1440, (18, 36));
+  @include cssLock("font-size", 360, 1440, (18, 56));
+  color: map-get($theme-colors, primary);
+  font-family: map-get($font-family, title);
+  font-weight: 800;
 
   @extend %text;
+
+  &--light {
+    color: map-get($theme-colors, light);
+  }
 }
 
 .subtitle {
-  @include cssLock("font-size", 360, 1440, (16, 24));
+  @include cssLock("font-size", 360, 1440, (16, 32));
+  color: map-get($theme-colors, primary);
+  font-family: map-get($font-family, title);
+  font-weight: 800;
 
   @extend %text;
+
+  &--light {
+    color: map-get($theme-colors, light);
+  }
 }
 
 .text {
   @include cssLock("font-size", 360, 1440, (12, 16));
+  font-family: map-get($font-family, main);
+  color: map-get($theme-colors, dark);
+  font-weight: 800;
 
   @extend %text;
+
+  &--light {
+    color: map-get($theme-colors, light);
+  }
+
+  &--primary {
+    color: map-get($theme-colors, primary);
+  }
+
+  &--thin {
+    font-weight: 300;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.large-text {
+  @include cssLock("font-size", 360, 1440, (16, 20));
+  font-family: map-get($font-family, main);
+  color: map-get($theme-colors, dark);
+  font-weight: 800;
+}
+
+.small-text {
+  @include cssLock("font-size", 360, 1440, (10, 12));
+  font-family: map-get($font-family, main);
+  color: map-get($theme-colors, dark);
+  font-weight: 300;
 }
 
 .bold {
-  font-weight: 900;
+  font-weight: 800;
 }
 
 .light {
