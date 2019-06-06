@@ -1,0 +1,29 @@
+@mixin button-bg($bg) {
+  background: $bg;
+  &:hover {
+    background: darken($bg, 8%);
+    transition: all 0.3s ease;
+  }
+  &:active {
+    background: darken($bg, 25%);
+  }
+}
+
+.button {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-family: "Open Sans", cursive;
+  font-size: 1em;
+}
+
+.button-special {
+  @include button-bg( map-get($theme-colors, special));
+}
+.button-light {
+    @include button-bg( map-get($theme-colors, light));
+  }
+  .button-dark {
+    @include button-bg( map-get($theme-colors, dark));
+  }
