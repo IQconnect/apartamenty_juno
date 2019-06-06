@@ -4,48 +4,31 @@ import '../../resources/assets/styles/main.scss';
 
 storiesOf('Texts', module)
   .add('Subtitle', () => `
-  <h2 class="subtitle bold">
-    Subtitle - Light
+  <h2 class="subtitle">
+    Subtitle
   </h2>
   <hr />
-  <p class="subtitle light">Lorem ipsum</p>
-  <xmp> 
-    <p class="subtitle light">
+  <h2 class="subtitle">
+    Lorem ipsum
+  </h2>
+  <xmp>
+    <h2 class="subtitle">
       Lorem ipsum
-    </p> 
+    </h2>
   </xmp>
   <br><br>
-  <h2 class="subtitle bold">
-    Subtitle - Regular
+  <h2 class="subtitle">
+    Subitle Light
   </h2>
   <hr />
-  <p class="subtitle">Lorem ipsum</p>
-  <xmp> 
-    <p class="subtitle">
+  <h2 class="subtitle subtitle--light" style="background: #364ea2">
+    Lorem ipsum
+  </h2>
+
+  <xmp>
+    <h2 class="subtitle subtitle--light">
       Lorem ipsum
-    </p> 
-  </xmp>
-  <br><br>
-  <h2 class="subtitle bold">
-    Subtitle - Bold
-  </h2>
-  <hr />
-  <p class="subtitle bold">Lorem ipsum</p>
-  <xmp> 
-    <p class="subtitle bold">
-      Lorem ipsum
-    </p> 
-  </xmp>
-  <br><br>
-  <h2 class="subtitle bold">
-    Text example
-  </h2>
-  <hr />
-  <p class="subtitle" style="width: 600px;">Sed porttitor lectus nibh. Nulla quis lorem ut libero malesuada feugiat.</p>
-  <xmp> 
-    <p class="subtitle">
-      ...
-    </p> 
+    </h2>
   </xmp>
   <br><br>
   `);

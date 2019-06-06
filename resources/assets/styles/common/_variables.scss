@@ -4,7 +4,9 @@
 $theme-colors: (
   light: #fff,
   dark: #000,
-  greyy: #707070,
+  primary: #364ea2,
+  secondary: #dcc38b,
+  grey: #707070,
   special: #fec400,
 );
 
@@ -19,8 +21,8 @@ $media: (
 $transition: 0.4s;
 
 $font-family: (
-  main: "Open Sans",
-  title: "Open Sans"
+  main: "Biryani",
+  title: "Martel"
 );
 
 $gutter: 8px;
