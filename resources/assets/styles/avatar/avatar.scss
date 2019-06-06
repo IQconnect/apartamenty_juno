@@ -1,20 +1,16 @@
 .avatar{
-  align-items: center;
 
   &--image--cover {
-  
+    
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: auto;
-  
     object-fit: cover;
     object-position: center center;
+  } 
+  &--name{
+    margin-top: $gutter*3;
   }
-  
 
-    &--center {
-      text-align: center;
-    }
 }
 

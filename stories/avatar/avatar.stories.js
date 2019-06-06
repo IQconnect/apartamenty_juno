@@ -7,10 +7,10 @@ import sofa from '../../resources/assets/images/sofa-bg.jpg'
 const Avatar = `
 <div class="avatar">
     <img src="${sofa}" class="avatar--image--cover">
-    <p class="avatar--center text bold"> Lorem ipsum </p>
-    <br/>
-    <p class="avatar--center text bold"> number </p>
-    <p class="avatar--center text bold"> mail </p>
+    <p class="avatar--name text main text--thin text--left"> Pani kanapa</p>
+   <br/>
+    <p class=" text small-text ">tel: +48 500 526 600</p>
+    <p class=" text small-text ">mail: biuro@apartamentyjuno.pl</p>
 </div>`;
 
 
