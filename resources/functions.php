@@ -243,11 +243,11 @@ function the_breadcrumb() {
 
 class Placeholder {
     function image() {
-        return "images/sofa-bg.jpg"; 
+        return "images/bg-juno.jpg"; 
     }
 
     function title() {
-        return '<a href="/sofa">Sofa</a> place <br> in your home'; 
+        return 'Twoja bezpieczna przystań'; 
     }
 } 
 

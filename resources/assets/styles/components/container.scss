@@ -1,4 +1,4 @@
 .container {
-  max-width: $gutter * 100;
+  max-width: calc(100% - 200px);
   margin: 0 auto;
 }
