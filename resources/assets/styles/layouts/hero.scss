@@ -4,8 +4,9 @@
   overflow: hidden;
 
   &__header {
+    @include cssLock("padding-top", 360, 1440, (120, 180));
+
     padding-left: 50%;
-    padding-top: $gutter * 20;
   }
 
   &__image {
