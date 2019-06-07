@@ -1,0 +1,28 @@
+.icon-box {
+  color: map-get($theme-colors, light);
+  background: map-get($theme-colors, secondary);
+  padding: $gutter*4;
+  text-align: center;
+  max-width: 300px;
+
+  &__icon {
+    width: $gutter * 8;
+    height: auto;
+    margin: auto;
+    padding: $gutter * 3;
+  }
+
+  &__hr {
+    border-bottom: 2px solid map-get($theme-colors, light);
+    border-top: 0;
+    margin-bottom: $gutter*2.5;
+  }
+
+  &__desc {
+    color: map-get($theme-colors, light);
+    opacity: 0.8;
+    max-width: $gutter * 25;
+    margin: auto;
+    padding-top: $gutter*3;
+  }
+}
