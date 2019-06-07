@@ -1,19 +1,26 @@
 .header {
-  color: map-get($theme-colors, primary);
+  color: color(primary);
+  text-align: center;
 
   &__title {
+    text-align: center;
+    margin: auto;
+
     &::after {
+      @include cssLock("width", 360, 1440, (50, 190));
+
       content: "";
       display: block;
-      @include cssLock("width", 360, 1440, (50, 190));
-      height: $gutter/2;
-      margin: 0 auto ($gutter*2.5);
-      background-color: map-get($theme-colors, secondary);
+      height: $gutter / 2;
+      margin: 0 auto ($gutter * 2.5);
+      background-color: color(secondary);
     }
 
     &--left {
       text-align: left;
-      color: map-get($theme-colors, light);
+      display: block;
+      margin-left: auto;
+      color: color(light);
     }
   }
 
@@ -22,24 +29,27 @@
 
     &--left {
       position: relative;
-      padding-top: $gutter*2;
-      color: map-get($theme-colors, light);
+      padding-top: $gutter * 2;
+      display: block;
+      text-align: left;
+      color: color(light);
 
       &::after {
+        @include cssLock("width", 360, 1440, (50, 190));
+
         content: "";
         display: inline-block;
-        height: $gutter/2;
-        @include cssLock("width", 360, 1440, (50, 190));
-        background-color: map-get($theme-colors, secondary);
-        margin-left: $gutter*4;
+        height: $gutter / 2;
+        background-color: color(secondary);
+        margin-left: $gutter * 4;
         margin-bottom: $gutter;
       }
     }
   }
 
   &__img {
-    max-width: $gutter*20;
+    max-width: $gutter * 20;
     height: auto;
-    margin: 0 auto $gutter*4;
+    margin: 0 auto ($gutter * 4);
   }
 }

@@ -10,21 +10,25 @@ storiesOf('Elementy/header', module)
     </h2>
     <hr />
     <div class="header">
-      <h2 class="header__title title text--center">
-        Doskonała lokalizacja
+      <h2>
+        <span class="header__title title text--center">
+          Doskonała lokalizacja
+        </span>
+        <span class="header__sub subtitle text--center">
+          Wysoki standard
+        </span>
       </h2>
-      <h3 class="header__sub subtitle text--center">
-        Wysoki standard
-      </h3>
     </div>
     <xmp>
       <div class="header">
-        <h2 class="header__title title text--center">
-          Doskonała lokalizacja
+        <h2>
+          <span class="header__title title text--center">
+            Doskonała lokalizacja
+          </span>
+          <span class="header__sub subtitle text--center">
+            Wysoki standard
+          </span>
         </h2>
-        <h3 class="header__sub subtitle text--center">
-          Wysoki standard
-        </h3>
       </div>
     </xmp>
     <br><br>
@@ -51,21 +55,25 @@ storiesOf('Elementy/header', module)
       Header Left
     </h2>
     <hr />
-    <div class="header" style="background: #364ea2">
-      <h2 class="title header__title--left">
-        Dlaczego warto
-      </h2>
-      <h2 class="header__sub--left subtitle">
-        tu zamieszkać?
+    <div class="header">
+      <h2>
+        <span class="title header__title--left">
+          Dlaczego warto
+        </span>
+        <span class="header__sub--left subtitle">
+          tu zamieszkać?
+        </span>
       </h2>
     </div>
     <xmp>
     <div class="header">
-      <h2 class="title header__title--left">
-        Dlaczego warto
-      </h2>
-      <h2 class="header__sub--left subtitle">
-        tu zamieszkać?
+      <h2>
+        <span class="title header__title--left">
+          Dlaczego warto
+        </span>
+        <span class="header__sub--left subtitle">
+          tu zamieszkać?
+        </span>
       </h2>
     </div>
     </xmp>
