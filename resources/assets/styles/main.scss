@@ -33,8 +33,10 @@
 @import "components/sub-menu";
 
 /** Blocks */
+@import "blocks/product-block.scss";
+@import "blocks/icon-box.scss";
+@import "blocks/header.scss";
 @import "blocks/product-block";
-@import "blocks/icon-box";
 
 /** Layouts */
 @import "layouts/hero";
