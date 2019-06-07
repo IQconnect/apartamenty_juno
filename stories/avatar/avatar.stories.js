@@ -13,7 +13,6 @@ const Avatar = `
     <p class=" text small-text ">mail: biuro@apartamentyjuno.pl</p>
 </div>`;
 
-
   storiesOf('Elementy/avatar', module)
     .add('avatar', () => `
     <h2 class="subtitle bold">Avatar</h2>
