@@ -34,8 +34,8 @@ const HeaderLeft = `
   </h2>
 `;
 
-storiesOf('Elementy/header', module)
-  .add('Header', () => `
+storiesOf('Elementy', module)
+  .add('Nagłówki', () => `
     <h2 class="subtitle">
       Header
     </h2>
@@ -62,9 +62,7 @@ storiesOf('Elementy/header', module)
       ${HeaderLeft}
     </div>
     <xmp>
-    <div class="section-header">
       ${HeaderLeft}
-    </div>
     </xmp>
     <br><br>
     `);
