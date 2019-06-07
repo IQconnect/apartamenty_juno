@@ -1,0 +1,19 @@
+.avatar{
+  &--lighter{
+    color:theme-colors("light");
+    &:hover{
+      color: lighter(theme-colors("light"),10%);
+    }
+  }
+  &--image--cover {
+    width: $gutter*19;
+    height: $gutter*19;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center center;
+  }
+  &--name{
+    margin-top: $gutter * 3;
+  }
+}
+
