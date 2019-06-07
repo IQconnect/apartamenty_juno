@@ -4,30 +4,28 @@ import "../../resources/assets/styles/main.scss";
 import phone from '../../resources/assets/images/phone-icon.png'
 
 const buttonprimary = `
-<div class="button">
-    <a href="#" class="button button--primary text  main text--thin">Lorem ipsum</a>
-    
-</div>`;
+    <a href="#" class="button button--primary text  main text--thin">
+        Lorem ipsum
+    </a>
+`;
 const buttonlight = `
-<div class="button">
-    <a href="#" class="button button--light text  main text--thin">Lorem ipsum</a>
-    
-</div>`;
+    <a href="#" class="button button--light text  main text--thin">
+        Lorem ipsum
+    </a>
+`;
 
 const buttonwhite = `
-<div class="button">
-    <a href="#" class="button button--white button--secondary text  main text--thin">Lorem ipsum</a>
-    
-</div>`;
+    <a href="#" class="button button--white button--secondary text  main text--thin">
+        Lorem ipsum
+    </a>
+`;
 
 const buttonicon = `
-<div class="button">
-
     <a href="#" class="button button--primary text main text--thin">
-    <img class="button__icon"src="${phone}" alt="icon">
-    Lorem ipsum</a>
-    
-</div>`;
+        <img class="button__icon"src="${phone}" alt="icon">
+        Lorem ipsum
+    </a>
+`;
 
 storiesOf("Elementy/przyciski", module).add(
   "buttonforsite",
