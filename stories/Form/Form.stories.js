@@ -6,23 +6,23 @@ import '../../resources/assets/styles/main.scss';
 
 const Input = `
 <div class="input">
-  <label for="name">Name:</label>
+  <p><label for="name">Name:</label></p>
   <input type="text" name="name" id="name" placeholder="John Smith" />
 </div>`;
 
   storiesOf('Elementy/Form', module)
-    .add('Forms', () => `
+    .add('Input', () => `
     <h2 class="subtitle bold">Input</h2>
     <hr>
     <br>
     <br>
-    ${IconBoxCenter}
+    ${ Input}
     <br>
     <br>
     <xmp>
-        ${IconBoxCenter}
+        ${ Input}
     </xmp>
 
   `);
 
-export default productBlock;
+export default  Input;
