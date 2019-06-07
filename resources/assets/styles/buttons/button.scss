@@ -10,24 +10,34 @@
 }
 
 .button {
-  color: white;
-    text-decoration: none;
-  padding: $gutter $gutter*5;
-  border-radius: $gutter*3;
-  font-size: $gutter*2 ;
+  color: map-get($theme-colors, light);
+  text-decoration: none;
+  padding: $gutter $gutter * 5;
+  border-radius: $gutter * 3;
+  font-size: $gutter * 2;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-  &--secondary{
+  &--secondary {
     color: map-get($theme-colors, secondary);
+  }
 
+  &--primary {
+    @include button-bg(map-get($theme-colors, primary));
+  }
+  &--light {
+    @include button-bg(map-get($theme-colors, secondary));
+  }
+  &--white {
+    @include button-bg(map-get($theme-colors, light));
+  }
+  &__icon {
+    height: $gutter * 3;
+    width: $gutter * 3;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    margin-left: -10px;
   }
 }
-
-.button-blue {
-  @include button-bg( map-get($theme-colors, primary));
-}
-.button-light {
-    @include button-bg( map-get($theme-colors, secondary));
-  }
-  .button-white {
-    @include button-bg( map-get($theme-colors, light));
-  }
