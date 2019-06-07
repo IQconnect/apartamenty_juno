@@ -1,28 +1,31 @@
 import { storiesOf } from "@storybook/html";
 
 import "../../resources/assets/styles/main.scss";
+import phone from '../../resources/assets/images/phone-icon.png'
 
-const buttonblue = `
+const buttonprimary = `
 <div class="button">
-    <a href="#" class="button button-blue text  main text--thin">Lorem ipsum</a>
+    <a href="#" class="button button--primary text  main text--thin">Lorem ipsum</a>
     
 </div>`;
 const buttonlight = `
 <div class="button">
-    <a href="#" class="button button-light text  main text--thin">Lorem ipsum</a>
+    <a href="#" class="button button--light text  main text--thin">Lorem ipsum</a>
     
 </div>`;
 
 const buttonwhite = `
 <div class="button">
-    <a href="#" class="button button-white button--secondary text  main text--thin">Lorem ipsum</a>
+    <a href="#" class="button button--white button--secondary text  main text--thin">Lorem ipsum</a>
     
 </div>`;
 
 const buttonicon = `
 <div class="button">
-    <a href="#" class="button button-blue text main text--thin">
-    <i class="fa fa-cloud"></i>Lorem ipsum</a>
+
+    <a href="#" class="button button--primary text main text--thin">
+    <img class="button__icon"src="${phone}" alt="icon">
+    Lorem ipsum</a>
     
 </div>`;
 
@@ -33,11 +36,11 @@ storiesOf("Elementy/przyciski", module).add(
     <hr>
     <br>
     <br>
-    ${buttonblue}
+    ${buttonprimary}
     <br>
     <br>
     <xmp>
-        ${buttonblue}
+        ${buttonprimary}
     </xmp>
     <h2 class="subtitle bold">Button-light</h2>
     <hr>
