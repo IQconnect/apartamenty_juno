@@ -2,11 +2,11 @@ import { storiesOf } from "@storybook/html";
 
 import "../../resources/assets/styles/main.scss";
 
-import sofa from "../../resources/assets/images/sofa-bg.jpg";
+import image from "../../resources/assets/images/sofa-bg.jpg";
 
 const Avatar = `
 <div class="avatar">
-    <img class="avatar__image" src="${sofa}">
+    <img class="avatar__image" src="${image}">
     <p class="avatar__name text text--bold">
       Pani kanapa
     </p>
