@@ -27,8 +27,8 @@ const buttonicon = `
     </button>
 `;
 
-storiesOf("Elementy/przyciski", module).add(
-  "buttonforsite",
+storiesOf("Elementy", module).add(
+  "przyciski",
   () => `
     <h2 class="subtitle bold">Button-primary</h2>
     <hr>
