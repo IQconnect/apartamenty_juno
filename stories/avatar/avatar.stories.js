@@ -5,10 +5,10 @@ import "../../resources/assets/styles/main.scss";
 import sofa from "../../resources/assets/images/sofa-bg.jpg";
 
 const Avatar = `
-<div class="avatar">
-    <img src="${sofa}" class="avatar--image--cover">
-    <p class="avatar--name text main text--thin text text--left">
-    Pani kanapa
+<div class="avatar text">
+    <img class="avatar__image" src="${sofa}">
+    <p class="avatar__name text--bold">
+      Pani kanapa
     </p>
     <p>
     <a href="#" class="avatar__link text small-text ">

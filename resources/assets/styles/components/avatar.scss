@@ -6,7 +6,7 @@
     }
   }
 
-  &--image--cover {
+  &__image {
     width: $gutter * 16;
     height: $gutter * 16;
     border-radius: 50%;
@@ -14,7 +14,7 @@
     object-position: center center;
   }
 
-  &--name {
+  &__name {
     margin-top: $gutter * 3;
   }
 }
