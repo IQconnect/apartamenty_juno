@@ -3,7 +3,7 @@
   background: map-get($theme-colors, secondary);
   padding: $gutter*4;
   text-align: center;
-  max-width: 300px;
+  //max-width: 300px;
 
   &__icon {
     width: $gutter * 8;
@@ -23,6 +23,6 @@
     opacity: 0.8;
     max-width: $gutter * 25;
     margin: auto;
-    padding-top: $gutter*3;
+    padding-top: $gutter * 3;
   }
 }

@@ -13,20 +13,20 @@
   }
 
   &__content {
-    padding: ($gutter*5) ($gutter*6);
+    padding: ($gutter * 8) ($gutter * 6);
     display: flex;
     flex-wrap: wrap;
   }
 
   &__boxes {
-    width: 70%;
+    width: 65%;
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-gap: $gutter * 5;
+    grid-gap: $gutter * 4;
   }
 
   &__desc {
-    width: 30%;
+    width: 35%;
   }
 }
