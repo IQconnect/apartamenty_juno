@@ -47,4 +47,27 @@ storiesOf('Elementy/header', module)
       </div>
     </xmp>
     <br><br>
+    <h2 class="subtitle">
+      Header Left
+    </h2>
+    <hr />
+    <div class="header" style="background: #364ea2">
+      <h2 class="title header__title--left">
+        Dlaczego warto
+      </h2>
+      <h2 class="header__sub--left subtitle">
+        tu zamieszkać?
+      </h2>
+    </div>
+    <xmp>
+    <div class="header">
+      <h2 class="title header__title--left">
+        Dlaczego warto
+      </h2>
+      <h2 class="header__sub--left subtitle">
+        tu zamieszkać?
+      </h2>
+    </div>
+    </xmp>
+    <br><br>
     `);
