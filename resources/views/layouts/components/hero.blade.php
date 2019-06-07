@@ -1,6 +1,7 @@
 @php
     $placeholder = new Placeholder;
 
+    $cat_id = $cat->term_id; 
     $image = get_field('bg_image', 'term_'.  $cat_id )['ID'];
     $header = get_field('header', 'term_'.  $cat_id );
     
@@ -16,14 +17,27 @@
                 {!! $header ? $header : $placeholder->title() !!}
             </h2>
         </header>
+        @if($products)
+        <ul class="hero__products">
+            @foreach ($products as $product)
+            <li>
+                @include('blocks.product-block', ['product'=>$product])
+            </li>
+            <li>
+                @include('blocks.product-block', ['product'=>$product])
+            </li>
+            <li>
+                @include('blocks.product-block', ['product'=>$product])
+            </li>
+            @endforeach
+        </ul>
+        @endif
     </div>
     @if($image) 
         {!! image($image, 'full', 'hero__image') !!}
     @else 
-        <img class="hero__image" src="@asset($placeholder->image())" alt="placeholder"> 
+        <img class="hero__image" src="@asset($placeholder->image())" alt="Brusso"> 
     @endif
-
-    <button class="hero__icon mouse">
-        <span class="mouse__dot"></span>
-    </button>
 </section>
+
+@dump($products)

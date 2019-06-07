@@ -9,8 +9,8 @@
   <div class="container">
     <div class="row">
       <div class="col header__wrapper">
-        <a class="header__brand" href="{{ home_url('/') }}">
-          <img src="{{  get_field('logo', 'options')['url'] }}" alt="Apartamenty Mer">
+        {{-- <a class="header__brand" href="{{ home_url('/') }}">
+          <img src="{{  get_field('logo', 'options')['url'] }}" alt="Jartech">
         </a>
         <button class="header__hamburger hamburger" data-toggle-menu>
           <span class="hamburger__line"></span>
@@ -21,7 +21,7 @@
           @if (has_nav_menu('primary_navigation'))
             {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'header__menu']) !!}
           @endif
-        </nav>
+        </nav> --}}
       </div>
     </div>
   </div>
