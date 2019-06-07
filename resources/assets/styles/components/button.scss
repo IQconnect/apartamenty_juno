@@ -10,34 +10,32 @@
 }
 
 .button {
-  color: map-get($theme-colors, light);
+  color: theme-color("light");
   text-decoration: none;
-  padding: $gutter $gutter * 5;
+  padding: $gutter ($gutter * 5);
   border-radius: $gutter * 3;
   font-size: $gutter * 2;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-
-  &--secondary {
-    color: map-get($theme-colors, secondary);
+  &--textchange {
+    color: theme-color("secondary");
   }
-
   &--primary {
-    @include button-bg(map-get($theme-colors, primary));
+    @include button-bg(theme-color("primary"));
+  }
+  &--secondary {
+    @include button-bg(theme-color("secondary"));
   }
   &--light {
-    @include button-bg(map-get($theme-colors, secondary));
-  }
-  &--white {
-    @include button-bg(map-get($theme-colors, light));
+    @include button-bg(theme-color("light"));
   }
   &__icon {
     height: $gutter * 3;
     width: $gutter * 3;
     display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    margin-left: -10px;
+    margin-right: $gutter;
+    margin-bottom: $gutter;
+    margin-left: -$gutter;
   }
 }

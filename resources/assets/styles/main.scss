@@ -28,6 +28,7 @@
 @import "components/container";
 @import "components/list";
 @import "components/mouse";
+@import "components/button.scss";
 
 /** Blocks */
 @import "blocks/product-block.scss";
@@ -36,6 +37,3 @@
 /** Layouts */
 @import "layouts/hero.scss";
 @import "layouts/sidebar.scss";
-
-/** Buttons*/
-@import "buttons/button.scss";

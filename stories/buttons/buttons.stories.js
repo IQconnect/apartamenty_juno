@@ -1,30 +1,30 @@
 import { storiesOf } from "@storybook/html";
 
 import "../../resources/assets/styles/main.scss";
-import phone from '../../resources/assets/images/phone-icon.png'
+import phone from "../../resources/assets/images/phone-icon.png";
 
 const buttonprimary = `
-    <a href="#" class="button button--primary text  main text--thin">
+    <button href="#" class="button button--primary text  main text--thin">
         Lorem ipsum
-    </a>
+    </button>
 `;
 const buttonlight = `
-    <a href="#" class="button button--light text  main text--thin">
+    <button href="#" class="button button--textchange button--light text  main text--thin">
         Lorem ipsum
-    </a>
+    </button>
 `;
 
-const buttonwhite = `
-    <a href="#" class="button button--white button--secondary text  main text--thin">
+const buttonsecondary = `
+    <button href="#" class="button button--secondary text  main text--thin">
         Lorem ipsum
-    </a>
+    </button>
 `;
 
 const buttonicon = `
-    <a href="#" class="button button--primary text main text--thin">
+    <button href="#" class="button button--primary text main text--thin">
         <img class="button__icon"src="${phone}" alt="icon">
         Lorem ipsum
-    </a>
+    </button>
 `;
 
 storiesOf("Elementy/przyciski", module).add(
@@ -54,11 +54,11 @@ storiesOf("Elementy/przyciski", module).add(
     <hr>
     <br>
     <br>
-    ${buttonwhite}
+    ${buttonsecondary}
     <br>
     <br>
     <xmp>
-    ${buttonwhite}
+    ${buttonsecondary}
     </xmp>
     <h2 class="subtitle bold">Button-icon</h2>
     <hr>
