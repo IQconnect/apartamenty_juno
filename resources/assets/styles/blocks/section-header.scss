@@ -1,10 +1,11 @@
-.header {
+.section-header {
   color: color(primary);
   text-align: center;
 
   &__title {
     text-align: center;
     margin: auto;
+    display: block;
 
     &::after {
       @include cssLock("width", 360, 1440, (50, 190));
@@ -26,6 +27,7 @@
 
   &__sub {
     opacity: 0.5;
+    display: block;
 
     &--left {
       position: relative;
