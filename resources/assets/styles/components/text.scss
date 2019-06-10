@@ -5,7 +5,7 @@
 }
 
 .headline {
-  @include cssLock("font-size", 360, 1440, (20, 72));
+  @include cssLock("font-size", 360, 1920, (24, 72));
 
   color: map-get($theme-colors, primary);
   font-family: map-get($font-family, title);
@@ -16,7 +16,7 @@
 }
 
 .title {
-  @include cssLock("font-size", 360, 1440, (18, 45));
+  @include cssLock("font-size", 360, 1920, (18, 56));
 
   color: map-get($theme-colors, primary);
   font-family: map-get($font-family, title);
@@ -30,7 +30,7 @@
 }
 
 .subtitle {
-  @include cssLock("font-size", 360, 1440, (16, 32));
+  @include cssLock("font-size", 360, 1920, (16, 32));
 
   color: map-get($theme-colors, primary);
   font-family: map-get($font-family, title);
@@ -44,7 +44,7 @@
 }
 
 .text {
-  @include cssLock("font-size", 360, 1440, (12, 16));
+  @include cssLock("font-size", 360, 1920, (12, 16));
 
   font-family: map-get($font-family, main);
   color: map-get($theme-colors, dark);
@@ -74,7 +74,7 @@
 }
 
 .large-text {
-  @include cssLock("font-size", 360, 1440, (16, 20));
+  @include cssLock("font-size", 360, 1920, (16, 20));
 
   font-family: map-get($font-family, main);
   color: map-get($theme-colors, dark);
@@ -82,7 +82,7 @@
 }
 
 .small-text {
-  @include cssLock("font-size", 360, 1440, (10, 12));
+  @include cssLock("font-size", 360, 1920, (10, 12));
 
   font-family: map-get($font-family, main);
   color: map-get($theme-colors, dark);

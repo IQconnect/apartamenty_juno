@@ -27,6 +27,7 @@
 @import "components/icon";
 @import "components/container";
 @import "components/list";
+@import "components/avatar";
 @import "components/mouse";
 @import "components/button.scss";
 @import "components/hamburger";
@@ -39,7 +40,9 @@
 @import "blocks/product-block";
 
 /** Layouts */
+@import "layouts/section";
 @import "layouts/hero";
 @import "layouts/sidebar";
 @import "layouts/header";
 @import "layouts/info-section";
+@import "layouts/text-section";
