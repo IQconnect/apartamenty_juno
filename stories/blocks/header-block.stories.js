@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/html';
 import '../../resources/assets/styles/main.scss';
 import boat from '../../resources/assets/images/boat.png';
 
-const sectionHeader = `
+export const sectionHeader = `
   <h2 class="section-header">
     <span class="section-header__title title text--center">
       Doskonała lokalizacja
@@ -14,7 +14,7 @@ const sectionHeader = `
   </h2>
 `;
 
-const HeaderSpecial = `
+export const HeaderSpecial = `
   <div class="section-header">
     <img class="section-header__img" src="${boat}">
     <h2 class="section-header__title title text--center">
@@ -23,7 +23,7 @@ const HeaderSpecial = `
   </div>
 `;
 
-const HeaderLeft = `
+export const HeaderLeft = `
   <h2 class="section-header">
     <span class="title section-header__title--left">
       Dlaczego warto
