@@ -63,7 +63,23 @@ storiesOf('Layouts', module)
           </div>
         </div>
         <div class="info-section__desc">
-          opisik
+          <div class="info-section__desc-content">
+            <h2 class="section-header info-section__desc-h">
+              <span class="title section-header__title--left">
+                Dlaczego warto
+              </span>
+              <span class="section-header__sub--left subtitle">
+                tu zamieszkać?
+              </span>
+            </h2>
+            <p class="text info-section__desc-p">
+              Osiedle Juno to nowoczesne 13-rodzinne bloki, które osadzone zostały w pięknym mazurskim krajobrazie, nad brzegiem jeziora Juno w Mrągowie.
+            </p>
+
+            <button href="#" class="button button--secondary text  main text--thin">
+              Znajdź swoje mieszkanie
+            </button>
+          </div>
         </div>
       </div>
     </section>

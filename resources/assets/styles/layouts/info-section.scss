@@ -13,13 +13,13 @@
   }
 
   &__content {
-    padding: ($gutter * 8) ($gutter * 6);
+    padding: ($gutter * 8) ($gutter * 5);
     display: flex;
     flex-wrap: wrap;
   }
 
   &__boxes {
-    width: 65%;
+    width: 55%;
     flex-wrap: wrap;
     display: grid;
     grid-template-columns: auto auto auto;
@@ -27,6 +27,22 @@
   }
 
   &__desc {
-    width: 35%;
+    width: 45%;
+
+    &-content {
+      padding: 0 ($gutter * 10) 0 ($gutter * 15) ;
+    }
+
+    &-h {
+      margin-top: 0;
+    }
+
+    &-p {
+      color: map-get($theme-colors, light);
+      opacity: 0.6;
+      max-width: $gutter * 60;
+      padding-top: $gutter * 2;
+      padding-bottom: $gutter * 7;
+    }
   }
 }

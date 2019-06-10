@@ -16,7 +16,7 @@
 }
 
 .title {
-  @include cssLock("font-size", 360, 1440, (18, 56));
+  @include cssLock("font-size", 360, 1440, (18, 45));
 
   color: map-get($theme-colors, primary);
   font-family: map-get($font-family, title);
