@@ -12,7 +12,7 @@
 }
 
 .button {
-  color: theme-color("light");
+  color: color("light");
   text-decoration: none;
   padding: $gutter ($gutter * 4);
   border-radius: $gutter * 3;
@@ -25,19 +25,19 @@
   cursor: pointer;
 
   &--textchange {
-    color: theme-color("secondary");
+    color: color("secondary");
   }
 
   &--primary {
-    @include button-bg(theme-color("primary"));
+    @include button-bg(color("primary"));
   }
 
   &--secondary {
-    @include button-bg(theme-color("secondary"));
+    @include button-bg(color("secondary"));
   }
 
   &--light {
-    @include button-bg(theme-color("light"));
+    @include button-bg(color("light"));
   }
 
   &__icon {
