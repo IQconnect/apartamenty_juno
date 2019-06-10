@@ -15,5 +15,7 @@
   @endif
 
   @include('layouts.components.hero')
+  @include('layouts.components.text-section')
+  @include('layouts.components.info-section')
 
 @endsection
