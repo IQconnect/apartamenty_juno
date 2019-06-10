@@ -1,21 +1,25 @@
-.info-section{
-  color: map-get($theme-colors, light);
+.info-section {
+  @extend .overlay;
+
+  color: color(light);
   position: relative;
 
   &__bg {
+    @extend .image;
+
+    object-position: center 80%;
     position: absolute;
     top: 0;
     left: 0;
     z-index: -1;
-    width: 100%;
-    heighT: 100%;
-    object-fit: cover;
   }
 
   &__content {
     padding: ($gutter * 8) ($gutter * 5);
     display: flex;
     flex-wrap: wrap;
+    z-index: 10;
+    position: relative;
   }
 
   &__boxes {
@@ -28,21 +32,5 @@
 
   &__desc {
     width: 45%;
-
-    &-content {
-      padding: 0 ($gutter * 10) 0 ($gutter * 15) ;
-    }
-
-    &-h {
-      margin-top: 0;
-    }
-
-    &-p {
-      color: map-get($theme-colors, light);
-      opacity: 0.6;
-      max-width: $gutter * 60;
-      padding-top: $gutter * 2;
-      padding-bottom: $gutter * 7;
-    }
   }
 }
