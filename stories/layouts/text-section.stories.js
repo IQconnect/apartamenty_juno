@@ -7,7 +7,7 @@ const textSection = `
         <div class="container">
             <div class="row"> 
                 <!-- Header -->
-                <header class="section__header text-section__header section-header">
+                <header class="section__header section-header">
                     <img class="section-header__img" src="static/media/boat.09b109ec.png">
                     <h2 class="section-header__title title text--center">
                         Doskonała lokalizacja
