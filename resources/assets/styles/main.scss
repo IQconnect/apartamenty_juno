@@ -29,12 +29,20 @@
 @import "components/list";
 @import "components/mouse";
 @import "components/form";
+@import "components/button.scss";
+@import "components/hamburger";
+@import "components/sub-menu";
 
 /** Blocks */
 @import "blocks/product-block.scss";
 @import "blocks/icon-box.scss";
+@import "blocks/section-header.scss";
+@import "blocks/product-block";
 
 /** Layouts */
 @import "layouts/hero.scss";
 @import "layouts/sidebar.scss";
 
+@import "layouts/hero";
+@import "layouts/sidebar";
+@import "layouts/header";

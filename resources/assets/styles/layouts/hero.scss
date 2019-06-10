@@ -1,10 +1,12 @@
 .hero {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 
   &__header {
+    @include cssLock("padding-top", 360, 1440, (120, 180));
+
     padding-left: 50%;
-    padding-top: $gutter * 20;
   }
 
   &__image {
@@ -12,7 +14,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 120%;
     object-fit: cover;
     z-index: -1;
   }
