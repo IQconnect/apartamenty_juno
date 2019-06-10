@@ -10,13 +10,15 @@ const Avatar = `
     <p class="avatar__name text--bold">
       Pani kanapa
     </p>
-    <p>
+    <p class="small-text text--thin">
+    tel: 
     <a href="#" class="avatar__link text small-text ">
-    tel: +48 500 526 600
+    +48 500 526 600
     </a>
     <br/>
+    mail: 
     <a href="#"  class="avatar__link text small-text ">
-    mail: biuro@apartamentyjuno.pl
+    biuro@apartamentyjuno.pl
     </a>
     </p>
 </div>`;
