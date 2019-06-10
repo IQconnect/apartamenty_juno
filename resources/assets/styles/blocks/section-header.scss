@@ -31,13 +31,13 @@
 
     &--left {
       position: relative;
-      padding-top: $gutter * 2;
+      padding-top: $gutter * 1.5;
       display: block;
       text-align: left;
       color: color(light);
 
       &::after {
-        @include cssLock("width", 360, 1440, (50, 190));
+        @include cssLock("width", 360, 1440, (50, 100));
 
         content: "";
         display: inline-block;

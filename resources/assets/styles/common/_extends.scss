@@ -12,3 +12,12 @@
   height: 100%;
   object-fit: cover;
 }
+
+.overlay {
+  &::before {
+    @extend .absolute;
+
+    content: "";
+    background-color: rgba(color("primary"), 0.8);
+  }
+}

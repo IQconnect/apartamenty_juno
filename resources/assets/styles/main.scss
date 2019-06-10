@@ -32,18 +32,20 @@
 @import "components/button.scss";
 @import "components/hamburger";
 @import "components/sub-menu";
+@import "components/icon-box.scss";
 
 /** Blocks */
 @import "blocks/product-block.scss";
-@import "blocks/icon-box.scss";
 @import "blocks/section-header.scss";
 @import "blocks/product-block";
 @import "blocks/icon-text";
+@import "blocks/card-block";
 
 /** Layouts */
 @import "layouts/section";
 @import "layouts/hero";
 @import "layouts/sidebar";
 @import "layouts/header";
+@import "layouts/info-section";
 @import "layouts/text-section";
 @import "layouts/icons-section";
