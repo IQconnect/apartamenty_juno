@@ -27,14 +27,17 @@
 @import "components/icon";
 @import "components/container";
 @import "components/list";
+@import "components/avatar";
 @import "components/mouse";
 @import "components/button.scss";
 @import "components/hamburger";
 @import "components/sub-menu";
 
 /** Blocks */
+@import "blocks/product-block.scss";
+@import "blocks/icon-box.scss";
+@import "blocks/section-header.scss";
 @import "blocks/product-block";
-@import "blocks/icon-box";
 
 /** Layouts */
 @import "layouts/hero";
