@@ -1,49 +1,42 @@
 @mixin button-bg($bg) {
-  background: $bg;
-
-  &:hover {
-    background: darken($bg, 8%);
-    transition: all 0.3s ease;
-  }
-
-  &:active {
-    background: darken($bg, 25%);
-  }
+    background: $bg;
+    &:hover {
+        background: darken($bg, 8%);
+        transition: all 0.3s ease;
+    }
+    &:active {
+        background: darken($bg, 25%);
+    }
 }
 
 .button {
-  color: color("light");
-  text-decoration: none;
-  padding: $gutter ($gutter * 4);
-  border-radius: $gutter * 3;
-  font-size: $gutter * 2;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-appearance: none;
-  border: 0;
-  cursor: pointer;
-
-  &--textchange {
-    color: color("secondary");
-  }
-
-  &--primary {
-    @include button-bg(color("primary"));
-  }
-
-  &--secondary {
-    @include button-bg(color("secondary"));
-  }
-
-  &--light {
-    @include button-bg(color("light"));
-  }
-
-  &__icon {
-    height: $gutter * 3;
-    width: $gutter * 3;
-    display: inline-block;
-    margin: 0 $gutter ($gutter * 0.3) 0;
-  }
+    color: color("light");
+    text-decoration: none;
+    padding: $gutter ($gutter * 9);
+    border-radius: $gutter * 3;
+    font-size: $gutter * 2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-appearance: none;
+    border: 0;
+    cursor: pointer;
+    &--textchange {
+        color: color("secondary");
+    }
+    &--primary {
+        @include button-bg(color("primary"));
+    }
+    &--secondary {
+        @include button-bg(color("secondary"));
+    }
+    &--light {
+        @include button-bg(color("light"));
+    }
+    &__icon {
+        height: $gutter * 3;
+        width: $gutter * 3;
+        display: inline-block;
+        margin: 0 $gutter ($gutter * 0.3) 0;
+    }
 }

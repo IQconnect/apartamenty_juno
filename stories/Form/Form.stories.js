@@ -3,21 +3,23 @@ import { storiesOf } from "@storybook/html";
 import "../../resources/assets/styles/main.scss";
 
 const Input = `
+
   <p>
   <label class="form__label text text--thin" for="name">
   Imie i Nazwisko</label></p>
   <input class="form__input" type="text" name="name" id="name" placeholder="" />
+
 `;
 const Message = `
   <p>
   <label class="form__label text text--thin" for="name">
  Wiadomość</label>
   </p>
-  <textarea class="form__input" cols="40" rows="8" name="textarea" ></textarea>
+  <textarea class="form__textarea" cols="40" rows="8" name="textarea" ></textarea>
 `;
 
 const Checkbox = `
-<div class="form__container">
+<div class="form__checkcontainer">
   <input class="form__check" type="checkbox" name="checkbox">
   <label class="form__labelcheck small-text" for="name">
     Zapoznałem się z Polityką prywatności serwisu apartamentyjuno.pl oraz wyrażam zgodę na przetwarzanie przez ...Nazwa firmy,  ...adres, udostępnionych przeze mnie danych osobowych na zasadach opisanych w Polityce prywatności dostępnej w Serwisie. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod adresem  biuro@apartamentyjuno.pl, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. Więcej informacji dotyczących przetwarzania danych osobowych - Obowiązek Informacyjny.
@@ -26,8 +28,8 @@ const Checkbox = `
 `;
 
 storiesOf("Elementy/Form", module).add(
-  "Input",
-  () => `
+    "Input",
+    () => `
     <h2 class="subtitle bold">Input</h2>
     <hr>
     <br>
