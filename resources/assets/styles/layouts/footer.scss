@@ -1,0 +1,15 @@
+.footer {
+  z-index: -1;
+  
+  &__content {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: $gutter * 20;
+    height: auto;
+  }
+}
