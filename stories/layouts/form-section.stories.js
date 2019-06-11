@@ -19,7 +19,7 @@ const formsection = `
             </h2>
             <form id="form" action="mail.php" method="POST">
               <div class="form-section--row">
-                <div class="col">
+                <div>
                   <label class="form__label text">Imie i nazwisko</label>
                   <p>
                     <input class="form__input">
@@ -28,42 +28,36 @@ const formsection = `
 
               </div>
               <div class="form-section--row">
-                <div class="col">
+                <div>
                   <label class="form__label text">Mail</label>
                   <p>
                     <input class="form__input">
                   </p>
                 </div>
-                <div class="col">
+                <div>
                   <label class = "form__label text" > Telefon </label>
                   <p>
                     <input class="form__input">
                   </p>
                 </div>
               </div>
-              <div class="form-section--row">
-              <div class="col">
               <label class="form__label  text" for="name">
                 Wiadomość
               </label>
+              <p>
+               <textarea class="form__textarea" rows="12" name="textarea" ></textarea>
               </p>
-              <textarea class="form__textarea" rows="12" name="textarea" ></textarea>
-              </p>
-              </div>
-              </div>
-              <div class="form-section--row">
-              <div class="col">
+
                 <div class="form__checkcontainer">
                   <input class="form__check" type="checkbox" name="checkbox">
                   <label class="form__labelcheck small-text" for="name">
                     Zapoznałem się z Polityką prywatności serwisu apartamentyjuno.pl oraz wyrażam zgodę na przetwarzanie przez ...Nazwa firmy,  ...adres, udostępnionych przeze mnie danych osobowych na zasadach opisanych w Polityce prywatności dostępnej w Serwisie. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod adresem  biuro@apartamentyjuno.pl, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. Więcej informacji dotyczących przetwarzania danych osobowych - Obowiązek Informacyjny.
                   </label>
-                  </div>
-                </div>
+
               </div>
               </br>
               <div class="form-section--row">
-              <div class="col">
+              <div>
               <button href="#" class="button button--secondary text  main text--thin">
                 Wyślij
               </button>
