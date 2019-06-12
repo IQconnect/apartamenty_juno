@@ -36,29 +36,25 @@
 @import "components/avatar";
 @import "components/mouse";
 @import "components/form";
-@import "components/button.scss";
+@import "components/button";
 @import "components/hamburger";
 @import "components/sub-menu";
-@import "components/icon-box.scss";
+@import "components/icon-box";
 
 /** Blocks */
-
-@import "blocks/product-block.scss";
-@import "blocks/section-header.scss";
-@import "blocks/product-block";
+@import "blocks/section-header";
+@import "blocks/icon-text";
 @import "blocks/card-block";
 
 /** Layouts */
-@import "layouts/hero.scss";
-@import "layouts/sidebar.scss";
-
 @import "layouts/section";
 @import "layouts/hero";
 @import "layouts/sidebar";
 @import "layouts/header";
 @import "layouts/info-section";
 @import "layouts/text-section";
-
-@import "layouts/form-section";
 @import "layouts/avatar-section";
 @import "layouts/contact-section";
+@import "layouts/footer";
+@import "layouts/icons-section";
+@import "layouts/full-img";

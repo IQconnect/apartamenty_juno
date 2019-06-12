@@ -12,6 +12,7 @@ $option_page
 $option_page
     ->addTab('Main', ['label' => 'Ustawienia główne', 'placement' => 'left'])
         ->addImage('logo')
+        ->addImage('logo-white')
     ->addTab('Social media', ['label' => 'Social Media', 'placement' => 'left'])
         ->addRepeater('icons', ['min' => 0, 'layout' => 'table'])
             ->addText('icon', ['title' => 'Font awesome kod ikonki'])
