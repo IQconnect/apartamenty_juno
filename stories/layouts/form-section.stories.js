@@ -25,7 +25,6 @@ export const formsection = `
                     <input class="form__input">
                   </p>
                 </div>
-
               </div>
               <div class="form-section--row">
                 <div>
@@ -47,21 +46,19 @@ export const formsection = `
               <p>
                <textarea class="form__textarea" rows="12" name="textarea" ></textarea>
               </p>
-
-                <div class="form__checkcontainer">
-                  <input class="form__check" type="checkbox" name="checkbox">
-                  <label class="form__labelcheck small-text form__label--zgoda" for="name">
-                    Zapoznałem się z Polityką prywatności serwisu apartamentyjuno.pl oraz wyrażam zgodę na przetwarzanie przez ...Nazwa firmy,  ...adres, udostępnionych przeze mnie danych osobowych na zasadach opisanych w Polityce prywatności dostępnej w Serwisie. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod adresem  biuro@apartamentyjuno.pl, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. Więcej informacji dotyczących przetwarzania danych osobowych - Obowiązek Informacyjny.
-                  </label>
-
+              <div class="form__checkcontainer">
+                <input class="form__check" type="checkbox" name="checkbox">
+                <label class="form__labelcheck small-text form__label--zgoda" for="name">
+                  Zapoznałem się z Polityką prywatności serwisu apartamentyjuno.pl oraz wyrażam zgodę na przetwarzanie przez ...Nazwa firmy,  ...adres, udostępnionych przeze mnie danych osobowych na zasadach opisanych w Polityce prywatności dostępnej w Serwisie. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod adresem  biuro@apartamentyjuno.pl, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. Więcej informacji dotyczących przetwarzania danych osobowych - Obowiązek Informacyjny.
+                </label>
               </div>
               </br>
               <div class="form-section--row">
-              <div>
-              <button href="#" class="button button--secondary text  main text--thin">
-                Wyślij
-              </button>
-              </div>
+                <div>
+                  <button href="#" class="button button--secondary text  main text--thin">
+                    Wyślij
+                  </button>
+                </div>
               </div>
           </div>
         </div>
