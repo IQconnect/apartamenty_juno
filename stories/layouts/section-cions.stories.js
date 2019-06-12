@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/html';
 
 import '../../resources/assets/styles/main.scss';
-import icon from '../../resources/assets/images/icons-section.png';
+import icon from '../../resources/assets/images/wiz-mwo-01.png';
 
 const textSection = `
     <section class="section icons-section">

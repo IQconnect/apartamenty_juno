@@ -12,7 +12,7 @@ const footer = `
     <div class="footer__content">
       <div class="footer__left">
         <img class="footer__logo" src="${logo}" alt="logo">
-        <nav>
+        <nav class="footer__nav-wrapper">
           <ul class="footer__nav">
             <li>
               <a href="#" class="small-text footer__link">
@@ -29,13 +29,9 @@ const footer = `
                 Wizualizacje
               </a>
             </li>
-          </ul>
-        </nav>
-        <nav>
-          <ul class="footer__nav">
             <li>
               <a href="#" class="small-text footer__link">
-                O inwestycji
+                Kontakt
               </a>
             </li>
             <li>
@@ -51,7 +47,9 @@ const footer = `
           </ul>
         </nav>
       </div>
-      <img class="footer__by" src="${iq}" alt="logo">
+      <a href="http://iqconnect.pl/">
+        <img class="footer__by" src="${iq}" alt="logo">
+      </a>
     </div>
   </div>
 </footer>
