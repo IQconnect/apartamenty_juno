@@ -29,15 +29,13 @@
 @import "components/list";
 @import "components/avatar";
 @import "components/mouse";
-@import "components/button.scss";
+@import "components/button";
 @import "components/hamburger";
 @import "components/sub-menu";
-@import "components/icon-box.scss";
+@import "components/icon-box";
 
 /** Blocks */
-@import "blocks/product-block.scss";
-@import "blocks/section-header.scss";
-@import "blocks/product-block";
+@import "blocks/section-header";
 @import "blocks/icon-text";
 @import "blocks/card-block";
 
@@ -49,3 +47,4 @@
 @import "layouts/info-section";
 @import "layouts/text-section";
 @import "layouts/icons-section";
+@import "layouts/full-img";
