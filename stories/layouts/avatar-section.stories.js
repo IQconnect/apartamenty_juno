@@ -1,6 +1,6 @@
-import { storiesOf } from '@storybook/html';
+import { storiesOf } from "@storybook/html";
 
-import '../../resources/assets/styles/main.scss';
+import "../../resources/assets/styles/main.scss";
 
 import image from "../../resources/assets/images/sofa-bg.jpg";
 
@@ -42,20 +42,19 @@ const avatarsection = `
           </p>
 		  <div class="avatar-section__boxes">
 		  <!-- Avatar -->
-
 			${Avatar}
 			${Avatar}
-
 		  <!--/ Avatar -->
 			</div>
         </div>
       </div>
     </div>
   </section>
-`
+`;
 
-storiesOf('Layouts', module)
-    .add('Avatar-section', () => `
+storiesOf("Layouts", module).add(
+  "Avatar-section",
+  () => `
     <h2 class="subtitle bold">Avatar-section</h2>
     <hr>
       ${avatarsection}
@@ -64,5 +63,5 @@ storiesOf('Layouts', module)
     <xmp>
       ${avatarsection}
     </xmp>
-
-  `);
+  `
+);
