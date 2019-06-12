@@ -1,14 +1,17 @@
 /** Vendors */
+
 @import "vendors/scss-lock/css-lock";
 @import "vendors/fonts";
 
 /** Common */
+
 @import "common/variables";
 @import "common/mixins";
 @import "common/functions";
 @import "common/extends";
 
 /** Import everything from autoload */
+
 // @import "./autoload/**/*";
 
 /**
@@ -17,12 +20,15 @@
  * Prefix your imports with `~` to grab from node_modules/
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
+
 // @import "~some-node-module";
 
 /** Import theme styles */
+
 @import "common/global";
 
 /** Components */
+
 @import "components/text";
 @import "components/icon";
 @import "components/container";
@@ -35,15 +41,18 @@
 @import "components/icon-box.scss";
 
 /** Blocks */
+
 @import "blocks/product-block.scss";
 @import "blocks/section-header.scss";
 @import "blocks/product-block";
 @import "blocks/card-block";
 
 /** Layouts */
+
 @import "layouts/section";
 @import "layouts/hero";
 @import "layouts/sidebar";
 @import "layouts/header";
 @import "layouts/info-section";
 @import "layouts/text-section";
+@import "layouts/avatar-section";
