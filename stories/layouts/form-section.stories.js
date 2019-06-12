@@ -2,7 +2,7 @@ import { storiesOf } from "@storybook/html";
 import "../../resources/assets/styles/main.scss";
 import sectionbg from "../../resources/assets/images/form-section-bg.png";
 
-const formsection = `
+export const formsection = `
 <section class="form-section">
   <img class="form-section__bg" src="${sectionbg}" alt="background">
     <div class="container">
@@ -50,7 +50,7 @@ const formsection = `
 
                 <div class="form__checkcontainer">
                   <input class="form__check" type="checkbox" name="checkbox">
-                  <label class="form__labelcheck small-text" for="name">
+                  <label class="form__labelcheck small-text form__label--zgoda" for="name">
                     Zapoznałem się z Polityką prywatności serwisu apartamentyjuno.pl oraz wyrażam zgodę na przetwarzanie przez ...Nazwa firmy,  ...adres, udostępnionych przeze mnie danych osobowych na zasadach opisanych w Polityce prywatności dostępnej w Serwisie. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod adresem  biuro@apartamentyjuno.pl, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. Więcej informacji dotyczących przetwarzania danych osobowych - Obowiązek Informacyjny.
                   </label>
 
@@ -72,8 +72,8 @@ const formsection = `
 `;
 
 storiesOf("Layouts", module).add(
-    "Formsection",
-    () => `
+  "Formsection",
+  () => `
     <h2 class="subtitle bold">Form section</h2>
     <hr>
       ${formsection}

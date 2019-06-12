@@ -23,15 +23,14 @@ const Avatar = `
     </p>
 </div>`;
 
-const avatarsection = `
+export const avatarsection = `
 <section class="avatar-section">
-
+  <div class="container">
     <div class="avatar-section__content">
       <div class="avatar-section__boxes">
-
       </div>
       <div class="avatar-section__desc">
-        <div class="card-block">
+
           <h2 class="section-header card-block__title">
             <span class="avatar-section__coltext--primary section-header__sub--left subtitle">
               Biuro sprzedaży
@@ -45,9 +44,10 @@ const avatarsection = `
 			${Avatar}
 			${Avatar}
 		  <!--/ Avatar -->
-			</div>
+
         </div>
       </div>
+    </div>
     </div>
   </section>
 `;
