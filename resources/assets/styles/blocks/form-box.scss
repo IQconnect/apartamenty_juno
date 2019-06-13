@@ -1,9 +1,11 @@
 .form-box {
   @extend .overlay;
+
   position: relative;
 
   &__bg {
     @extend .image;
+
     object-position: center 50%;
     position: absolute;
     top: 0;
@@ -22,7 +24,6 @@
     padding: ($gutter * 1) ($gutter * 15);
     z-index: 10;
     position: relative;
-
     margin-left: auto;
     margin-bottom: 10%;
   }
@@ -39,7 +40,6 @@
     &--message {
       display: grid;
       grid-template-columns: 1fr;
-
     }
 
     &--send {
