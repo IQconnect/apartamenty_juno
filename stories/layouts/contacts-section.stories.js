@@ -1,8 +1,14 @@
-import { storiesOf } from "@storybook/html";
+import {
+  storiesOf
+} from "@storybook/html";
 
 import "../../resources/assets/styles/main.scss";
-import { avatarsection } from "./avatar-section.stories";
-import { formsection } from "./form-section.stories";
+import {
+  avatarsection
+} from "./avatar-section.stories";
+import {
+  formbox
+} from "../blocks/form-box.stories";
 
 const contactsection = `
 <section class="contact-section">
@@ -10,8 +16,7 @@ const contactsection = `
 		<div class="contact-section__boxes">
 
 	${avatarsection}
-	${formsection}
-
+	${formbox}
 	</div>
 	</div>
 </section>
