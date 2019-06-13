@@ -1,10 +1,12 @@
 .form-section {
   @extend .overlay;
+
   color: color(light);
   position: relative;
 
   &__bg {
     @extend .image;
+
     object-position: center 50%;
     position: absolute;
     top: 0;

@@ -1,13 +1,16 @@
 .avatar-section {
   position: relative;
+
   &__coltext {
     &--dark {
       color: color(dark);
     }
+
     &--primary {
       color: color(primary);
     }
   }
+
   &__content {
     margin-top: ($gutter * 19);
     display: flex;
@@ -15,6 +18,7 @@
     z-index: 10;
     position: relative;
   }
+
   &__boxes {
     width: 110%;
     flex-wrap: wrap;
@@ -22,6 +26,7 @@
     grid-template-columns: auto auto;
     grid-gap: ($gutter * 15);
   }
+
   &__desc {
     width: 70%;
     margin: auto;
