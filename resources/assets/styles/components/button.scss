@@ -3,7 +3,6 @@
 
   &:hover {
     background: darken($bg, 8%);
-    transition: all 0.3s ease;
   }
 
   &:active {
@@ -14,15 +13,16 @@
 .button {
   color: color("light");
   text-decoration: none;
-  padding: $gutter ($gutter * 9);
+  padding: $gutter ($gutter * 4);
   border-radius: $gutter * 3;
   font-size: $gutter * 2;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   -webkit-appearance: none;
-  border: 0;
+  border: 2px solid transparent;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &--textchange {
     color: color("secondary");
@@ -30,6 +30,17 @@
 
   &--primary {
     @include button-bg(color("primary"));
+  }
+
+  &--primary-light {
+    @include button-bg(color("light"));
+
+    color: color("primary");
+    border-color: rgba(color("primary"), 0.2);
+
+    &:hover {
+      border-color: rgba(color("primary"), 0.5);
+    }
   }
 
   &--secondary {

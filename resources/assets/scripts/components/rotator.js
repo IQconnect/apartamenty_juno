@@ -1,6 +1,7 @@
 const CONFIG = {
-    TRIGGER : 'opinion-button',
-    ELEM : 'opinion',
+    TRIGGER : 'slide-button',
+    ELEM : 'slide',
+    IMAGE: 'slide-img',
     CLASS : {
         ADD: '-is-active',
         HOLD: '-on-hold',
@@ -9,13 +10,14 @@ const CONFIG = {
 
 const rotator = {
     init() {
-        const { TRIGGER, ELEM, CLASS } = CONFIG;
+        const { TRIGGER, ELEM, IMAGE, CLASS } = CONFIG;
         this.trigger = document.querySelectorAll(`[${TRIGGER}]`);
-        this.opinion = document.querySelectorAll(`[${ELEM}]`);
+        this.elem = document.querySelectorAll(`[${ELEM}]`);
+        this.image = document.querySelectorAll(`[${IMAGE}]`);
         this.activ = 0;
         this.addClass = CLASS.ADD;
         this.holdClass = CLASS.HOLD;
-        this.max = this.opinion.length - 1;
+        this.max = this.elem.length - 1;
         this.addEvents();
     },
 
@@ -38,7 +40,7 @@ const rotator = {
 
                 setTimeout(()=> {
                     $this.disabled = false;
-                }, 1200)
+                }, 400)
             })
         });
     },
@@ -60,7 +62,19 @@ const rotator = {
     },
 
     setCurrent($i) {
-        Array.from(this.opinion).forEach((element, index) => {
+        Array.from(this.elem).forEach((element, index) => {
+            setTimeout(()=>{
+                if(index == $i) element.classList.add(this.addClass);
+                else element.classList.remove(this.addClass);
+            }, 700);
+
+            
+            setTimeout(()=>{
+                element.classList.remove(this.holdClass);
+            }, 800);
+        });  
+
+        Array.from(this.image).forEach((element, index) => {
             setTimeout(()=>{
                 if(index == $i) element.classList.add(this.addClass);
                 else element.classList.remove(this.addClass);
@@ -74,7 +88,8 @@ const rotator = {
     },
 
     holdController($i) {
-         this.opinion[$i].classList.add(this.holdClass);
+         this.elem[$i].classList.add(this.holdClass);
+         this.image[$i].classList.add(this.holdClass);
     },
 };
 

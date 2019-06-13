@@ -11,16 +11,19 @@
 
 <section class="hero">
     <div class="container">
-        <header class="hero__header">
-            <h2 class="headline bold">
-                {!! $header ? $header : $placeholder->title() !!}
-            </h2>
-        </header>
+        <div class="hero__info -is-active" slide>
+            @include('blocks.info-block', ['title'=>'Twoja bezpieczna <br> przystań 1'])
+        </div>
+        <div class="hero__info" slide>
+                @include('blocks.info-block', ['title'=>'Twoja bezpieczna <br> przystań 2'])
+        </div>
     </div>
     @if($image) 
         {!! image($image, 'full', 'hero__image') !!}
     @else 
-        <img class="hero__image" src="@asset($placeholder->image())" alt="placeholder"> 
+        <img class="hero__image -is-active" slide-img src="@asset($placeholder->image())" alt="placeholder"> 
+
+        <img class="hero__image" slide-img src="@asset('images/wiz-mwo-01.png')" alt="placeholder"> 
     @endif
 
     <button class="hero__icon mouse">
