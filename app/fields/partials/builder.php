@@ -8,5 +8,6 @@ $builder = new FieldsBuilder('builder');
 
 $builder
     ->addTab('builder', ['placement' => 'left'])
-        ->addFlexibleContent('components', ['button_label' => 'Add Component']);
+        ->addFlexibleContent('components', ['button_label' => 'Add Component'])
+            ->addLayout('hero'); 
 return $builder;

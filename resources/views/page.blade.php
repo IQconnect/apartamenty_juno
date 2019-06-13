@@ -11,10 +11,11 @@
   @if($sections)
     @foreach ($sections as $section)
       @php ($sectionName = $section['acf_fc_layout']) @endphp
+        @include('layouts.components.' . $sectionName, ['data'=>$section])
+      {{ $sectionName }}
     @endforeach
   @endif
 
-  @include('layouts.components.hero')
   @include('layouts.components.text-section')
   @include('layouts.components.full-img')
   @include('layouts.components.icon-section')
