@@ -12,6 +12,7 @@ import aboutUs from './routes/about';
 
 import slider from './components/slider';
 import rotator from './components/rotator';
+import hamburger from './components/hamburger'
 
 
 /** Populate Router instance with DOM routes */
@@ -29,6 +30,7 @@ jQuery(document).ready(() => {
   routes.loadEvents();
   slider.init();
   rotator.init();
+  hamburger.init();
 });
 
 setTimeout(()=> {

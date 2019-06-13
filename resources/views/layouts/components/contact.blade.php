@@ -1,4 +1,4 @@
-<section class="contact-section section section--full">
+<section class="contact-section section section--full" id="kontakt">
   <div class="contact-section__boxes">
     <div class="avatar-section">
       <div class="container">

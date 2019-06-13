@@ -11,6 +11,25 @@
     opacity: 0;
     pointer-events: none;
 
+    @media (max-width: 1600px) {
+      left: 50%;
+      width: 50%;
+    }
+
+    @media (max-width: 998px) {
+      left: 10%;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+    }
+
+    @media (max-width: 567px) {
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
     &.-is-active {
       pointer-events: initial;
       animation: show 0.4s ease-in both;
@@ -31,6 +50,10 @@
     object-fit: cover;
     z-index: -1;
     opacity: 0;
+
+    @media (max-width: 567px) {
+      display: none;
+    }
 
     &.-is-active {
       pointer-events: initial;
