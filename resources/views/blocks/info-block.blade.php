@@ -1,27 +1,20 @@
+@php
+  if(!$title) $title = $data['title'];    
+  if(!$content) $content = $data['content'];    
+
+@endphp
 <div class="info-block">
   <h2 class="info-block__title subtitle bold">
     {!! $title !!}
   </h2>
-  <p class="info-block__content text light">
-    Chcesz zamieszkać w bezpiecznej i malowniczej okolicy? Zależy Ci na spokoju
-    i komforcie? Osiedle Juno w Mrągowie jest właśnie dla Ciebie! Mieszkania o
-    podwyższonym standardzie, osiedle z dostępem do jeziora i własną plażą,
-    dookoła mazurska zieleń i piękne krajobrazy. Zamieszkaj nad Junem!
-    <br />
-    <br />
-    <strong> Data oddania: </strong> 2019.06.02
-    <br />
-    <strong> Status: </strong> W sprzedaży
-    <br />
-    <strong> Budynek: </strong> 2019.06.02
-    <br />
-    <strong> Adres: </strong> 2019.06.02
-  </p>
+  <div class="info-block__content text light">
+    {!! $content !!}
+  </div>
   <div class="info-block__footer">
-    <a href="#" class="button button--primary text  main text--thin">
+    <a href="./znajdz_mieszkanie" class="button button--primary text  main text--thin">
       Znajdź mieszkanie
     </a>
-    <a href="#" class="button button--primary-light text  main text--thin">
+    <a href="#kontakt" class="button button--primary-light text  main text--thin">
       <img
         class="button__icon"
         src="@asset('images/icons/phone.png')"
