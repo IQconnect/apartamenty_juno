@@ -9,5 +9,8 @@ $builder = new FieldsBuilder('builder');
 $builder
     ->addTab('builder', ['placement' => 'left'])
         ->addFlexibleContent('components', ['button_label' => 'Add Component'])
-            ->addLayout('hero'); 
+            ->addLayout('hero') 
+            ->addLayout(get_field_partial('components.text-section'))
+            ->addLayout(get_field_partial('components.full-img'))
+            ->addLayout(get_field_partial('components.icon-section')); 
 return $builder;

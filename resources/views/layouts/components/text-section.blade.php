@@ -1,27 +1,40 @@
 @php
-    $title = 'Apartamenty Juno';
+    $special = $data['special'];
+    $title = $data['title'];
+    $subtitle = $data['subtitle'];
+    $content = $data['content'];
+    $link = $data['link'];
 @endphp
 
 <section class="section text-section">
     <div class="container">
         <div class="row"> 
             <!-- Header -->
-            @include('components.section-header.special', ['title'=>$title])
+            @if($title)
+            <header class="section__header">
+                @if($special)
+                    @include('components.section-header.special', ['title'=>$title])
+                @else 
+                    @include('components.section-header.default', ['title'=>$title, 'subtitle'=>$subtitle])
+                @endif 
+            </header>
+            @endif
             <!-- /Header -->
 
             <!-- Content -->
             <p class="text-section__content text text--center">
-                Wychodząc na przeciw oczekiwaniom naszych klientów zaprojektowaliśmy dla Państwa osiedle z własną plażą. Większość mieszkań będzie miała widok na jezioro. Na szczególną uwagę zasługują wszystkie mieszkania i apartamenty na drugiej kondygnacji, które będą miały oprócz balkonów zielone tarasy na dachu. Wielkość mieszkań od 42m2. Pierwsze bloki 20m od jeziora.
-Pierwsze mieszkania już w 2018.
+                {!! $content !!}
             </p>
             <!-- /Content -->
 
             <!-- Footer -->
-            {{-- <footer class="section__footer">
-            <a href="#" class="button button--primary text  main text--thin">
-                Lorem ipsum
+            @if($link)
+            <footer class="section__footer">
+            <a href="{{ $link['url'] }}" class="button button--primary text  main text--thin">
+                {{ $link['title'] }}
             </a>
-            </footer> --}}
+            </footer>
+            @endif
             <!-- /Footer -->
         </div>
     </div>
