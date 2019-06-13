@@ -21,7 +21,6 @@
               <!-- Avatar -->
 
               @include('blocks.avatar', ['name'=>'Monika Doe'])
-              @include('blocks.avatar', ['name'=>'John Doe'])
 
               <!--/ Avatar -->
             </div>
