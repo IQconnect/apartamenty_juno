@@ -11,21 +11,17 @@
 
             <!-- Content -->
             <p class="text-section__content text text--center">
-                Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Quisque velit nisi,
-                pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit,
-                eget tincidunt nibh pulvinar a.Mauris blandit aliquet elit, eget tincidunt nibh pulvinar 
-                a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec rutrum congue leo eget 
-                malesuada.Nulla quis lorem ut libero malesuada feugiat. Vivamus magna justo, lacinia eget consectetur sed, 
-                convallis at tellus. Vivamus suscipit tortor eget felis porttitor volutpat.
+                Wychodząc na przeciw oczekiwaniom naszych klientów zaprojektowaliśmy dla Państwa osiedle z własną plażą. Większość mieszkań będzie miała widok na jezioro. Na szczególną uwagę zasługują wszystkie mieszkania i apartamenty na drugiej kondygnacji, które będą miały oprócz balkonów zielone tarasy na dachu. Wielkość mieszkań od 42m2. Pierwsze bloki 20m od jeziora.
+Pierwsze mieszkania już w 2018.
             </p>
             <!-- /Content -->
 
             <!-- Footer -->
-            <footer class="section__footer">
+            {{-- <footer class="section__footer">
             <a href="#" class="button button--primary text  main text--thin">
                 Lorem ipsum
             </a>
-            </footer>
+            </footer> --}}
             <!-- /Footer -->
         </div>
     </div>

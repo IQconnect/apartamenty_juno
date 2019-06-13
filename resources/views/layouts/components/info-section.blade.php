@@ -4,9 +4,9 @@
   <div class="info-section__content container">
     <div class="info-section__boxes">
       <!-- Icon Box -->
-      @include('blocks.icon-box')
-      @include('blocks.icon-box')
-      @include('blocks.icon-box')
+      @include('blocks.icon-box', ['title'=> 'Rodzinnie i komfortowo', 'subtitle'=>'Rodzina, komfort, bezpieczeństwo', 'content'=>'Nasze apartamenty na Osiedlu Juno są doskonałą propozycją dla rodzin, turystów marzących o mieszkaniu na Mazurach, a także dla ludzi, którzy cenią sobie komfort.'])
+      @include('blocks.icon-box', ['title'=> 'Doskonałe położenie', 'subtitle'=>'Rodzina, komfort, bezpieczeństwo', 'content'=>'Osiedle położone jest w północnej części Mrągowa, w cichej i malowniczej okolicy, tuż nad brzegiem jeziora Juno.'])
+      @include('blocks.icon-box', ['title'=> 'Spokój i bezpieczeństwo', 'subtitle'=>'Rodzina, komfort, bezpieczeństwo', 'content'=>'Monitoring i ogrodzenie osiedla to gwarancja bezpieczeństwa dla jego mieszkańców. Rozwiązania, które zastosowaliśmy z pewnością wpłyną na poczucie bezpieczeństwa mieszkańców i gości.'])
       <!--/ Icon Box -->
     </div>
     <div class="info-section__desc">

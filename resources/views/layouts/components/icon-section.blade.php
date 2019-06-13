@@ -23,11 +23,11 @@
       <!-- /Content -->
 
       <!-- Footer -->
-      <footer class="section__footer">
+      {{-- <footer class="section__footer">
         <a href="#" class="button button--primary text  main text--thin">
           Dowiedz się więcej
         </a>
-      </footer>
+      </footer> --}}
       <!-- /Footer -->
     </div>
   </div>

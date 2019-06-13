@@ -3,7 +3,7 @@
 
   background-color: map-get($theme-colors, "light");
   color: theme-color("light");
-  padding: ($gutter * 3) 0;
+  padding: ($gutter * 3);
   position: fixed;
   width: 100%;
   top: 0;
@@ -229,6 +229,7 @@
 
     @include media(md) {
       padding: 0;
+      margin-left: 0;
       flex-direction: row;
     }
   }

@@ -1,5 +1,5 @@
 <div class="avatar text">
-  <img class="avatar__image" src="@asset('images/sofa-bg.jpg')" />
+  <img class="avatar__image" src="@asset('images/monika.png')" />
   <p class="avatar__name text--bold">
     {{ $name }}
   </p>
