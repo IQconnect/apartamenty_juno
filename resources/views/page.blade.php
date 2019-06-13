@@ -15,7 +15,6 @@
     @endforeach
   @endif
 
-  @include('layouts.components.info-section')
   @include('layouts.components.gallery')
   @include('layouts.components.contact')
 

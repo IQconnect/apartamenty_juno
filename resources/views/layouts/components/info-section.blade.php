@@ -1,25 +1,38 @@
+@php
+  $title = get_field('info-section_title', 'options');    
+  $subtitle = get_field('info-section_subtitle', 'options');    
+  $content = get_field('info-section_content', 'options');    
+  $link = get_field('info-section_link', 'options');    
+  $image = get_field('info-section_image', 'options')['ID'];    
+  $icon_boxs = get_field('icon-boxs', 'options'); 
+@endphp
+
 <section class="info-section">
-  <img class="info-section__bg" src="@asset('images/info-section-bg.jpg')" alt="background">
+  {!! image($image, 'full', 'info-section__bg') !!}
 
   <div class="info-section__content container">
+    @if($icon_boxs)
     <div class="info-section__boxes">
+      @foreach ($icon_boxs as $box)
       <!-- Icon Box -->
-      @include('blocks.icon-box', ['title'=> 'Rodzinnie i komfortowo', 'subtitle'=>'Rodzina, komfort, bezpieczeństwo', 'content'=>'Nasze apartamenty na Osiedlu Juno są doskonałą propozycją dla rodzin, turystów marzących o mieszkaniu na Mazurach, a także dla ludzi, którzy cenią sobie komfort.'])
-      @include('blocks.icon-box', ['title'=> 'Doskonałe położenie', 'subtitle'=>'Rodzina, komfort, bezpieczeństwo', 'content'=>'Osiedle położone jest w północnej części Mrągowa, w cichej i malowniczej okolicy, tuż nad brzegiem jeziora Juno.'])
-      @include('blocks.icon-box', ['title'=> 'Spokój i bezpieczeństwo', 'subtitle'=>'Rodzina, komfort, bezpieczeństwo', 'content'=>'Monitoring i ogrodzenie osiedla to gwarancja bezpieczeństwa dla jego mieszkańców. Rozwiązania, które zastosowaliśmy z pewnością wpłyną na poczucie bezpieczeństwa mieszkańców i gości.'])
+      @include('blocks.icon-box', ['data'=> $box])
       <!--/ Icon Box -->
+      @endforeach
     </div>
+    @endif
     <div class="info-section__desc">
       <div class="card-block">
-        @include('components.section-header.left', ['title'=>'Dlaczego warto', 'subtitle'=>'tu zamieszkać?'])
+        @include('components.section-header.left', ['title'=>$title , 'subtitle'=>$subtitle ])
         
         <p class="text card-block__text">
-          Osiedle Juno to nowoczesne 13-rodzinne bloki, które osadzone zostały w pięknym mazurskim krajobrazie, nad brzegiem jeziora Juno w Mrągowie.
+          {!! $content !!}
         </p>
 
-        <a href="#" class="button button--secondary text  main text--thin">
-          Znajdź swoje mieszkanie
+        @if ($link)
+        <a href="{{ $link['url'] }}" class="button button--secondary text  main text--thin">
+          {{ $link['title'] }}
         </a>
+        @endif
       </div>
     </div>
   </div>
