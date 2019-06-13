@@ -1,6 +1,10 @@
 .section {
   padding: $gutter * 16;
 
+  @media (max-width: 998px) {
+    padding: $gutter * 8 0;
+  }
+
   &--full {
     padding-left: 0;
     padding-right: 0;
