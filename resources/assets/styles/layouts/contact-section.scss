@@ -1,6 +1,10 @@
 .contact-section {
   position: relative;
 
+  @media (max-width: 1200px) {
+    padding-bottom: 0;
+  }
+
   &__content {
     padding: ($gutter * 2) ($gutter * 1);
     display: flex;
@@ -15,5 +19,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 0;
+
+    @media (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
   }
 }
