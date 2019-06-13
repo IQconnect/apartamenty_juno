@@ -10,8 +10,7 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 
-//Woocommerce
-import priceFormat from './woocommerce/price-format';
+import slider from './components/slider';
 
 
 /** Populate Router instance with DOM routes */
@@ -27,6 +26,10 @@ const routes = new Router({
 // Load Events
 jQuery(document).ready(() => {
   routes.loadEvents();
-  priceFormat.init();
+  slider.init();
 });
+
+setTimeout(()=> {
+  slider.resize();
+}, 1000)
 
