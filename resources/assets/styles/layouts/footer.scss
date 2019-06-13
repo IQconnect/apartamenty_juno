@@ -16,23 +16,43 @@
     align-items: center;
     justify-content: space-between;
     padding: ($gutter * 7) 0;
+
+    @media (max-width: 998px) {
+      flex-direction: column;
+      align-items: space-between;
+    }
   }
 
   &__left {
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-column-gap: $gutter * 10;
+
+    @media (max-width: 998px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
 
   &__logo {
     max-width: $gutter * 21;
     width: 100%;
     height: auto;
+
+    @media (max-width: 998px) {
+      margin-bottom: $gutter * 4;
+    }
   }
 
   &__nav-wrapper {
     display: flex;
     align-items: center;
+
+    @media (max-width: 998px) {
+      margin-bottom: $gutter * 8;
+    }
   }
 
   &__nav,
@@ -44,6 +64,12 @@
     grid-gap: $gutter * 3;
     column-gap: $gutter * 20;
     padding: 0;
+
+    @media (max-width: 998px) {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
   }
 
   &__link,
