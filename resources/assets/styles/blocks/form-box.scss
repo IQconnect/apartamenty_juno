@@ -1,0 +1,28 @@
+.form-box {
+  @extend .overlay;
+
+  position: relative;
+  padding: ($gutter * 7) ($gutter * 25) 0 ($gutter * 15);
+
+  &__bg {
+    @extend .image;
+
+    object-position: center 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__header {
+    z-index: 10;
+    position: relative;
+  }
+
+  &__content {
+    z-index: 10;
+    position: relative;
+    margin-left: auto;
+    margin-bottom: 10%;
+  }
+}

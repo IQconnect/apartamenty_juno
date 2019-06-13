@@ -15,4 +15,8 @@
       max-width: 100%;
     }
   }
+
+  & + .section {
+    padding-top: 0;
+  }
 }

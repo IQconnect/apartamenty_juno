@@ -15,7 +15,7 @@
   }
 
   &__content {
-    padding: ($gutter * 8) ($gutter * 5);
+    padding: ($gutter * 8) 0;
     display: flex;
     flex-wrap: wrap;
     z-index: 10;
