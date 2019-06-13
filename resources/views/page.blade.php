@@ -19,5 +19,6 @@
   @include('layouts.components.full-img')
   @include('layouts.components.icon-section')
   @include('layouts.components.info-section')
+  @include('layouts.components.contact')
 
 @endsection

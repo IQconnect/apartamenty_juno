@@ -1,6 +1,11 @@
 .section {
   padding: $gutter * 16;
 
+  &--full {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   &__header {
     margin-bottom: $gutter * 6;
   }

@@ -1,70 +1,49 @@
-<section class="form-section">
-  <img class="form-section__bg" src="${sectionbg}" alt="background">
-  <div class="container">
-    <div class="form-section__content">
-      <div class="form-section__desc">
-        <div class="form-section-box">
-          <!-- HEADER -->
-          <h2 class="section-header card-block__title">
-            <span class="title section-header__title--left">
-              Potrzebujesz
-            </span>
-            <span class="section-header__sub--left subtitle ">
-              pomocy?
-            </span>
-          </h2>
-          <!-- /HEADER -->
+<section class="contact-section section section--full">
+  <div class="contact-section__boxes">
+    <div class="avatar-section">
+      <div class="container">
+        <div class="avatar-section__content">
+          <div class="avatar-section__boxes"></div>
+          <div class="avatar-section__desc">
+            <h2 class="section-header card-block__title">
+              <span
+                class="avatar-section__coltext--primary section-header__sub--left subtitle"
+              >
+                Biuro sprzedaży
+              </span>
+            </h2>
+            <p class="text card-block__text avatar-section__coltext--dark">
+              Osiedle Juno to nowoczesne 13-rodzinne bloki, które osadzone
+              zostały w pięknym mazurskim krajobrazie, nad brzegiem jeziora Juno
+              w Mrągowie.
+            </p>
+            <div class="avatar-section__boxes">
+              <!-- Avatar -->
 
-          <!-- FORM -->
-          <form id="form" action="mail.php" method="POST">
-            <div class="form-section--row">
-              <div>
-                <label class="form__label text">
-                  Imie i nazwisko
-                </label>
-                <p>
-                  <input class="form__input">
-                </p>
-              </div>
+              @include('blocks.avatar', ['name'=>'Monika Doe'])
+              @include('blocks.avatar', ['name'=>'John Doe'])
+
+              <!--/ Avatar -->
             </div>
-            <div class="form-section--row">
-              <div>
-                <label class="form__label text">Mail</label>
-                <p>
-                  <input class="form__input">
-                </p>
-              </div>
-              <div>
-                <label class = "form__label text" > Telefon </label>
-                <p>
-                <input class="form__input">
-                </p>
-              </div>
-                </div>
-                <label class="form__label  text" for="name">
-                Wiadomość
-                </label>
-                <p>
-                <textarea class="form__textarea" rows="12" name="textarea" ></textarea>
-                </p>
-                <div class="form__checkcontainer">
-                <input class="form__check" type="checkbox" name="checkbox">
-                <label class="form__labelcheck small-text form__label--zgoda" for="name">
-                Zapoznałem się z Polityką prywatności serwisu apartamentyjuno.pl oraz wyrażam zgodę na przetwarzanie przez ...Nazwa firmy,  ...adres, udostępnionych przeze mnie danych osobowych na zasadach opisanych w Polityce prywatności dostępnej w Serwisie. Oświadczam, że są mi znane cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod adresem  biuro@apartamentyjuno.pl, bez wpływu na zgodność z prawem przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem. Więcej informacji dotyczących przetwarzania danych osobowych - Obowiązek Informacyjny.
-                </label>
-                </div>
-                </br>
-                <div class="form-section--row">
-                <div>
-                <button href="#" class="button button--secondary text  main text--thin">
-                Wyślij
-                </button>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>
+
+    <div class="form-box">
+      <img
+        class="form-box__bg"
+        src="@asset('images/form-section-bg.png')"
+        alt="background"
+      />
+      <!-- form-box__header -->
+      <div class="form-box__header">
+        @include('components.section-header.left', ['title'=>'Potrzebujesz', 'subtitle'=>'pomocy'])
+      </div>
+      <!-- form-box__content form -->
+      <div class="form-box__content">
+        @include('components.form')
+      </div>
+    </div>
   </div>
-</div>
 </section>
