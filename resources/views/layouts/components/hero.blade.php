@@ -25,8 +25,4 @@
 
         <img class="hero__image" slide-img src="@asset('images/wiz-mwo-01.png')" alt="placeholder"> 
     @endif
-
-    <button class="hero__icon mouse">
-        <span class="mouse__dot"></span>
-    </button>
 </section>
