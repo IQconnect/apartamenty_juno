@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 
 import slider from './components/slider';
+import rotator from './components/rotator';
 
 
 /** Populate Router instance with DOM routes */
@@ -27,6 +28,7 @@ const routes = new Router({
 jQuery(document).ready(() => {
   routes.loadEvents();
   slider.init();
+  rotator.init();
 });
 
 setTimeout(()=> {
