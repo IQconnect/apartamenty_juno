@@ -1,0 +1,15 @@
+.big-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__img {
+    width: $gutter * 12;
+    height: auto;
+  }
+
+  &__title {
+    color: color("primary");
+  }
+}

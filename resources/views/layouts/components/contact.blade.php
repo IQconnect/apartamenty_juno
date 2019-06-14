@@ -43,7 +43,7 @@
       {!! image($form_bg, 'full', 'form-box__bg') !!}
       <!-- form-box__header -->
       <div class="form-box__header">
-        @include('components.section-header.left', ['title'=>'Potrzebujesz', 'subtitle'=>'pomocy'])
+        @include('components.section-header.left', ['title'=>'Potrzebujesz', 'subtitle'=>'pomocy', 'color'=>'light'])
       </div>
       <!-- form-box__content form -->
       <div class="form-box__content">

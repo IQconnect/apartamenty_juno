@@ -22,7 +22,7 @@
     @endif
     <div class="info-section__desc">
       <div class="card-block">
-        @include('components.section-header.left', ['title'=>$title , 'subtitle'=>$subtitle ])
+        @include('components.section-header.left', ['title'=>$title , 'subtitle'=>$subtitle, 'color'=>'light' ])
         
         <p class="text card-block__text">
           {!! $content !!}

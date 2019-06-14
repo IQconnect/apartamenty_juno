@@ -11,7 +11,7 @@ $builder
     ->addText('title', ['title'=>'Tytuł'])
     ->addText('subtitle', ['title'=>'Subtitle'])
         ->conditional('special', '==', '0')
-    ->addTextarea('content', ['title'=>'Content'])
+    ->addTextarea('content', ['title'=>'Content', 'new_lines'=>'br'])
     ->addLink('link', ['title'=>'Link']);
     ;
 return $builder;

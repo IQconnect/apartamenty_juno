@@ -27,18 +27,25 @@
   &--light {
     color: map-get($theme-colors, light);
   }
+
+  &--dark {
+    color: color("primary");
+  }
 }
 
 .subtitle {
   @include cssLock("font-size", 360, 1920, (16, 32));
 
-  color: map-get($theme-colors, primary);
   font-family: map-get($font-family, title);
   font-weight: 800;
 
   @extend %text;
 
   &--light {
+    color: map-get($theme-colors, light);
+  }
+
+  &--dark {
     color: map-get($theme-colors, light);
   }
 }

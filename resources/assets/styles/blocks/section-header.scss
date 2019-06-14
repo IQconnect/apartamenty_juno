@@ -21,7 +21,6 @@
       text-align: left;
       display: block;
       margin-left: auto;
-      color: color(light);
     }
   }
 
@@ -34,7 +33,6 @@
       padding-top: $gutter * 1.5;
       display: block;
       text-align: left;
-      color: color(light);
 
       &::after {
         @include cssLock("width", 360, 1440, (50, 100));
