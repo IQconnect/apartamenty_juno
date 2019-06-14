@@ -1,6 +1,12 @@
+@php
+    $img = $data['img']['ID'];
+    $title = $data['title'];
+@endphp
+
 <section class="small-hero">
-    <img class="small-hero__image" src="@asset('images/wiz/0.jpg')" alt="">
+    {!! image($img, 'full', 'small-hero__image') !!}
+
     <header class="small-hero__header">
-        @include('components.section-header.special', ['title'=>'O inwestycji', 'color'=>'light'])
+        @include('components.section-header.special', ['title'=>$title, 'color'=>'light'])
     </header>
 </section>

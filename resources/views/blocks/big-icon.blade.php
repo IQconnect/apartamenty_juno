@@ -1,6 +1,13 @@
+@php
+    $icon = $data['img']['ID'];
+    $text = $data['text'];
+@endphp
+
 <div class="big-icon">
-    <img class="big-icon__img" src="@asset('images/family.png')" alt="">
-    <h3 class="big-icon__title" class="subtitle text--center">
-        test
+
+    {!! image($icon, 'full', 'big-icon__img') !!}
+
+    <h3 class="big-icon__title large-text text--center">
+        {!! $text !!}
     </h3>
 </div>

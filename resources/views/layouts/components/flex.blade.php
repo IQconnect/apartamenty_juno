@@ -1,11 +1,19 @@
-<section class="flex">
+@php
+    $title = $data['title'];
+    $subtitle = $data['subtitle'];
+    $content = $data['content'];
+    $img = $data['img']['ID'];
+    $reverse = $data['reverse'];
+@endphp
+
+<section class="flex @if($reverse) flex--reverse @endif">
     <div class="flex__content">
-        <header>
-            @include('components.section-header.left', ['title'=>'Dlaczego warto', 'subtitle'=>'Tu zamieszkać', 'color'=>'dark'])
+        <header class="flex__header">
+            @include('components.section-header.left', ['title'=>$title , 'subtitle'=>$subtitle  , 'color'=>'dark'])
         </header>
-        <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe iusto dicta ut et vero cupiditate eos accusantium. Provident neque cupiditate quibusdam voluptatem eveniet sapiente quisquam aliquam accusamus corrupti fugiat? Officia.  
+        <p class="flex__text text">
+            {!! $content !!}
         </p>
     </div>
-    <img src="@asset('images/wiz/0.jpg')" alt="">
+    {!! image($img, 'full', 'flex__img') !!}
 </section>

@@ -11,6 +11,10 @@
   z-index: map-get($z-index, "header");
   transition: $transition;
 
+  @media (max-width: 998px) {
+    width: calc(100% - 44px);
+  }
+
   @include media(md) {
     color: theme-color("primary");
   }

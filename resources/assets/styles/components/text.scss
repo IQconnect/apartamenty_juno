@@ -48,6 +48,10 @@
   &--dark {
     color: map-get($theme-colors, light);
   }
+
+  &--center {
+    text-align: center;
+  }
 }
 
 .text {
