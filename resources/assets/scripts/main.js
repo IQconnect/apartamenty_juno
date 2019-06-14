@@ -33,7 +33,7 @@ jQuery(document).ready(() => {
   hamburger.init();
 });
 
-setTimeout(()=> {
-  slider.resize();
-}, 1000)
+// setTimeout(()=> {
+//   slider.resize();
+// }, 1000)
 

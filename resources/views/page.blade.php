@@ -15,7 +15,4 @@
     @endforeach
   @endif
 
-  @include('layouts.components.gallery')
-  @include('layouts.components.contact')
-
 @endsection

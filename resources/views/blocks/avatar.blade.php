@@ -1,17 +1,24 @@
+@php
+    $img = $data['img']['ID'];
+    $name = $data['contact']['name'];
+    $tel = $data['contact']['tel'];
+    $mail = $data['contact']['mail'];
+@endphp
+
 <div class="avatar text">
-  <img class="avatar__image" src="@asset('images/monika.png')" />
+  {!! image($img, 'full', 'avatar__image') !!}
   <p class="avatar__name text--bold">
     {{ $name }}
   </p>
   <p class="small-text text--thin">
     tel:
-    <a href="#" class="avatar__link text small-text ">
-      +48 500 526 600
+    <a href="tel:{{ str_replace(' ', '', $tel) }}" class="avatar__link text small-text ">
+      {{ $tel }}
     </a>
     <br />
     mail:
-    <a href="#" class="avatar__link text small-text ">
-      biuro@apartamentyjuno.pl
+    <a href="mailto:{{ $mail }}" class="avatar__link text small-text ">
+     {{ $mail }}
     </a>
   </p>
 </div>

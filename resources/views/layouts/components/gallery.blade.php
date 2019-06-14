@@ -1,14 +1,13 @@
+@php
+    $gallery = $data['gallery'];
+@endphp
+
+@if($gallery)
 <section class="gallery">
+    @foreach ($gallery as $img)
     <div class="gallery__cell">
-        <img src="@asset('images/wiz/0.jpg')" alt="">
+        {!! image($img['ID'], 'full','') !!}
     </div>
-    <div class="gallery__cell">
-        <img src="@asset('images/wiz/1.jpg')" alt="">
-    </div>
-    <div class="gallery__cell">
-        <img src="@asset('images/wiz/2.jpg')" alt="">
-    </div>
-    <div class="gallery__cell">
-        <img src="@asset('images/wiz/3.jpg')" alt="">
-    </div>
+    @endforeach
 </section>
+@endif

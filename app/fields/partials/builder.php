@@ -13,5 +13,7 @@ $builder
             ->addLayout(get_field_partial('components.text-section'))
             ->addLayout(get_field_partial('components.full-img'))
             ->addLayout(get_field_partial('components.icon-section'))
-            ->addLayout('info-section');
+            ->addLayout(get_field_partial('components.gallery'))
+            ->addLayout('info-section')
+            ->addLayout('contact');
 return $builder;

@@ -1,3 +1,13 @@
+@php
+  $office_title = get_field('office_title', 'option');
+  $office_content = get_field('office_content', 'option');
+  $office_persons = get_field('office_persons', 'option');
+  $form_title = get_field('form_title', 'option');
+  $form_subtitle = get_field('form_subtitle', 'option');
+  $form_terms = get_field('form_terms', 'option');
+  $form_bg = get_field('form_bg', 'option')['ID'];
+@endphp
+
 <section class="contact-section section section--full" id="kontakt">
   <div class="contact-section__boxes">
     <div class="avatar-section">
@@ -9,32 +19,28 @@
               <span
                 class="avatar-section__coltext--primary section-header__sub--left subtitle"
               >
-                Biuro sprzedaży
+                {{ $office_title }}
               </span>
             </h2>
             <p class="text card-block__text avatar-section__coltext--dark">
-              Osiedle Juno to nowoczesne 13-rodzinne bloki, które osadzone
-              zostały w pięknym mazurskim krajobrazie, nad brzegiem jeziora Juno
-              w Mrągowie.
+              {{ $office_content }}
             </p>
+            @if($office_persons)
             <div class="avatar-section__boxes">
               <!-- Avatar -->
-
-              @include('blocks.avatar', ['name'=>'Monika Doe'])
-
+              @foreach ($office_persons as $person)  
+                @include('blocks.avatar', ['data'=>$person])
+              @endforeach
               <!--/ Avatar -->
             </div>
+            @endif
           </div>
         </div>
       </div>
     </div>
 
     <div class="form-box">
-      <img
-        class="form-box__bg"
-        src="@asset('images/form-section-bg.png')"
-        alt="background"
-      />
+      {!! image($form_bg, 'full', 'form-box__bg') !!}
       <!-- form-box__header -->
       <div class="form-box__header">
         @include('components.section-header.left', ['title'=>'Potrzebujesz', 'subtitle'=>'pomocy'])

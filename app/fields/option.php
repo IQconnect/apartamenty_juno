@@ -52,9 +52,20 @@ $option_page
         ->addText('footer_nip', ['label' => 'NIP'] )
         ->addText('footer_regon', ['label' => 'REGON'] )
     ->addTab('Formularz kontaktowy', ['placement' => 'left'])
-        ->addText('form_title', ['label' => 'Nagłówek formularza'])
+        ->addText('office_title', ['label' => 'Tytuł biuro sprzedaży'])
+        ->addTextarea('office_content', ['label' => 'Treść biuro sprzedaży'])
+        ->addRepeater('office_persons', ['label' => 'Osoby do kontatku'])
+            ->addImage('img',  ['label' => 'Zdjęcie'])
+            ->addGroup('contact',  ['label' => 'Informacje kontaktowe'])
+                ->addText('name', ['label' => 'Imię i nazwisko'])
+                ->addText('tel', ['label' => 'Telefon'])
+                ->addText('mail', ['label' => 'E-mail'])
+            ->endGroup()
+        ->endRepeater()    
+        ->addText('form_title', ['label' => 'Tytuł formularza'])
         ->addText('form_subtitle', ['label' => 'Podtytuł formularza'])
-        ->addTextarea('form_terms', ['label' => 'Treść checbkoxa']);
+        ->addTextarea('form_terms', ['label' => 'Treść checbkoxa'])
+        ->addImage('form_bg', ['label' => 'Zdjęcie w tle']);
         
 
     
