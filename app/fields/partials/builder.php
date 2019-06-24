@@ -16,6 +16,8 @@ $builder
             ->addLayout(get_field_partial('components.gallery'))
             ->addLayout('info-section')
             ->addLayout('contact')
+            ->addLayout('bildings')
+            ->addLayout('content')
             ->addLayout(get_field_partial('components.small-hero'))
             ->addLayout(get_field_partial('components.stats'))
             ->addLayout(get_field_partial('components.flex'));

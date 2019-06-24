@@ -11,10 +11,10 @@
     {!! $content !!}
   </div>
   <div class="info-block__footer">
-    <a href="./znajdz_mieszkanie" class="button button--primary text  main text--thin">
+    <a href="./znajdz-mieszkanie" class="button button--primary text  main text--thin">
       Znajdź mieszkanie
     </a>
-    <a href="#kontakt" class="button button--primary-light text  main text--thin">
+    <a href="./kontakt" class="button button--primary-light text  main text--thin">
       <img
         class="button__icon"
         src="@asset('images/icons/phone.png')"
