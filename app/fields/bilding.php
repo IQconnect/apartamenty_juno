@@ -13,6 +13,7 @@ $page
     ->addText('subtitle', ['label'=>'Typ budynku'])
     ->addImage('img', ['label'=>'Zdjęcie w tle'])
     ->addRepeater('flats', ['title'=>'Mieszkania'])
+        ->addText('nr', ['label'=> 'Numer'])
         ->addText('area', ['label'=> 'Powierzchnia'])
         ->addText('tarace', ['label'=> 'Taras / balkon'])
         ->addNumber('floor', ['label'=> 'Piętro'])
@@ -20,7 +21,11 @@ $page
             ->addChoice('wolne')
             ->addChoice('zajęte')
             ->addChoice('sprzedane')
-        ->addText('price', ['label'=> 'Cena'])
+        ->addGroup('price', ['label'=> 'Cena'])
+            ->addText('regular', ['label'=> 'Cena'])
+            ->addText('promo', ['label'=> 'Cena promocyjna'])
+            ->addTextarea('promo_text', ['label'=> 'Wiadomość'])
+        ->endGroup()
         ->addFile('plan', ['label'=> 'Plan']);
     ;
 return $page;

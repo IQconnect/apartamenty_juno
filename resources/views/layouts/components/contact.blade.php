@@ -39,11 +39,16 @@
       </div>
     </div>
 
+    @php
+        $title = get_field('form_title', 'options');
+        $subtitle = get_field('form_subtitle', 'options');
+    @endphp
+
     <div class="form-box">
       {!! image($form_bg, 'full', 'form-box__bg') !!}
       <!-- form-box__header -->
       <div class="form-box__header">
-        @include('components.section-header.left', ['title'=>'Potrzebujesz', 'subtitle'=>'pomocy', 'color'=>'light'])
+        @include('components.section-header.left', ['title'=>$title, 'subtitle'=>$subtitle, 'color'=>'light'])
       </div>
       <!-- form-box__content form -->
       <div class="form-box__content">

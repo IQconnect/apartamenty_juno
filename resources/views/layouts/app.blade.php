@@ -19,6 +19,7 @@
     </div>
     @php do_action('get_footer') @endphp
     @include('partials.footer')
+    @include('partials.popup')
     @php wp_footer() @endphp
   </body>
 </html>

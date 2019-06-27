@@ -40,6 +40,7 @@
 @import "components/hamburger";
 @import "components/sub-menu";
 @import "components/icon-box";
+@import "components/price";
 
 /** Blocks */
 @import "blocks/section-header";
@@ -69,3 +70,7 @@
 @import "layouts/bildings";
 @import "layouts/table";
 @import "layouts/content";
+@import "layouts/popup";
+
+/** PAges */
+@import "pages/znajdz-mieszkanie";

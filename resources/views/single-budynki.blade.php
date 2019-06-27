@@ -47,7 +47,7 @@
                     @foreach ($flats as $flat)
                     <tr>
                         <td>
-                            {{ $loop->iteration }}
+                            {{ $flat['nr'] }}
                         </td>
                         <td>
                             {{ $flat['area'] }} m²
@@ -72,8 +72,23 @@
                             </span>
                         </td>
                         <td>
-                            @if( $flat['price'])
-                                {{ $flat['price'] }}
+                            @if($flat['price']['promo'])
+
+                            <span class="price price--promo">
+                                {{ $flat['price']['promo'] }}
+                            </span>
+                            <span class="price price--del">
+                                {{ $flat['price']['regular'] }}
+                            </span>
+
+                            @if ($flat['price']['promo_text'])
+                            <span class="price price--message">
+                                {{ $flat['price']['promo_text'] }}
+                            </span>
+                            @endif
+                            
+                            @elseif( $flat['price']['regular'])
+                                {{ $flat['price']['regular'] }}
                             @else
                                 X
                             @endif

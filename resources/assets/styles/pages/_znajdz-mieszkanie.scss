@@ -1,0 +1,9 @@
+.znajdz-mieszkanie {
+  height: auto;
+
+  .full-img {
+    &__bg {
+      object-position: top;
+    }
+  }
+}
