@@ -50,10 +50,12 @@ table {
 
         &.wolne {
           background: color("free");
+          letter-spacing: 2px;
         }
 
         &.zajęte {
           background: color("taken");
+          color: color("dark");
         }
 
         &.sprzedane {

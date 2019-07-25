@@ -17,7 +17,7 @@
   display: none;
 
   @media (max-width: 992px) {
-    display: none;
+    display: none !important;
   }
 
   &.-is-active {
@@ -29,6 +29,10 @@
     @include cssLock("padding", 360, 1920, (16, 20));
 
     position: relative;
+
+    @media (max-width: 1200px) {
+      display: none !important;
+    }
   }
 
   &__title {

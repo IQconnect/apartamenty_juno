@@ -30,16 +30,7 @@
         class="form__labelcheck small-text form__label--textnearcheck "
         for="checkbox"
       >
-        Zapoznałem się z Polityką prywatności serwisu apartamentyjuno.pl oraz
-        wyrażam zgodę na przetwarzanie przez ...Nazwa firmy, ...adres,
-        udostępnionych przeze mnie danych osobowych na zasadach opisanych w
-        Polityce prywatności dostępnej w Serwisie. Oświadczam, że są mi znane
-        cele przetwarzania danych oraz moje uprawnienia. Niniejsza zgoda może
-        być wycofana w dowolnym czasie poprzez kontakt z Administratorem pod
-        adresem biuro@apartamentyjuno.pl, bez wpływu na zgodność z prawem
-        przetwarzania, którego dokonano na podstawie zgody przed jej cofnięciem.
-        Więcej informacji dotyczących przetwarzania danych osobowych - Obowiązek
-        Informacyjny.
+        {{ get_field('form_terms', 'options') }}
       </label>
     </div>
   </div>
