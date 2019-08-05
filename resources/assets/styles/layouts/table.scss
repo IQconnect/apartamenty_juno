@@ -113,10 +113,17 @@ table {
 
   img {
     width: $gutter * 4;
+    margin: ($gutter * 0.5);
   }
 
   a {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .table__plan {
     display: flex;
     justify-content: center;
     align-items: center;

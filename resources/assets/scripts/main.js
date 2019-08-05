@@ -12,8 +12,9 @@ import aboutUs from './routes/about';
 
 import slider from './components/slider';
 import rotator from './components/rotator';
-import hamburger from './components/hamburger'
-import popup from './components/popup'
+import hamburger from './components/hamburger';
+import popup from './components/popup';
+import ExtraMenu from './components/extra-menu';
 
 
 /** Populate Router instance with DOM routes */
@@ -33,6 +34,7 @@ jQuery(document).ready(() => {
   rotator.init();
   hamburger.init();
   popup.init();
+  ExtraMenu.init();
 });
 
 // setTimeout(()=> {

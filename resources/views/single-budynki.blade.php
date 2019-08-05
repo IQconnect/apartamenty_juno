@@ -38,7 +38,7 @@
                             Cena
                         </th>
                         <th>
-                            Plan
+                            Zobacz mieszkanie
                         </th>
                     </tr>
                 </thead>
@@ -90,14 +90,19 @@
                             @elseif( $flat['price']['regular'])
                                 {{ $flat['price']['regular'] }}
                             @else
-                                X
+                                <a href="{{ home_url('/kontakt') }}"> Zapytaj o cenę</a>
                             @endif
                         </td>
-                        <td>
+                        <td class="table__plan">
                             @if( $flat['plan'])
-                                <a href="{{ $flat['plan']['url'] }}">
+                            <div class="table__plan">
+                                <a  data-fancybox href="{{ $flat['plan']['url'] }}">
+                                    <img src="@asset('images/eye.png')" alt="Plan mieszkania...">
+                                </a>
+                                <a  href="{{ $flat['plan']['url'] }}">
                                     <img src="@asset('images/download.png')" alt="Plan mieszkania...">
                                 </a>
+                            </div>
                             @else
                                 X
                             @endif

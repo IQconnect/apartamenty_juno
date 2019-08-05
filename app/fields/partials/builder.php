@@ -9,7 +9,7 @@ $builder = new FieldsBuilder('builder');
 $builder
     ->addTab('builder', ['placement' => 'left'])
         ->addFlexibleContent('components', ['button_label' => 'Add Component'])
-            ->addLayout('hero') 
+            ->addLayout('hero')
             ->addLayout(get_field_partial('components.text-section'))
             ->addLayout(get_field_partial('components.full-img'))
             ->addLayout(get_field_partial('components.icon-section'))
@@ -20,5 +20,6 @@ $builder
             ->addLayout('content')
             ->addLayout(get_field_partial('components.small-hero'))
             ->addLayout(get_field_partial('components.stats'))
-            ->addLayout(get_field_partial('components.flex'));
+            ->addLayout(get_field_partial('components.flex'))
+            ->addLayout(get_field_partial('components.extra-menu'));
 return $builder;

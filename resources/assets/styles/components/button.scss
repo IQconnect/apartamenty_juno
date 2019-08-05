@@ -51,6 +51,19 @@
     @include button-bg(color("light"));
   }
 
+  &--full-sm {
+    display: block;
+    text-align: center;
+
+    @include media(sm) {
+      display: inline;
+    }
+  }
+
+  &.-is-active {
+    background-color: color("secondary");
+  }
+
   &__icon {
     height: $gutter * 3;
     width: $gutter * 3;
