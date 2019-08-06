@@ -7,6 +7,6 @@
     {{ $title }}
   </h3>
   <p class="small-text">
-    {{ $content }}
+    {!! $content !!}
   </p>
 </div>
