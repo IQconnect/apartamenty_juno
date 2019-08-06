@@ -1,0 +1,14 @@
+.super-list {
+  &__list {
+    @extend .list;
+
+    @include cssLock("grid-column-gap", 360, 1920, ($gutter_num * 8, $gutter_num * 16));
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__elem {
+    height: 100%;
+  }
+}
