@@ -1,3 +1,16 @@
+<div class="side-box">
+  <div class="fb-page" data-href="https://www.facebook.com/ApartamentyJuno/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+    <blockquote cite="https://www.facebook.com/ApartamentyJuno/" class="fb-xfbml-parse-ignore">
+      <a href="https://www.facebook.com/ApartamentyJuno/">
+        Apartamenty Juno
+      </a>
+    </blockquote>
+  </div>
+  <div class="side-box__fb-button">
+    <i class="fab fa-facebook-f"></i>
+  </div>
+</div>
+
 <footer class="footer">
   <img class="footer__bg" src="@asset('images/footer.png')" alt="background" />
   <div class="container">
@@ -35,3 +48,5 @@
       });
   });
 </script>
+
+<script async defer src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v3.2"></script>
