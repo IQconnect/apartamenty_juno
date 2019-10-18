@@ -2,7 +2,7 @@
   @extend .overlay;
 
   position: relative;
-  padding: ($gutter * 7) ($gutter * 25) 0 ($gutter * 15);
+  padding: ($gutter * 7) ($gutter * 13) 0 ($gutter * 15);
 
   @media (max-width: 1200px) {
     padding: ($gutter * 7) 0 0 0;

@@ -4,11 +4,16 @@
   padding: $gutter * 4;
   text-align: center;
 
+  &:nth-child(3) {
+    @media (max-width: 1600px) {
+      display: none;
+    }
+  }
+
   &__icon {
     width: $gutter * 8;
     height: auto;
-    margin: auto;
-    padding: $gutter * 3;
+    margin: $gutter * 3 auto;
   }
 
   &__line {

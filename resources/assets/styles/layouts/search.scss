@@ -1,0 +1,150 @@
+.search {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  overflow-y: auto;
+  background: color(primary);
+  color: color(light);
+  z-index: z-index(popup) * 100;
+  padding: $gutter * 3 $gutter * 6;
+  opacity: 0;
+  pointer-events: none;
+  transition: $transition;
+
+  @include media(sm) {
+    padding: $gutter * 6 $gutter * 6;
+    width: 60vw;
+    max-height: 90vh;
+    height: fit-content;
+  }
+
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(color("dark"), 0.8);
+    z-index: -1;
+  }
+
+  &.-is-active {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  &__title {
+    @include cssLock("margin", 360, 1920, ($gutter_num * 4, $gutter_num * 8));
+
+    margin-left: 0;
+    margin-right: 0;
+    color: color(light);
+    width: 100%;
+    text-align: center;
+  }
+
+  &__subtitle {
+    @include cssLock("margin", 360, 1920, ($gutter_num * 2, $gutter_num * 4));
+
+    margin-left: 0;
+    margin-right: 0;
+    color: color(light);
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+
+  &__close {
+    z-index: 10;
+    position: absolute;
+    top: $gutter * 4;
+    right: $gutter * 2;
+    bottom: unset;
+    left: unset;
+    width: $gutter * 4;
+    height: $gutter * 4;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      @extend .absolute;
+
+      content: "";
+      width: 100%;
+      height: $gutter * 0.3;
+      background-color: color("light");
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(135deg);
+    }
+  }
+
+  &__form-wrapper {
+    @include cssLock("margin", 360, 1920, ($gutter_num * 4, $gutter_num * 8));
+
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+
+    &--bildings {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__footer {
+    @include cssLock("margin", 360, 1920, ($gutter_num * 4, $gutter_num * 8));
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .ui-slider {
+    margin-bottom: $gutter * 2;
+  }
+
+  .ui-slider-handle {
+    border-radius: 100%;
+    width: $gutter * 3;
+    height: $gutter * 3;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: lighten(color(primary), 20%);
+    transform: scale(1.1);
+  }
+
+  .ui-slider-range {
+    background-color: lighten(color(primary), 40%);
+    border-radius: 0;
+  }
+
+  &__slider-input {
+    background: transparent;
+    border: 0;
+    width: $gutter * 10;
+    text-align: left;
+    position: absolute;
+    color: color(light);
+    overflow: visible;
+    user-select: none;
+    pointer-events: none;
+    transform: translateX($gutter * 0.9);
+  }
+
+  &__button {
+    margin: 0 auto;
+  }
+}

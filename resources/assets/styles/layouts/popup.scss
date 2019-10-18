@@ -16,6 +16,16 @@
   transition: 0.4s;
   display: none;
 
+  &::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(color("dark"), 0.8);
+  }
+
   @media (max-width: 992px) {
     display: none !important;
   }
@@ -53,6 +63,12 @@
 
   &__form {
     padding: 5%;
+
+    .form-box {
+      &::before {
+        z-index: -1;
+      }
+    }
 
     .form-box__content {
       width: 100% !important;

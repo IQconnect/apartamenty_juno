@@ -2,7 +2,7 @@
   @extend .overlay;
 
   padding-top: $gutter * 20;
-  height: 35vh;
+  height: calc(35vh + #{$gutter * 20});
   min-height: 300px;
   display: flex;
   justify-content: center;

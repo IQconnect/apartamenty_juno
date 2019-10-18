@@ -20,25 +20,29 @@
   }
 
   &__input {
-    border-radius: $gutter * 3;
+    border-radius: 0;
     outline: none;
-    border: none;
     padding-left: ($gutter * 2);
     width: 100%;
     height: ($gutter * 4);
+    background: transparent;
+    border: 1px solid color(light);
+    color: color(light);
   }
 
   &__textarea {
-    border-radius: $gutter * 3;
+    border-radius: 0;
     outline: none;
     padding: ($gutter * 2) 0 0 ($gutter * 2);
-    border: none;
     width: 100%;
     resize: none;
+    background: transparent;
+    border: 1px solid color(light);
+    color: color(light);
   }
 
   &__label {
-    margin: $gutter ($gutter * 2) $gutter ($gutter * 2);
+    margin: $gutter 0;
     color: color("light");
 
     &--textnearcheck {

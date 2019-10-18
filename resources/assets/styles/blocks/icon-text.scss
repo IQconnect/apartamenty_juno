@@ -1,9 +1,10 @@
 .icon-text {
   display: flex;
   padding: ($gutter * 2) ($gutter * 2.1) ($gutter * 9);
+  align-items: center;
 
   &__icon {
-    height: $gutter * 8;
+    height: auto;
     width: auto;
   }
 

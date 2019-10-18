@@ -1,0 +1,28 @@
+.bilding-button {
+  @extend .overlay;
+
+  border: 0;
+  background: 0;
+  position: relative;
+  width: calc(100% / 4);
+  min-width: $gutter * 15;
+  height: $gutter*10;
+  margin: $gutter * 1.5;
+
+  &.-is-active {
+    border: 2px solid color(free);
+  }
+
+  &__image {
+    @extend .absolute;
+    @extend .image;
+
+    z-index: -1;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    color: color(light);
+  }
+}

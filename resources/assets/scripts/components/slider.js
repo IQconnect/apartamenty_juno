@@ -19,6 +19,9 @@ const Slider = {
                     autoPlay: true,
                 });
 
+                setTimeout(()=> {
+                    this.slider.resize();
+                }, 1000)
             });
         }
     },

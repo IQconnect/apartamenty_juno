@@ -22,6 +22,10 @@
             {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'header__menu']) !!}
           @endif
         </nav>
+        <button class="header__button" data-toggle-search>
+          <img src="@asset('images/lupa.png')" alt="Szukaj">
+          Wyszukiwarka
+        </button>
       </div>
     </div>
   </div>

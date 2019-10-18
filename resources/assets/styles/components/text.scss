@@ -107,3 +107,9 @@
 .light {
   font-weight: 300;
 }
+
+.my-menu-link {
+  @include cssLock("font-size", 360, 1920, (10, 16));
+
+  font-weight: 400;
+}

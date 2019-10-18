@@ -2,6 +2,7 @@
 
 @import "vendors/scss-lock/css-lock";
 @import "vendors/fonts";
+@import "vendors/jquery-ui";
 
 /** Common */
 
@@ -41,6 +42,7 @@
 @import "components/sub-menu";
 @import "components/icon-box";
 @import "components/price";
+@import "components/bilding-button";
 
 /** Blocks */
 @import "blocks/section-header";
@@ -76,6 +78,7 @@
 @import "layouts/extra-menu";
 @import "layouts/super-list";
 @import "layouts/side-box";
+@import "layouts/search";
 
 /** PAges */
 @import "pages/znajdz-mieszkanie";

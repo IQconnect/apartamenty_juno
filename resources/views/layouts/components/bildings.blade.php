@@ -10,8 +10,33 @@
   );
 
   $bildings = get_posts( $args );
+
+  $flats = [];
 @endphp
 
+@if ($_GET['bilding'])
+    @php
+        $names = explode(",",$_GET['bilding']);
+    @endphp
+    @foreach ($bildings as $bilding)
+        @if (in_array($bilding->post_title, $names))
+        @php
+            $ID = $bilding->ID;
+            $thisFlats = get_field('flats', $ID);
+            $flats = array_merge($flats, $thisFlats);
+        @endphp
+
+        @elseif($_GET['bilding'] == 'all')
+        @php
+            $ID = $bilding->ID;
+            $thisFlats = get_field('flats', $ID);
+            $flats = array_merge($flats, $thisFlats);
+        @endphp
+        @endif
+    @endforeach
+
+    @include('layouts.components.table', ['flats'=>$flats])
+@else
 <section class="section">
     <div class="container">
         <div class="bildings">
@@ -25,3 +50,5 @@
         </div>
     </div>
 </section>
+@endif
+

@@ -3,17 +3,13 @@
 
   background-color: map-get($theme-colors, "light");
   color: theme-color("light");
-  padding: ($gutter * 3);
+  padding: ($gutter * 3) 0;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: map-get($z-index, "header");
   transition: $transition;
-
-  @media (max-width: 998px) {
-    width: calc(100% - 44px);
-  }
 
   @include media(md) {
     color: theme-color("primary");
@@ -92,7 +88,7 @@
       justify-content: flex-end;
       align-items: center;
       background-color: transparent;
-      padding: 0 15px;
+      padding: 0 $gutter * 4;
       overflow: initial;
       top: unset;
     }
@@ -175,7 +171,7 @@
       }
 
       a {
-        @extend .text;
+        @extend .my-menu-link;
 
         color: theme-color("primary");
         padding: $gutter 0;
@@ -265,6 +261,39 @@
 
     @include media(md) {
       padding: 0 0 0 ($gutter * 3);
+    }
+  }
+
+  &__button {
+    @extend .my-menu-link;
+
+    padding: $gutter * 2;
+    width: auto;
+    height: $gutter * 8;
+    border: 2px solid color("primary");
+    background: color("primary");
+    cursor: pointer;
+    color: color("light");
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    right: 0;
+    top: $gutter * 11.5;
+
+    @include media(md) {
+      position: relative;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      right: 0;
+    }
+
+    img {
+      height: auto;
+      width: $gutter * 3;
+      margin-right: $gutter * 3;
     }
   }
 }
