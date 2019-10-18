@@ -20,6 +20,13 @@
     @extend .absolute;
 
     content: "";
-    background-color: rgba(color("primary"), 0.8);
+    background-color: rgba(color("special_dark"), 0.6);
+    pointer-events: none;
+  }
+
+  &--darker {
+    &::before {
+      background-color: rgba(color("special_dark"), 0.8);
+    }
   }
 }

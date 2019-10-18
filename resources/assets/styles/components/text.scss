@@ -5,12 +5,11 @@
 }
 
 .headline {
-  @include cssLock("font-size", 360, 1920, (24, 72));
+  @include cssLock("font-size", 360, 1920, (gutter_num(3), gutter_num(8)));
 
-  color: map-get($theme-colors, primary);
   font-family: map-get($font-family, title);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.7;
 
   @extend %text;
 }
@@ -18,19 +17,10 @@
 .title {
   @include cssLock("font-size", 360, 1920, (18, 56));
 
-  color: map-get($theme-colors, primary);
   font-family: map-get($font-family, title);
   font-weight: 800;
 
   @extend %text;
-
-  &--light {
-    color: map-get($theme-colors, light);
-  }
-
-  &--dark {
-    color: color("primary");
-  }
 }
 
 .subtitle {
@@ -41,14 +31,6 @@
 
   @extend %text;
 
-  &--light {
-    color: map-get($theme-colors, light);
-  }
-
-  &--dark {
-    color: map-get($theme-colors, light);
-  }
-
   &--center {
     text-align: center;
   }
@@ -58,18 +40,9 @@
   @include cssLock("font-size", 360, 1920, (12, 16));
 
   font-family: map-get($font-family, main);
-  color: map-get($theme-colors, dark);
   font-weight: 800;
 
   @extend %text;
-
-  &--light {
-    color: map-get($theme-colors, light);
-  }
-
-  &--primary {
-    color: map-get($theme-colors, primary);
-  }
 
   &--thin {
     font-weight: 300;
@@ -88,7 +61,6 @@
   @include cssLock("font-size", 360, 1920, (16, 20));
 
   font-family: map-get($font-family, main);
-  color: map-get($theme-colors, dark);
   font-weight: 800;
 }
 
@@ -96,7 +68,6 @@
   @include cssLock("font-size", 360, 1920, (10, 12));
 
   font-family: map-get($font-family, main);
-  color: map-get($theme-colors, dark);
   font-weight: 300;
 }
 

@@ -5,3 +5,11 @@
 @function z-index($key) {
   @return map-get($z-index, $key);
 }
+
+@function gutter($key) {
+  @return $gutter * $key;
+}
+
+@function gutter_num($key) {
+  @return $gutter_num * $key;
+}

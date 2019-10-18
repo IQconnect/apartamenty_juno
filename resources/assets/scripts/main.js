@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 
 import slider from './components/slider';
+import hero from './components/hero';
 import rotator from './components/rotator';
 import hamburger from './components/hamburger';
 import popup from './components/popup';
@@ -32,6 +33,7 @@ const routes = new Router({
 jQuery(document).ready(() => {
   routes.loadEvents();
   slider.init();
+  hero.init();
   rotator.init();
   hamburger.init();
   popup.init();

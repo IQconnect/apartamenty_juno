@@ -1,8 +1,7 @@
 .header {
   $root: &;
 
-  background-color: map-get($theme-colors, "light");
-  color: theme-color("light");
+  background-color: transparent;
   padding: ($gutter * 3) 0;
   position: fixed;
   width: 100%;
@@ -12,7 +11,7 @@
   transition: $transition;
 
   @include media(md) {
-    color: theme-color("primary");
+    color: color("light");
   }
 
   &__wrapper {
@@ -173,7 +172,7 @@
       a {
         @extend .my-menu-link;
 
-        color: theme-color("primary");
+        color: inherit;
         padding: $gutter 0;
         white-space: nowrap;
         opacity: 0;

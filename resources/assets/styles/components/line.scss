@@ -1,0 +1,28 @@
+$line-height: 1px;
+
+.line {
+  position: relative;
+
+  &::before,
+  &::after {
+    @extend .absolute;
+
+    content: "";
+    background: color(light);
+  }
+
+  &::before {
+    width: 100vw;
+    height: $line-height;
+    right: 105%;
+    left: unset;
+  }
+
+  &::after {
+    width: gutter(1.5);
+    height: gutter(1.5);
+    left: unset;
+    right: 105%;
+    border-radius: 100%;
+  }
+}

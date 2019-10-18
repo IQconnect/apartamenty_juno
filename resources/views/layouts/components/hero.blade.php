@@ -2,30 +2,31 @@
     $placeholder = new Placeholder;
 
     $hero = get_field('hero', 'options');
+    $hero_slogan = get_field('hero_slogan', 'options');
+    $hero_link = get_field('hero_link', 'options');
 @endphp
 
 
-
+@if ($hero)
 <section class="hero">
-    <div class="container">
-
-        @if ($hero)
-        @foreach ( $hero as $elem)
-
-        <div class="hero__info @if($loop->first) -is-active @endif" slide>
-            @include('blocks.info-block', ['data'=>$elem])
-        </div>
-
-        <img class="hero__image @if($loop->first) -is-active @endif" slide-img src="{{$elem['img']['url']}}" alt="placeholder">
-        
-        @endforeach
+    @if ($hero_slogan)
+    <div class="hero__container container container--small">
+        <h1 class="hero__title headline line">
+            {!! $hero_slogan !!}
+        </h1>
+        @if ($hero_link)
+        <a href="{{ $hero_link['url'] }}" class="button button--primary">
+            {!! $hero_link['title'] !!}
+        </a>
         @endif
     </div>
-    @if ($hero)
-    @foreach ( $hero as $elem)
-
-    <img class="hero__image @if($loop->first) -is-active @endif" slide-img src="{{$elem['img']['url']}}" alt="placeholder">
-    
-    @endforeach
     @endif
+    <div class="hero__carousel">
+    @foreach ( $hero as $elem)
+        <div class="hero__cell">
+            {!! image($elem['ID'], 'full', 'hero__image') !!}
+        </div>
+        @endforeach
+    </div>
 </section>
+@endif
