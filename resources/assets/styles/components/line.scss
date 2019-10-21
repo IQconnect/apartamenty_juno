@@ -9,6 +9,10 @@ $line-height: 1px;
 
     content: "";
     background: color(light);
+
+    @include mediaTo(md) {
+      display: none;
+    }
   }
 
   &::before {

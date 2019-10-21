@@ -1,0 +1,19 @@
+.slogan {
+  text-align: center;
+
+  &__title {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      (gutter_num(4), gutter_num(8))
+    );
+
+    color: color(primary);
+  }
+
+  &__sign {
+    color: rgba(color(dark), 0.6);
+    text-transform: uppercase;
+  }
+}

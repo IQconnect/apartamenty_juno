@@ -83,3 +83,11 @@
 
   font-weight: 400;
 }
+
+.main-font {
+  font-family: map-get($font-family, main);
+}
+
+.title-font {
+  font-family: map-get($font-family, title);
+}
