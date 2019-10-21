@@ -1,0 +1,62 @@
+.img-dsc {
+  &__wrapper {
+    display: grid;
+    gap: gutter(4);
+    overflow: hidden;
+
+    @include media(md) {
+      gap: gutter(10);
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__content {
+    @include media(md) {
+      padding: gutter(5) 0;
+    }
+  }
+
+  &__title {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      (gutter_num(2), gutter_num(4))
+    );
+
+    color: color();
+  }
+
+  &__description {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      (gutter_num(4), gutter_num(8))
+    );
+
+    @include media(xl) {
+      column-count: 2;
+      column-gap: gutter(5);
+      margin-left: gutter(5);
+    }
+
+    color: rgba(color("dark"), 0.7);
+  }
+
+  &__link {
+    @include media(xl) {
+      margin-left: gutter(5);
+    }
+  }
+
+  &__image {
+    @extend .image;
+
+    z-index: 10;
+
+    @include mediaTo(md) {
+      height: auto;
+    }
+  }
+}

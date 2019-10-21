@@ -14,7 +14,7 @@ $line-height: 1px;
   &::before {
     width: 100vw;
     height: $line-height;
-    right: 105%;
+    right: calc(105% + #{gutter(1.7)});
     left: unset;
   }
 
@@ -24,5 +24,29 @@ $line-height: 1px;
     left: unset;
     right: 105%;
     border-radius: 100%;
+    background: transparent;
+    border: 1px solid color(light);
+  }
+
+  &--primary {
+    &::before {
+      background: color(primary);
+    }
+
+    &::after {
+      border-color: color(primary);
+    }
+  }
+
+  &--top {
+    &::before,
+    &::after {
+      bottom: unset;
+      top: gutter(5);
+    }
+
+    &::after {
+      transform: translateY(-50%);
+    }
   }
 }
