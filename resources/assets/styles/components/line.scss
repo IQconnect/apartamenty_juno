@@ -53,4 +53,16 @@ $line-height: 1px;
       transform: translateY(-50%);
     }
   }
+
+  &--right {
+    &::before {
+      left: calc(105% + #{gutter(1.7)});
+      right: unset;
+    }
+
+    &::after {
+      left: 105%;
+      right: unset;
+    }
+  }
 }

@@ -1,8 +1,13 @@
 .section {
-  padding: $gutter * 16 0;
+  padding: gutter(10) 0;
 
   @media (max-width: 998px) {
     padding: $gutter * 8 0;
+  }
+
+  &--full-img {
+    padding: 0;
+    margin: gutter(10) 0;
   }
 
   &--full {

@@ -10,11 +10,10 @@ $imgList
     ->addImage('img', ['label'=>'Zdjęcie'])
     ->addTextarea('title', ['title'=>'Tytuł', 'new_lines'=>'br'])
     ->addSelect('direction', ['label'=>'Pozycja'])
-        ->addChoice('left', ['label'=>'Lewo'])
-        ->addChoice('right', ['label'=>'Prawo'])
+        ->addChoice('left', 'Lewo')
+        ->addChoice('right', 'Prawo')
         ->setDefaultValue('left')
-    ->addRepeater('elem', ['label'=>'Element'])
-        ->addTextarea('text', ['title'=>'Tytuł', 'new_lines'=>'br'])
+->addRepeater('elem', ['label'=>'Element', 'max'=>3])
         ->addTextarea('content', ['title'=>'Treść'])
     ;
 return $imgList;

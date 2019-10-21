@@ -1,0 +1,69 @@
+.img-list {
+  position: relative;
+
+  &__image {
+    @extend .absolute;
+    @extend .image;
+
+    left: unset;
+    z-index: 10;
+    display: none;
+
+    @include media(md) {
+      display: block;
+      width: calc(50% - #{gutter(5)});
+    }
+  }
+
+  &__wrapper {
+    @include media(md) {
+      padding: gutter(5) 0 gutter(15);
+    }
+  }
+
+  &__title {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      (gutter_num(5), gutter_num(10))
+    );
+
+    color: color("primary");
+  }
+
+  &__list {
+    padding-left: gutter(2);
+
+    @include media(md) {
+      padding: 0;
+      list-style: none;
+      width: calc(50% - #{gutter(5)});
+    }
+  }
+
+  &__elem {
+    margin: gutter(2.5) 0;
+    color: rgba(color("dark"), 0.7);
+
+    @include media(md) {
+      margin: gutter(5) 0;
+      width: 65%;
+    }
+
+    &--right {
+      @include media(md) {
+        margin-left: 35%;
+        text-align: right;
+      }
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -35,13 +35,13 @@
       (gutter_num(4), gutter_num(8))
     );
 
+    color: rgba(color("dark"), 0.7);
+
     @include media(xl) {
       column-count: 2;
       column-gap: gutter(5);
       margin-left: gutter(5);
     }
-
-    color: rgba(color("dark"), 0.7);
   }
 
   &__link {
