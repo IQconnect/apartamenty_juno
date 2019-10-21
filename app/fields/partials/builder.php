@@ -12,6 +12,7 @@ $builder
             ->addLayout('hero')
             ->addLayout(get_field_partial('components.img-dsc'))
             ->addLayout(get_field_partial('components.slogan'))
+            ->addLayout(get_field_partial('components.img-list'))
             ->addLayout(get_field_partial('components.text-section'))
             ->addLayout(get_field_partial('components.full-img'))
             ->addLayout(get_field_partial('components.icon-section'))
