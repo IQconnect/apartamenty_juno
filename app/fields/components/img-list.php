@@ -4,9 +4,9 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
-$imgDsc = new FieldsBuilder('img-dsc');
+$imgList = new FieldsBuilder('img-list');
 
-$imgDsc
+$imgList
     ->addImage('img', ['label'=>'Zdjęcie'])
     ->addTextarea('title', ['title'=>'Tytuł', 'new_lines'=>'br'])
     ->addSelect('direction', ['label'=>'Pozycja'])
@@ -17,4 +17,4 @@ $imgDsc
         ->addTextarea('text', ['title'=>'Tytuł', 'new_lines'=>'br'])
         ->addTextarea('content', ['title'=>'Treść'])
     ;
-return $imgDsc;
+return $imgList;
