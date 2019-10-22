@@ -17,6 +17,7 @@ $builder
             ->addLayout(get_field_partial('components.full-img'))
             ->addLayout(get_field_partial('components.icon-section'))
             ->addLayout(get_field_partial('components.gallery'))
+            ->addLayout(get_field_partial('components.gallery_feed'))
             ->addLayout('info-section')
             ->addLayout('contact')
             ->addLayout('bildings')
