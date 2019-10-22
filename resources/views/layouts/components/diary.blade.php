@@ -11,8 +11,11 @@
         <div class="diary__marker diary__marker--first"></div>
         @if ($diary)
         <ul class="diary">
-            @foreach ($diary as $item)
 
+            @foreach ($diary as $item)
+            @php
+            $galleryName = rand(1, 999);
+            @endphp
                 @if ($item['add_text'])
 
                 <li class="diary__part
@@ -21,17 +24,34 @@
                 data-aos="fade-up">
                 <div class="diary__marker"></div>
                         <div class="diary__content">
-                                <h3 class="diary__year subtitle">
-                                        {{ $item['year'] }}
-                                </h3>
+
                         <h3 class="diary__subtitle large-text">
                             {{$item['subtitle']}}
                         </h3>
-
+                        <h3 class="diary__year subtitle">
+                            {{ $item['year'] }}
+                    </h3>
 
                         <p class="diary__text text">
                             {{$item['text']}}
                         </p>
+                        <div class="diary__gallery">
+
+                            @foreach ($item['gallery'] as $image)
+                            @php
+                            $zdjecie=$loop->index;
+                            @endphp
+
+                                <a class="fancybox"
+                                    data-caption="{{ $image['description'] }}"
+                                    data-fancybox="diary_gallery{{$galleryName}}"
+                                    href="{{ $image['url'] }}"
+                                    @if($zdjecie>2) hidden @endif
+                                >
+                                    {!! image($image['ID'],'full','img') !!}
+                                </a>
+                            @endforeach
+                        </div>
                     </div>
 
                 </li>

@@ -1,24 +1,30 @@
 .diary {
   $root: &;
-
-  @include cssLock(
-    "max-width",
-    360,
-    1920,
-    ($gutter_num * 40, $gutter_num * 150)
-  );
-
+  // @include cssLock(
+  //   "max-width",
+  //   360,
+  //   1920,
+  //   ($gutter_num * 16, $gutter_num * 150)
+  // );
   padding-bottom: $gutter * 10;
   position: relative;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
 
   @include media(lg) {
     margin: 0 auto;
+    display: inherit;
   }
 
   &__header {
     text-align: center;
-    margin-bottom: $gutter * 27;
     color: color(primary);
+
+    @include media(lg) {
+      margin: 0 auto;
+      margin-bottom: $gutter * 27;
+    }
   }
 
   &__part {
@@ -28,18 +34,14 @@
       1920,
       ($gutter_num * 40, $gutter_num * 150)
     );
-    // @include cssLock(
-    //   "padding-bottom",
-    //   360,
-    //   1920,
-    //   ($gutter_num * 2, $gutter_num * 4)
-    // );
+
+    position: relative;
+    margin-bottom: $gutter * 4;
 
     @include media(lg) {
       position: relative;
       display: flex;
-      margin: 0 auto;
-      justify-content: flex-start;
+      margin: $gutter * 5 auto;
     }
 
     &--right {
@@ -70,6 +72,7 @@
 
       &--first {
         top: $gutter * 4;
+        left: 51.7%;
       }
     }
 
@@ -147,8 +150,6 @@
   }
 
   &__subtitle {
-    @extend .text;
-
     @include cssLock(
       "margin-bottom",
       360,
@@ -156,23 +157,19 @@
       ($gutter_num * 1, $gutter_num * 2)
     );
 
-    @include media(lg) {
-      font-style: normal;
-      font-family: inherit;
-      font-weight: 800;
-    }
+    color: color(primary);
 
-    &--red {
-      color: color(special);
+    @include media(lg) {
+      margin-block-start: 0;
     }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
+    color: rgba(color(dark), 0.7);
 
     @include media(lg) {
-      color: color(secondary);
       word-spacing: $gutter * 0.25;
       flex-direction: row;
     }
@@ -181,11 +178,28 @@
   &__year {
     position: absolute;
     text-align: center;
-    top: 0;
+    top: $gutter * 1.7;
     left: 43%;
-    height: 100%;
     padding: 0;
-    margin-bottom: 13px;
+    margin: 0;
     color: color(primary);
+
+    @include media(lg) {
+      top: 0;
+      left: 43%;
+      height: 100%;
+      padding: 0;
+      margin-bottom: 13px;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $gutter * 1;
+
+    a {
+      position: relative;
+    }
   }
 }

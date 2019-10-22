@@ -12,5 +12,6 @@ $diary
         ->addTextarea('text', ['title'=>'Tekst'])
             ->conditional('add_text', '==','1')
         ->addText('year', ['title'=>'Data'])
+        ->addGallery('gallery')
     ;
 return $diary;
