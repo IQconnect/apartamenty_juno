@@ -91,3 +91,11 @@
 .title-font {
   font-family: map-get($font-family, title);
 }
+
+.link {
+  transition: $transition;
+
+  &:hover {
+    color: color(special);
+  }
+}

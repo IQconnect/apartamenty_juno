@@ -1,58 +1,50 @@
 @php
-  $office_title = get_field('office_title', 'option');
-  $office_content = get_field('office_content', 'option');
-  $office_persons = get_field('office_persons', 'option');
-  $form_title = get_field('form_title', 'option');
-  $form_subtitle = get_field('form_subtitle', 'option');
-  $form_terms = get_field('form_terms', 'option');
-  $form_bg = get_field('form_bg', 'option')['ID'];
+    $title = option('form_title');
+    $link = option('form_link');
+    $image = option('form_image');
+    $office_title = option('office_title');
+    $persons = option('office_persons');
 @endphp
 
-<section class="contact-section section section--full" id="kontakt">
-  <div class="contact-section__boxes">
-    <div class="avatar-section">
-      <div class="container">
-        <div class="avatar-section__content">
-          <div class="avatar-section__boxes"></div>
-          <div class="avatar-section__desc">
-            <h2 class="section-header card-block__title">
-              <span
-                class="avatar-section__coltext--primary section-header__sub--left subtitle"
-              >
-                {{ $office_title }}
-              </span>
-            </h2>
-            <p class="text card-block__text avatar-section__coltext--dark">
-              {{ $office_content }}
-            </p>
-            @if($office_persons)
-            <div class="avatar-section__boxes">
-              <!-- Avatar -->
-              @foreach ($office_persons as $person)  
-                @include('blocks.avatar', ['data'=>$person])
-              @endforeach
-              <!--/ Avatar -->
-            </div>
-            @endif
-          </div>
+<section class="section contact-info">
+  {!! image($image['ID'], 'full', 'contact-info__image') !!}
+  <div class="container container--small container--full-mobile">
+    <div class="contact-info__wrapper">
+      <div class="contact-info__cell">
+        @if ($title)
+        <h2 class="contact-info__title headline line">
+          {!! $title !!}
+        </h2>
+        @endif
+
+        @if ($link)
+        <a href="{{ $link['url'] }}" class="contact-info__link button hide-md">
+          {{ $link['title'] }}
+        </a>
+        @endif
+      </div>
+      <div class="contact-info__cell">
+        <h3 class="contact-info__subtitle title">
+          {{ $office_title }} 
+        </h3>
+        @if ($persons)
+        @foreach ($persons as $person)
+        <div class="contact-info__person">
+          <h4 class="contact-info__name text">
+            {!! $person['name'] !!}
+          </h4>
+          <p class="contact-info__content text">
+            tel: <a class="contact-info__person-link link" href="tel:{{ clear_space($person['tel']) }}">{{ $person['tel'] }}</a><br>
+            mail: <a class="contact-info__person-link link" href="mailto:{{ $person['mail'] }}">{{ $person['mail'] }}</a>
+          </p>
+          @if ($link)
+          <a href="{{ $link['url'] }}" class="contact-info__link button show-md">
+            {{ $link['title'] }}
+          </a>
+          @endif
         </div>
-      </div>
-    </div>
-
-    @php
-        $title = get_field('form_title', 'options');
-        $subtitle = get_field('form_subtitle', 'options');
-    @endphp
-
-    <div class="form-box">
-      {!! image($form_bg, 'full', 'form-box__bg') !!}
-      <!-- form-box__header -->
-      <div class="form-box__header">
-        @include('components.section-header.left', ['title'=>$title, 'subtitle'=>$subtitle, 'color'=>'light'])
-      </div>
-      <!-- form-box__content form -->
-      <div class="form-box__content">
-        @include('components.form')
+        @endforeach
+        @endif
       </div>
     </div>
   </div>

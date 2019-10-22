@@ -38,7 +38,7 @@ if (version_compare('4.7.0', get_bloginfo('version'), '>=')) {
  * Ensure dependencies are loaded
  */
 if (!class_exists('Roots\\Sage\\Container')) {
-    if (!file_exists($composer = __DIR__.'/../vendor/autoload.php')) {
+    if (!file_exists($composer = __DIR__ . '/../vendor/autoload.php')) {
         $sage_error(
             __('You must run <code>composer install</code> from the Sage directory.', 'sage'),
             __('Autoloader not found.', 'sage')
@@ -85,9 +85,9 @@ array_map(
 Container::getInstance()
     ->bindIf('config', function () {
         return new Config([
-            'assets' => require dirname(__DIR__).'/config/assets.php',
-            'theme' => require dirname(__DIR__).'/config/theme.php',
-            'view' => require dirname(__DIR__).'/config/view.php',
+            'assets' => require dirname(__DIR__) . '/config/assets.php',
+            'theme' => require dirname(__DIR__) . '/config/theme.php',
+            'view' => require dirname(__DIR__) . '/config/view.php',
         ]);
     }, true);
 
@@ -96,21 +96,21 @@ Container::getInstance()
  * ADD ACF OPTION PAGE
  */
 
-if( function_exists('acf_add_options_page') ) {
+if (function_exists('acf_add_options_page')) {
 
-	acf_add_options_page('Ustawienia Strony');
-
+    acf_add_options_page('Ustawienia Strony');
 }
 
 /*=============================================
 =            BREADCRUMBS			            =
 =============================================*/
 //  to include in functions.php
-function the_breadcrumb() {
+function the_breadcrumb()
+{
     $sep = '';
     if (!is_front_page()) {
-	
-	// Start the breadcrumb with a link to your homepage
+
+        // Start the breadcrumb with a link to your homepage
         echo '<ul class="breadcramps">';
         echo '<li class="breadcramps__item body">';
         echo '<a href="';
@@ -119,36 +119,34 @@ function the_breadcrumb() {
         echo 'Strona główna';
         echo '</a>';
         echo '</li>';
-        
-	// Check if the current page is a category, an archive or a single page. If so show the category or archive name.
-        if (is_category() ){
-           
+
+        // Check if the current page is a category, an archive or a single page. If so show the category or archive name.
+        if (is_category()) {
+
             $cat = get_queried_object();
 
-            if($cat -> category_parent == '0') {
+            if ($cat->category_parent == '0') {
                 echo '<li class="breadcramps__item body">';
-                echo $cat -> name;
+                echo $cat->name;
                 echo '</li>';
-            }
-
-            else {
-                $parent = get_category($cat -> category_parent);
+            } else {
+                $parent = get_category($cat->category_parent);
                 echo '<li class="breadcramps__item body">';
                 echo '<a href="';
-                echo get_category_link($parent -> term_id);
+                echo get_category_link($parent->term_id);
                 echo '" class="breadcramps__elem body link">';
-                echo $parent -> name;
+                echo $parent->name;
                 echo '</a>';
                 echo '</li>';
                 echo '<li class="breadcramps__item body">';
-                echo $cat -> name;
+                echo $cat->name;
                 echo '</li>';
             }
             //print_r( get_queried_object());
-           
-        } elseif (is_archive() || is_single()){
-            if(is_single()) {
-                if(get_post_type() == 'partnerzy'):
+
+        } elseif (is_archive() || is_single()) {
+            if (is_single()) {
+                if (get_post_type() == 'partnerzy') :
                     echo '<li class="breadcramps__item body">';
                     echo '<a href="';
                     echo get_permalink(277);
@@ -156,7 +154,7 @@ function the_breadcrumb() {
                     echo get_post_type_object(get_post_type())->label;
                     echo '</a>';
                     echo '</li>';
-                else:
+                else :
                     echo '<li class="breadcramps__item body">';
                     echo '<a href="';
                     echo get_post_type_archive_link(get_post_type());
@@ -165,32 +163,29 @@ function the_breadcrumb() {
                     echo '</a>';
                     echo '</li>';
                 endif;
-            }
-
-            else {
-                echo '<li class="breadcramps__item body">';        
+            } else {
+                echo '<li class="breadcramps__item body">';
                 echo get_post_type_object(get_post_type())->label;
                 echo '</li>';
             }
-            
         }
-	
-	// If the current page is a single post, show its title with the separator
+
+        // If the current page is a single post, show its title with the separator
         if (is_single()) {
             echo '<li class="breadcramps__item body">';
             the_title();
             echo '</li>';
 
             //print_r(get_post_type_object(get_post_type())->label);
-           
+
         }
-	
-	// If the current page is a static page, show its title.
+
+        // If the current page is a static page, show its title.
         if (is_page()) {
             $parent_id = get_page(get_the_ID())->post_parent;
             $parent = get_page($parent_id);
 
-            if($parent_id != 0) {
+            if ($parent_id != 0) {
                 echo '<li class="breadcramps__item body">';
                 echo '<a href="';
                 echo get_permalink($parent_id);
@@ -204,12 +199,12 @@ function the_breadcrumb() {
             echo '</li>';
             //print_r($parent);
         }
-	
-	// if you have a static page assigned to be you posts list page. It will find the title of the static page and display it. i.e Home >> Blog
-        if (is_home()){
+
+        // if you have a static page assigned to be you posts list page. It will find the title of the static page and display it. i.e Home >> Blog
+        if (is_home()) {
             global $post;
             $page_for_posts_id = get_option('page_for_posts');
-            if ( $page_for_posts_id ) { 
+            if ($page_for_posts_id) {
                 $post = get_page($page_for_posts_id);
                 setup_postdata($post);
                 echo '<li class="breadcramps__item body">';
@@ -219,15 +214,14 @@ function the_breadcrumb() {
             }
         }
 
-        if(is_tag()) {
+        if (is_tag()) {
             echo '<li class="breadcramps__item body">';
             echo single_tag_title();
             echo '</li>';
         }
         echo '</ul>';
 
-        if( is_post_type_archive('oferty') )
-        {
+        if (is_post_type_archive('oferty')) {
             echo 'halo';
         }
     }
@@ -237,20 +231,34 @@ function the_breadcrumb() {
 */
 
 
-@ini_set( 'upload_max_size' , '64M' );
-@ini_set( 'post_max_size', '64M');
-@ini_set( 'max_execution_time', '300' );
+@ini_set('upload_max_size', '64M');
+@ini_set('post_max_size', '64M');
+@ini_set('max_execution_time', '300');
 
-class Placeholder {
-    function image() {
-        return "images/bg-juno.jpg"; 
+class Placeholder
+{
+    function image()
+    {
+        return "images/bg-juno.jpg";
     }
 
-    function title() {
-        return 'Twoja bezpieczna przystań'; 
+    function title()
+    {
+        return 'Twoja bezpieczna przystań';
     }
-} 
+}
 
-function image($id, $size, $class) {
-    return wp_get_attachment_image($id, $size, false, ['class'=>$class]);
+function image($id, $size, $class)
+{
+    return wp_get_attachment_image($id, $size, false, ['class' => $class]);
+}
+
+function option($key)
+{
+    return get_field($key, 'option');
+}
+
+function clear_space($key)
+{
+    return str_replace(' ', '', $key);
 }

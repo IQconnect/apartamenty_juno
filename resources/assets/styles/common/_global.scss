@@ -42,3 +42,37 @@ img {
   height: auto;
   display: block;
 }
+
+.show-md {
+  display: initial !important;
+
+  @include media(md) {
+    display: none !important;
+  }
+}
+
+.hide-md {
+  display: initial !important;
+
+  @include mediaTo(md) {
+    display: none !important;
+  }
+}
+
+.button.hide-md {
+  display: inline-block !important;
+  text-align: center;
+
+  @include mediaTo(md) {
+    display: none !important;
+  }
+}
+
+.button.show-md {
+  display: inline-block !important;
+  text-align: center;
+
+  @include media(md) {
+    display: none !important;
+  }
+}
