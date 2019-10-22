@@ -2,13 +2,12 @@
     $title = $data['title'];
     $diary = $data['diary'];
 @endphp
-<section class="diary">
+<section class="diary section">
     <div class="container">
-        <header class="diary__header title">
-            <h2 class="diary__title aos-init" data-aos="fade-up">{{$title}}</h2>
-
+        <header class="diary__header">
+            <h2 class="diary__title title aos-init" data-aos="fade-up">{{$title}}</h2>
+            <div class="diary__marker diary__marker--first"></div>
         </header>
-        <div class="diary__marker diary__marker--first"></div>
         @if ($diary)
         <ul class="diary">
 
@@ -25,16 +24,17 @@
                 <div class="diary__marker"></div>
                         <div class="diary__content">
 
-                        <h3 class="diary__subtitle large-text">
+                        <p class="diary__subtitle large-text">
                             {{$item['subtitle']}}
-                        </h3>
-                        <h3 class="diary__year subtitle">
+                        </p>
+                        <p class="diary__year subtitle">
                             {{ $item['year'] }}
-                    </h3>
+                    </p>
 
                         <p class="diary__text text">
                             {{$item['text']}}
                         </p>
+                        @if ($item['gallery'])
                         <div class="diary__gallery">
 
                             @foreach ($item['gallery'] as $image)
@@ -52,6 +52,7 @@
                                 </a>
                             @endforeach
                         </div>
+                        @endif
                     </div>
 
                 </li>

@@ -1,12 +1,7 @@
 .diary {
   $root: &;
-  // @include cssLock(
-  //   "max-width",
-  //   360,
-  //   1920,
-  //   ($gutter_num * 16, $gutter_num * 150)
-  // );
-  padding-bottom: $gutter * 10;
+
+  padding-left: 0;
   position: relative;
   list-style-type: none;
   display: flex;
@@ -20,10 +15,11 @@
   &__header {
     text-align: center;
     color: color(primary);
+    position: relative;
 
     @include media(lg) {
       margin: 0 auto;
-      margin-bottom: $gutter * 27;
+      padding-bottom: $gutter * 23;
     }
   }
 
@@ -41,7 +37,7 @@
     @include media(lg) {
       position: relative;
       display: flex;
-      margin: $gutter * 5 auto;
+      margin: 0 auto;
     }
 
     &--right {
@@ -66,42 +62,44 @@
   &__marker {
     @include media(lg) {
       position: absolute;
-      top: 5%;
-      left: 50%;
-      height: 100%;
-
-      &--first {
-        top: $gutter * 4;
-        left: 51.7%;
-      }
+      top: gutter(7);
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      height: 70%;
+      width: 1px;
     }
 
     &::before {
       @include media(lg) {
+        content: "";
         position: absolute;
-        top: 61.6px; //$gutter * 1.2;
-        left: $gutter * 0.63;
+        top: 0;
+        left: 0;
+        right: 0;
         bottom: 0;
+        margin: 0 auto;
         width: $gutter * 0.125;
-        height: 144px;
+        height: 100%;
         background-color: lighten(color(primary), 10%);
         max-height: 100%;
-        content: "";
       }
     }
 
     &::after {
       @include media(lg) {
-        position: absolute;
-        top: 204px; //$gutter * 32;
-        left: 0;
         content: "";
-        display: block;
-        width: $gutter * 1;
-        height: $gutter * 1;
+        position: absolute;
+        top: 100%; //$gutter * 32;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: $gutter;
+        height: $gutter;
         border-radius: 50%;
         border: $gutter * 0.125 solid color(primary);
         background-color: color(light);
+        transform: translateX(gutter(-0.5));
       }
     }
 
@@ -158,6 +156,7 @@
     );
 
     color: color(primary);
+    display: inline-block;
 
     @include media(lg) {
       margin-block-start: 0;
@@ -176,17 +175,19 @@
   }
 
   &__year {
-    position: absolute;
-    text-align: center;
+    position: initial;
     top: $gutter * 1.7;
-    left: 43%;
+    left: 0;
+    right: 0;
     padding: 0;
     margin: 0;
     color: color(primary);
+    display: inline-block;
 
     @include media(lg) {
+      position: absolute;
+      text-align: center;
       top: 0;
-      left: 43%;
       height: 100%;
       padding: 0;
       margin-bottom: 13px;
@@ -197,6 +198,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: $gutter * 1;
+    margin-top: gutter(2);
 
     a {
       position: relative;
