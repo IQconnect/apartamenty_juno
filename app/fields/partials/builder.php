@@ -27,5 +27,7 @@ $builder
             ->addLayout(get_field_partial('components.flex'))
             ->addLayout(get_field_partial('components.extra-menu'))
             ->addLayout(get_field_partial('components.list'))
-            ->addLayout(get_field_partial('components.diary'));
+            ->addLayout(get_field_partial('components.diary'))
+            ->addLayout(get_field_partial('components.visual'));
+            ;
 return $builder;
