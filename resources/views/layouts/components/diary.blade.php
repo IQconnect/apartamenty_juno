@@ -15,7 +15,7 @@
             @php
             $galleryName = rand(1, 999);
             @endphp
-                @if ($item['add_text'])
+                @if (1)
 
                 <li class="diary__part
                 @if($loop->index % 2 == 1) diary__part--right  @endif
@@ -25,14 +25,14 @@
                         <div class="diary__content">
 
                         <p class="diary__subtitle large-text">
-                            {{$item['subtitle']}}
+                            {{$item['content']['subtitle']}}
                         </p>
                         <p class="diary__year subtitle">
-                            {{ $item['year'] }}
+                            {{ $item['content']['year'] }}
                     </p>
 
                         <p class="diary__text text">
-                            {{$item['text']}}
+                            {{$item['content']['text']}}
                         </p>
                         @if ($item['gallery'])
                         <div class="diary__gallery">
