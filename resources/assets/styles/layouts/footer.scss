@@ -1,6 +1,9 @@
 .footer {
   position: relative;
 
+  @extend .overlay;
+  @extend .overlay--darker;
+
   &__bg {
     position: absolute;
     top: 0;
@@ -16,6 +19,8 @@
     align-items: center;
     justify-content: space-between;
     padding: ($gutter * 7) 0;
+    position: relative;
+    z-index: 10;
 
     @media (max-width: 998px) {
       flex-direction: column;

@@ -1,3 +1,7 @@
+@php
+  $footerImg = option('footer_image');
+@endphp
+
 <div class="side-box">
   <div class="fb-page" data-href="https://www.facebook.com/ApartamentyJuno/" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
     <blockquote cite="https://www.facebook.com/ApartamentyJuno/" class="fb-xfbml-parse-ignore">
@@ -12,7 +16,7 @@
 </div>
 
 <footer class="footer">
-  <img class="footer__bg" src="@asset('images/footer.png')" alt="background" />
+  {!! image($footerImg['ID'], 'full', 'footer__bg') !!}
   <div class="container">
     <div class="footer__content">
       <div class="footer__left">

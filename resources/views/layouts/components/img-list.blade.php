@@ -9,7 +9,7 @@
 @if ($list)
 <section class="section section--full-img img-list img-list--{{ $direction }}">
     {!! image($img, 'full', 'img-list__image') !!}
-    <div class="container container--small">
+    <div class="container container--small container--full-mobile">
         <div class="img-list__wrapper">
             @if ($title)
             <h2 class="img-list__title title">
