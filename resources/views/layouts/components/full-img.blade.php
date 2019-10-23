@@ -3,5 +3,7 @@
 @endphp
 
 <section class="full-img">
+        <div class="container">
     {!! image($img, 'full', 'full-img__bg') !!}
+    <div class="container">
 </section>
