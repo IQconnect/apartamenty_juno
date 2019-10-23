@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: color(light);
 
   &__image {
     @extend .image;
@@ -15,15 +16,9 @@
     z-index: -1;
   }
 
-  &__overlay {
-    @extend .absolute;
-
-    background: color("light");
-    clip-path: polygon(100% 66%, 0% 100%, 100% 100%);
-  }
-
-  &__header {
-    position: relative;
-    z-index: 10;
+  &__title {
+    @include mediaTo(md) {
+      text-align: center;
+    }
   }
 }

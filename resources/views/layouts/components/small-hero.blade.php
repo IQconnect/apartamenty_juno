@@ -6,7 +6,9 @@
 <section class="small-hero">
     {!! image($img, 'full', 'small-hero__image') !!}
 
-    <header class="small-hero__header">
-        @include('components.section-header.special', ['title'=>$title, 'color'=>'light'])
-    </header>
+    <div class="container container--small">
+        <h1 class="small-hero__title headline line">
+            {!! $title or get_the_title() !!}
+        </h1>
+    </div>
 </section>

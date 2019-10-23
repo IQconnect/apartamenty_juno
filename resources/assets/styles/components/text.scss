@@ -17,7 +17,7 @@
 .title {
   @include cssLock("font-size", 360, 1920, (gutter_num(2), gutter_num(4)));
 
-  font-family: map-get($font-family, title);
+  font-family: map-get($font-family, main);
   font-weight: 800;
 
   @extend %text;

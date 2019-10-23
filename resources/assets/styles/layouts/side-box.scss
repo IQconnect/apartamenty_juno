@@ -6,13 +6,34 @@
   transition: $transition;
   display: flex;
 
+  @include mediaTo(md) {
+    top: unset;
+    left: 0;
+    bottom: -100%;
+  }
+
   &:hover {
     left: 0;
+
+    @include mediaTo(md) {
+      bottom: gutter(4);
+    }
   }
 
   .fb-page {
     width: $gutter * 40;
     max-width: $gutter * 40;
+
+    @include mediaTo(md) {
+      width: 100vw !important;
+      max-width: 100vw;
+
+      iframe,
+      span {
+        width: 100vw !important;
+        max-width: 100vw;
+      }
+    }
   }
 
   &__fb-button {
@@ -22,5 +43,16 @@
     background-color: #3b5998;
     padding: $gutter ($gutter * 2);
     align-self: flex-start;
+
+    @include mediaTo(md) {
+      font-size: gutter(2);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 100;
+      text-align: center;
+    }
   }
 }

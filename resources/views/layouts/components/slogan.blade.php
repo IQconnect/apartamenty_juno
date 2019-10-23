@@ -6,7 +6,7 @@
 @if ($slogan )
 <section class="section section--shade slogan">
     <div class="container">
-        <h2 class="slogan__title title main-title">
+        <h2 class="slogan__title title main-title title-font">
             {!! $slogan !!}
         </h2>
         @if ($sign)
