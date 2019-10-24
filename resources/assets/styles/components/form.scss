@@ -1,4 +1,7 @@
 .form {
+  max-width: gutter(100);
+  margin: 0 auto;
+
   &__row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -26,8 +29,8 @@
     width: 100%;
     height: ($gutter * 4);
     background: transparent;
-    border: 1px solid color(light);
-    color: color(light);
+    border: 1px solid color(primary);
+    color: color(dark);
   }
 
   &__textarea {
@@ -37,13 +40,13 @@
     width: 100%;
     resize: none;
     background: transparent;
-    border: 1px solid color(light);
-    color: color(light);
+    border: 1px solid color(primary);
+    color: color(primary);
   }
 
   &__label {
     margin: $gutter 0;
-    color: color("light");
+    color: color("primary");
 
     &--textnearcheck {
       font-size: ($gutter * 1.1);
@@ -54,7 +57,7 @@
     padding-top: ($gutter * 0.4);
     padding-left: ($gutter * 4);
     display: block;
-    color: color("light");
+    color: color("primary");
   }
 
   &__checkcontainer {
@@ -63,7 +66,7 @@
   }
 
   &__check {
-    border: 0;
+    border: 1px solid color("primary");
     outline: 0;
     position: absolute;
     top: 0;
@@ -72,9 +75,7 @@
     border-radius: $gutter;
     -webkit-appearance: none;
     background-color: color("light");
-    box-shadow:
-      0 1px 2px (color("primary")),
-      inset 0 -15px 10px -12px (color("dark"));
+    box-shadow: 0;
     padding: ($gutter * 0.8);
     -webkit-user-select: none;
 
@@ -93,7 +94,7 @@
     }
 
     &:checked {
-      background-color: color("special");
+      background-color: color("primary");
       box-shadow:
         0 1px 2px (color("dark")),
         inset 0 -15px 10px -12px (color("dark")),
