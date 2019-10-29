@@ -6,18 +6,37 @@
 
   &__cell {
     @include cssLock(
-      "padding",
+      "padding-top",
       360,
       1920,
-      ($gutter_num * 40, $gutter_num * 150)
+      ($gutter_num * 1, $gutter_num * 1)
+    );
+    @include cssLock(
+      "padding-bottom",
+      360,
+      1920,
+      ($gutter_num * 1, $gutter_num * 1)
+    );
+    @include cssLock(
+      "padding-left",
+      360,
+      1920,
+      ($gutter_num * 1, $gutter_num * 5)
+    );
+    @include cssLock(
+      "padding-right",
+      360,
+      1920,
+      ($gutter_num * 1, $gutter_num * 5)
     );
 
-    padding: gutter(1) gutter(5);
+    //padding: gutter(1) gutter(5);
     margin: 0 gutter(2) 0;
     background-color: color(primary);
     color: color(light);
     transition: $transition;
     border: 0;
+    text-align: center;
 
     &--active {
       background-color: color(secondary);
