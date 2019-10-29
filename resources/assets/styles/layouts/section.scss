@@ -5,6 +5,10 @@
     padding: $gutter * 8 0;
   }
 
+  &--nobottom {
+    padding-bottom: 0;
+  }
+
   &--full-img {
     padding: 0;
     margin: gutter(10) 0;

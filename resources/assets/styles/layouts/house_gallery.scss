@@ -1,0 +1,48 @@
+.house-gallery {
+  width: 100%;
+  padding-bottom: gutter(3);
+
+  &__carousel {
+    max-height: 40vh;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @include media(sm) {
+      max-height: 80vh;
+    }
+  }
+
+  &__title {
+    @include cssLock(
+      "margin-bottom",
+      360,
+      1920,
+      (gutter_num(5), gutter_num(10))
+    );
+
+    color: color("primary");
+    display: flex;
+    justify-content: center;
+  }
+
+  &__cell {
+    height: 40vh;
+    width: 1000px;
+    position: relative;
+
+    @include media(sm) {
+      height: 80vh;
+    }
+  }
+
+  &__image {
+    @extend .absolute;
+    @extend .image;
+
+    object-fit: none;
+
+    @include media(sm) {
+      object-fit: cover;
+    }
+  }
+}
