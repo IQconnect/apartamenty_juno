@@ -8,7 +8,7 @@ $option_page = new FieldsBuilder('option');
 
 $option_page
     ->setLocation('options_page', '==', 'acf-options-ustawienia-strony');
-  
+
 $option_page
     ->addTab('Main', ['label' => 'Ustawienia główne', 'placement' => 'left'])
         ->addImage('logo')
@@ -45,10 +45,15 @@ $option_page
             ->addText('name', ['label' => 'Imię i nazwisko'])
             ->addText('tel', ['label' => 'Telefon'])
             ->addText('mail', ['label' => 'E-mail'])
-        ->endRepeater()    
+        ->endRepeater()
+    ->addTab('Navigacja', ['placement' => 'left'])
+        ->addRepeater('navigation', ['title'=>'Navigacja'])
+            ->addText('text', ['title'=>'Tekst',])
+            ->addLink('link')
+        ->endRepeater()
     ;
 
-        
 
-    
+
+
 return $option_page;

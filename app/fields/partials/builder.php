@@ -22,6 +22,7 @@ $builder
             ->addLayout('contact')
             ->addLayout('bildings')
             ->addLayout('content')
+            ->addLayout('contact-form')
             ->addLayout(get_field_partial('components.small-hero'))
             ->addLayout(get_field_partial('components.stats'))
             ->addLayout(get_field_partial('components.flex'))
@@ -29,4 +30,8 @@ $builder
             ->addLayout(get_field_partial('components.list'))
             ->addLayout(get_field_partial('components.diary'))
             ->addLayout(get_field_partial('components.titleicon'));
+            ->addLayout(get_field_partial('components.visual'))
+            ->addLayout(get_field_partial('components.textcontent'))
+            ->addLayout(get_field_partial('components.navigation'))
+            ;
 return $builder;

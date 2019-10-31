@@ -12,12 +12,13 @@ import aboutUs from './routes/about';
 
 import slider from './components/slider';
 import hero from './components/hero';
+import house from './components/house';
 import rotator from './components/rotator';
 import hamburger from './components/hamburger';
 import popup from './components/popup';
 import ExtraMenu from './components/extra-menu';
 import search from './components/search';
-
+import active from './components/active';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -39,9 +40,10 @@ jQuery(document).ready(() => {
   popup.init();
   ExtraMenu.init();
   search.init();
+  house.init();
+  active.init()
 });
 
 // setTimeout(()=> {
 //   slider.resize();
 // }, 1000)
-
