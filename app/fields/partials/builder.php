@@ -29,6 +29,7 @@ $builder
             ->addLayout(get_field_partial('components.extra-menu'))
             ->addLayout(get_field_partial('components.list'))
             ->addLayout(get_field_partial('components.diary'))
+            ->addLayout(get_field_partial('components.titleicon'));
             ->addLayout(get_field_partial('components.visual'))
             ->addLayout(get_field_partial('components.textcontent'))
             ->addLayout(get_field_partial('components.navigation'))

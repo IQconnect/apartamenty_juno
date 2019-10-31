@@ -1,15 +1,42 @@
 .icon-text {
   display: flex;
-  padding: ($gutter * 2) ($gutter * 2.1) ($gutter * 9);
+  padding: ($gutter * 2) ($gutter * 2.1) ($gutter * 4);
   align-items: center;
+  flex-direction: column;
+
+  &:last-child {
+    padding: ($gutter * 2) ($gutter * 2.1) 0;
+  }
+
+  &:nth-last-child(-n + 2) {
+    @include media(sm) {
+      padding-bottom: 0;
+    }
+  }
+
+  @include media(lg) {
+    flex-direction: row;
+  }
 
   &__icon {
-    height: auto;
-    width: auto;
+    height: 50px;
+    width: 50px;
   }
 
   &__text {
     color: color(primary);
-    padding: $gutter $gutter * 2.5;
+    padding: $gutter * 4 $gutter * 2.5 0;
+
+    br {
+      display: none;
+
+      @include media(lg) {
+        display: inherit;
+      }
+    }
+
+    @include media(lg) {
+      padding: $gutter $gutter * 2.5;
+    }
   }
 }
