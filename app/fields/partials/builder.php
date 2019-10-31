@@ -31,5 +31,6 @@ $builder
             ->addLayout(get_field_partial('components.diary'))
             ->addLayout(get_field_partial('components.visual'))
             ->addLayout(get_field_partial('components.textcontent'))
+            ->addLayout(get_field_partial('components.navigation'))
             ;
 return $builder;

@@ -27,7 +27,7 @@
                         </th>
                     </tr>
                 </thead>
-               
+
                 <tbody>
                     @php
                         $empty = 1;
@@ -38,14 +38,14 @@
                         if($_GET['bilding']) {
                             $areaFrom = preg_replace('/\D/', '', $_GET['area_from']);
                             $areaTo = preg_replace('/\D/', '', $_GET['area_to']);;
-    
+
                             if($flat['area'] < $areaFrom  || $flat['area'] > $areaTo) {
                                 $show = false;
                             }
-    
+
                             $floorFrom = preg_replace('/\D/', '', $_GET['floor_from']);
                             $floorTo = preg_replace('/\D/', '', $_GET['floor_to']);;
-    
+
                             if($flat['floor'] < $floorFrom  || $flat['floor'] > $floorTo) {
                                 $show = false;
                             }
@@ -72,30 +72,30 @@
                                 @if( $flat['floor'] == '0')
                                     Parter
                                 @else
-                                    {{ $flat['floor'] }} 
+                                    {{ $flat['floor'] }}
                                 @endif
                             </td>
                             <td>
                                 <span class="{{$flat['status']}}">
-                                    {{ $flat['status'] }} 
+                                    {{ $flat['status'] }}
                                 </span>
                             </td>
                             <td>
                                 @if($flat['price']['promo'])
-    
+
                                 <span class="price price--promo">
                                     {{ $flat['price']['promo'] }}
                                 </span>
                                 <span class="price price--del">
                                     {{ $flat['price']['regular'] }}
                                 </span>
-    
+
                                 @if ($flat['price']['promo_text'])
                                 <span class="price price--message">
                                     {{ $flat['price']['promo_text'] }}
                                 </span>
                                 @endif
-                                
+
                                 @elseif( $flat['price']['regular'])
                                     {{ $flat['price']['regular'] }}
                                 @else
@@ -105,7 +105,7 @@
                             <td class="table__plan">
                                 @if( $flat['plan'])
                                 <div class="table__plan">
-                                    <a  data-fancybox href="{{ $flat['plan']['url'] }}">
+                                    <a href="./?mieszkanie={{ $flat['nr'] }}">
                                         <img src="@asset('images/eye.png')" alt="Plan mieszkania...">
                                     </a>
                                     <a  href="{{ $flat['plan']['url'] }}">
@@ -118,7 +118,7 @@
                             </td>
                         </tr>
                     @endif
-                    
+
                     @endforeach
                 </tbody>
             </table>
