@@ -262,3 +262,12 @@ function clear_space($key)
 {
     return str_replace(' ', '', $key);
 }
+
+// Flats
+function get_flat_by_id($id, $flats) {
+    foreach ($flats as $flat) {
+        if($id == $flat['nr']) {
+            return $flat;
+        }
+    }
+}

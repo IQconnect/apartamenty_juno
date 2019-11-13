@@ -1,4 +1,6 @@
 .section {
+  $root: &;
+
   padding: gutter(10) 0;
 
   @media (max-width: 998px) {
@@ -31,5 +33,11 @@
 
   &--shade {
     background-color: color(shade);
+  }
+
+  &--text-content {
+    & + #{$root}--text-content {
+      padding-top: 0;
+    }
   }
 }

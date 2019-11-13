@@ -33,7 +33,6 @@
     ul {
       list-style: none;
       padding: 0;
-      padding-top: gutter(3);
     }
 
     li {
@@ -44,6 +43,15 @@
         display: inline-block;
         width: gutter(0.1);
         margin-right: gutter(2);
+      }
+    }
+
+    a {
+      text-decoration: underline;
+      transition: $transition;
+
+      &:hover {
+        color: color(special);
       }
     }
   }

@@ -3,6 +3,41 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  position: relative;
+
+  @include mediaTo(md) {
+    max-height: 37px;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: $transition;
+
+    &::after {
+      content: ">";
+      position: absolute;
+      top: 0;
+      right: 0;
+      color: color(light);
+      transform: rotateZ(90deg);
+      font-weight: 100;
+      height: 37px;
+      width: 37px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      transition: $transition;
+    }
+
+    &:hover {
+      max-height: gutter(20);
+
+      &::after {
+        transform: rotateZ(-90deg);
+        right: -3px;
+      }
+    }
+  }
 
   &__cell {
     @include cssLock(
@@ -18,9 +53,23 @@
     color: color(light);
     transition: $transition;
     border: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &--active {
       background-color: color(secondary);
+
+      @include mediaTo(md) {
+        order: -1;
+        pointer-events: none;
+      }
+    }
+
+    @include mediaTo(md) {
+      width: 100%;
+      margin: 0;
     }
   }
 }

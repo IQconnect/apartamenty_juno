@@ -1,9 +1,17 @@
 .visual {
-  width: 100%;
-  padding: gutter(10) gutter(3);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: $gutter * 1;
+  &__title {
+    margin-bottom: gutter(6);
+    width: 100%;
+    text-align: center;
+    color: color("special_dark");
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $gutter * 1;
+  }
 
   @include media(lg) {
     grid-template-columns: repeat(5, 1fr);
