@@ -1,0 +1,24 @@
+.bildings-map {
+  $root: &;
+
+  &__image {
+    @extend .absolute;
+    @extend .image;
+
+    &--part {
+      opacity: 0;
+      pointer-events: none;
+      transition: $transition;
+    }
+  }
+
+  .imp-wrap > img {
+    height: auto !important;
+  }
+
+  .imp-shape {
+    &:hover + img {
+      opacity: 1;
+    }
+  }
+}

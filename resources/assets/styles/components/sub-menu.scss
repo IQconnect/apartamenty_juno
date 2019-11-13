@@ -12,6 +12,11 @@
   width: 100%;
   display: none;
 
+  @include mediaTo(md) {
+    top: 0%;
+    background-color: darken(theme-color("special_dark"), 10%);
+  }
+
   @include media("md") {
     opacity: 0;
     display: initial;
@@ -22,9 +27,19 @@
     position: absolute;
   }
 
+  li {
+    margin-left: 0 !important;
+
+    &:first-child {
+      @include media("md") {
+        display: none;
+      }
+    }
+  }
+
   .menu-item.menu-item a {
     &:hover {
-      color: #5c91dc;
+      color: color(light);
     }
   }
 }

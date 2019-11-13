@@ -19,6 +19,7 @@ import popup from './components/popup';
 import ExtraMenu from './components/extra-menu';
 import search from './components/search';
 import active from './components/active';
+import header from './components/header';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -41,7 +42,8 @@ jQuery(document).ready(() => {
   ExtraMenu.init();
   search.init();
   house.init();
-  active.init()
+  active.init();
+  header.init();
 });
 
 // setTimeout(()=> {

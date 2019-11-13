@@ -8,9 +8,12 @@
         <div class="container container--small">
 			<div class="navigation">
 				@foreach ( $nav as $item)
-			 <a  class = "navigation__cell text" href="{{  $item['link']['url'] }}" nav-cell>{!! $item['text'] !!}</a>
+				<a  class = "navigation__cell text" href="{{  $item['link']['url'] }}" nav-cell>
+					{!! $item['text'] !!}
+				</a>
 				@endforeach
 			</div>
         </div>
     </section>
 @endif
+

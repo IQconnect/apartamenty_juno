@@ -45,4 +45,10 @@
       object-fit: cover;
     }
   }
+
+  &__link {
+    margin-top: gutter(6);
+    width: 100%;
+    text-align: center;
+  }
 }

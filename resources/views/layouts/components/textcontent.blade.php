@@ -3,7 +3,7 @@ $title = $data['title'];
 $content = $data['content'];
 @endphp
 
-<section class="section">
+<section class="section section--text-content">
 		<div class="container container--small">
 			<div class="textcontent__wrapper">
 				@if($title)

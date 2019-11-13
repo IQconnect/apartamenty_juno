@@ -39,6 +39,9 @@
 @else
 <section class="section bildings-map">
     <div class="container container--small container--full-mobile">
+        <h2 class="house-gallery__title title">
+            Wybierz budynek
+        </h2>
         {!! do_shortcode( '[budynki]' ) !!}
         {{-- <div class="bildings">
             @if($bildings)
@@ -49,6 +52,16 @@
                 @endforeach
             @endif
         </div> --}}
+        @if ($bildings )
+        @foreach ($bildings as $bilding)
+        @php
+            $ID = $bilding->ID;
+            $ID = $bilding->ID;
+            $img_map = get_field('img_map', $ID)
+        @endphp
+        <img class="bildings-map__image bildings-map__image--part" src="{{ $img_map['url'] }}" alt="{{ $bilding->post_title }}">
+        @endforeach     
+        @endif
     </div>
 </section>
 @endif
@@ -123,6 +136,17 @@
         tooltip.each(function(index) {
             console.log('test', index);
             $(this).html(tooltipThame(bilding[index].name, bilding[index].free, bilding[index].sold, bilding[index].taken, bilding[index].size));
+        });
+
+        var bildingImages = $('.bildings-map__image--part');
+
+        // $('.imp-shape-container').append(bildingImages);
+
+        console.log('mp-shape', $('.imp-shape'));
+
+        $('.imp-shape').each(function( index ) {
+            $( this ).after(bildingImages[index])
+            console.log( index + ": " + $( this ) );
         });
     }, 1000);
 

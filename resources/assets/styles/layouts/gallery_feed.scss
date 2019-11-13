@@ -5,4 +5,9 @@
   @include media(md) {
     grid-template-columns: repeat(6, 1fr);
   }
+
+  &__image {
+    height: 100%;
+    object-fit: cover;
+  }
 }

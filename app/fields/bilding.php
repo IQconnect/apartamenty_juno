@@ -12,6 +12,8 @@ $page
 $page
     ->addText('subtitle', ['label'=>'Typ budynku'])
     ->addImage('img', ['label'=>'Zdjęcie w tle'])
+    ->addImage('img_map', ['label'=>'Zdjęcie na mapie'])
+    ->addGallery('img_map_single', ['label'=>'Zdjęcie na mapie mieszkań'])
     ->addRepeater('flats', ['title'=>'Mieszkania'])
         ->addText('nr', ['label'=> 'Numer'])
         ->addText('area', ['label'=> 'Powierzchnia'])
