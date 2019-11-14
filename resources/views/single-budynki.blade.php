@@ -13,24 +13,13 @@
     $flats_gallery = get_field('img_map_single');
 
     $json_flats = json_encode( $flats );
+
+    global $post;
+    $post_slug = $post->post_name;
 @endphp
 
 @section('content')
     @include('layouts.components.small-hero', ['data'=>$heroData])
-
-    <section class="section bildings-map" data-flats="{{$json_flats}}">
-        <div class="container container--small container--full-mobile">
-            <h2 class="house-gallery__title title">
-                Wybierz Mieszkanie
-            </h2>
-            {!! do_shortcode( '[budynek-a]' ) !!}
-            @if ($flats_gallery)
-            @foreach ($flats_gallery as $img)
-                <img class="bildings-map__image bildings-map__image--part" src="{{ $img['url'] }}" alt="{{ $bilding->post_title }}"  data-nr={{$img['title']}}>
-            @endforeach     
-            @endif
-        </div>
-    </section>
 
     @if($_GET['mieszkanie'])
     @foreach ($flats as $flat)
@@ -42,6 +31,24 @@
 
     @else
         @include('layouts.components.table', ['flats'=>$flats])
+
+        <section class="section bildings-map" data-flats="{{$json_flats}}">
+            <div class="container container--small container--full-mobile">
+                <h2 class="house-gallery__title title">
+                    Wybierz Mieszkanie
+                </h2>
+                @if ($_GET['back'])
+                {!! do_shortcode( '['.$post_slug.'-rev]') !!}
+                @else
+                {!! do_shortcode( '['.$post_slug.']' ) !!}
+                @endif
+                @if ($flats_gallery)
+                @foreach ($flats_gallery as $img)
+                    <img class="bildings-map__image bildings-map__image--part" src="{{ $img['url'] }}" alt="{{ $bilding->post_title }}"  data-nr={{$img['title']}}>
+                @endforeach     
+                @endif
+            </div>
+        </section>
     @endif
 
 @endsection

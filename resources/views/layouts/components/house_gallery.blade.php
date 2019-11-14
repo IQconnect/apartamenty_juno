@@ -15,7 +15,7 @@ $gallery = $flat['gallery']
             @endforeach
         </div>
         <div class="house-gallery__link">
-            <a href="../../kontakt" class="button">
+            <a href="../../kontakt?message=Jestem zainteresowany kupnem mieszkania {{ $_GET['mieszkanie'] }}" class="button">
                 Zapytaj o mieszkanie
             </a>
         </div>

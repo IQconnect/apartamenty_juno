@@ -20,7 +20,7 @@
   <!-- form__row-->
   <div class="form__col">
     <label for="message" class="form__label text" for="name">Wiadomość</label>
-    <textarea id="message" name="message" class="form__textarea" rows="12" name="textarea"></textarea>
+  <textarea id="message" name="message" class="form__textarea" rows="12" name="textarea">{{ $_GET['message'] or '' }}</textarea>
   </div>
   <!-- form__checkcontainer -->
   <div class="form__checkcontainer">
