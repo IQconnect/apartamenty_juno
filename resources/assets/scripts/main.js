@@ -20,6 +20,7 @@ import ExtraMenu from './components/extra-menu';
 import search from './components/search';
 import active from './components/active';
 import header from './components/header';
+import locationmap from './components/location-map';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -44,6 +45,7 @@ jQuery(document).ready(() => {
   house.init();
   active.init();
   header.init();
+  locationmap.init();
 });
 
 // setTimeout(()=> {
