@@ -33,5 +33,6 @@ $builder
             ->addLayout(get_field_partial('components.visual'))
             ->addLayout(get_field_partial('components.textcontent'))
             ->addLayout(get_field_partial('components.navigation'))
+            ->addLayout(get_field_partial('components.map'))
             ;
 return $builder;

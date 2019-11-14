@@ -87,6 +87,7 @@
     "jquery-ui": "^1.12.1",
     "jquery-ui-dist": "^1.12.1",
     "jquery-ui-slider": "^1.12.1",
+    "load-google-maps-api": "^2.0.1",
     "popper.js": "^1.14.6"
   }
 }
