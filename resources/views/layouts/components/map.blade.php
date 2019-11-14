@@ -35,8 +35,7 @@
 <section class="section section--no-bottom" id="lokalizacja" data-single-section>
     <div class="container">
         <header class="section__header">
-            <h3 class="section__title title">
-                <span class="section__label minor-text">
+            <h3 class="house-gallery__title title">
                     LOKALIZACJA
             </h3>
         </header>
