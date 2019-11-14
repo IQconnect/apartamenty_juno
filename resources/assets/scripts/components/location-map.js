@@ -51,7 +51,7 @@ const locationMap = {
                     lat: Number(elem.dataset.lat),
                     lng: Number(elem.dataset.lng),
                 },
-                zoom: 19,
+                zoom: Number(elem.dataset.zoom),
                 styles: mapStyle,
             });
 

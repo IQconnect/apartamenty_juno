@@ -3,6 +3,7 @@
     $nav = option('loc_nav');
     $lat = $data['lat'];
     $lng = $data['lng'];
+    $zoom = $data['zoom'];
     $mainIcon = $data['img_active']['url'];
 
     $myMarkers = $data['localization'];
@@ -42,6 +43,6 @@
     </div>
     <div class="location-map">
 
-    <div class="location-map__map" location-map data-lat="{{ $lat }}" data-lng="{{ $lng }}" data-markers="{{ $JSON_MARKERS }}" data-icon="{{ $mainIcon }}"></div>
+    <div class="location-map__map" location-map data-lat="{{ $lat }}" data-zoom={{ $zoom }} data-lng="{{ $lng }}" data-markers="{{ $JSON_MARKERS }}" data-icon="{{ $mainIcon }}"></div>
     </div>
 </section>

@@ -30,8 +30,6 @@
     @endforeach
 
     @else
-        @include('layouts.components.table', ['flats'=>$flats])
-
         <section class="section bildings-map" data-flats="{{$json_flats}}">
             <div class="container container--small container--full-mobile">
                 <h2 class="house-gallery__title title">
@@ -49,6 +47,8 @@
                 @endif
             </div>
         </section>
+
+        @include('layouts.components.table', ['flats'=>$flats])
     @endif
 
 @endsection

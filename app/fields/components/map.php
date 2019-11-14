@@ -11,7 +11,6 @@ $map
 	->addText('lng', ['wrapper' => array ('width' => '33%')])
 	->addNumber('zoom', ['wrapper' => array ('width' => '33%'), 'default_value' => '13'])
 	->addImage('img_active', ['label'=> 'Pin aktywny', 'wrapper' => array ('width' => '50%')])
-	->addImage('img_inactive', ['label'=> 'Pin nieaktywny', 'wrapper' => array ('width' => '50%')])
 	->addRepeater('localization')
 		->addText('name', ['label'=>'Title'])
 		->addText('lat', ['label'=>'LAT'])
