@@ -10,6 +10,10 @@
 
     $flats = get_field('flats');
 
+    if($_GET['back'] == 'true')
+    $flats_gallery = get_field('img_map_single', 272);
+
+    else
     $flats_gallery = get_field('img_map_single');
 
     $json_flats = json_encode( $flats );
@@ -20,6 +24,7 @@
 
 @section('content')
     @include('layouts.components.small-hero', ['data'=>$heroData])
+    @include('layouts.components.navigation')
 
     @if($_GET['mieszkanie'])
     @foreach ($flats as $flat)
