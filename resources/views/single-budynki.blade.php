@@ -29,7 +29,6 @@
     @if($_GET['mieszkanie'])
     @foreach ($flats as $flat)
         @if ($flat['nr'] == $_GET['mieszkanie'])
-            @include('layouts.components.navigation')
             @include('layouts.components.house_gallery', ['flat'=>$flat])
         @endif 
     @endforeach
