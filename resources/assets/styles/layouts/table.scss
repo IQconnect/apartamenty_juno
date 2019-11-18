@@ -112,8 +112,8 @@ table {
   }
 
   img {
-    width: $gutter * 4;
-    margin: ($gutter * 0.5);
+    width: $gutter * 3;
+    margin: 0 ($gutter * 1);
   }
 
   a {
@@ -127,5 +127,13 @@ table {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &--space {
+      margin: 0 ($gutter * 3);
+
+      &:hover {
+        opacity: 0.9;
+      }
+    }
   }
 }
