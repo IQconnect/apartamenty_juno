@@ -105,11 +105,11 @@
                             <td class="table__plan">
                                 @if( $flat['plan'])
                                 <div class="table__plan">
-                                    <a href="./?mieszkanie={{ $flat['nr'] }}">
-                                        <img src="@asset('images/eye.png')" alt="Plan mieszkania...">
+                                    <a class="table__plan--space" href="./?mieszkanie={{ $flat['nr'] }}">
+                                        Zobacz<img src="@asset('images/3d.png')" alt="Plan mieszkania...">
                                     </a>
-                                    <a  href="{{ $flat['plan']['url'] }}">
-                                        <img src="@asset('images/download.png')" alt="Plan mieszkania...">
+                                    <a class="table__plan--space" href="{{ $flat['plan']['url'] }}">
+                                        Pobierz <img src="@asset('images/load.png')" alt="Plan mieszkania...">
                                     </a>
                                 </div>
                                 @else
