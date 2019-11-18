@@ -31,7 +31,7 @@
         @if ($flat['nr'] == $_GET['mieszkanie'])
             @include('layouts.components.navigation')
             @include('layouts.components.house_gallery', ['flat'=>$flat])
-        @endif 
+        @endif
     @endforeach
 
     @else
@@ -48,7 +48,7 @@
                 @if ($flats_gallery)
                 @foreach ($flats_gallery as $img)
                     <img class="bildings-map__image bildings-map__image--part" src="{{ $img['url'] }}" alt="{{ $bilding->post_title }}"  data-nr={{$img['title']}}>
-                @endforeach     
+                @endforeach
                 @endif
             </div>
         </section>
@@ -64,8 +64,8 @@
     var tooltipThame =  (name, state, size, taras)  => {
         return `
         <h2>Mieszkanie ${name || ''}</h2>
-        <p class="text text--light text--thin">
-            <b> Status: </b> ${state || '-'}
+        <p class="text text--light text--thin znajdz-mieszkanie">
+            <b> Status: </b><span class="${state}"> ${state || '-'}</span>
             <br>
             <b> Powierzchnia: </b> ${size || '-'} m²
             <br>
@@ -111,6 +111,6 @@
             $(this).html(tooltips[index]);
         });
 
-    }, 1000);
+    }, 1500);
 
 </script>

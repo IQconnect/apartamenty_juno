@@ -6,4 +6,21 @@
       object-position: top;
     }
   }
+
+  span {
+    color: color("light");
+    display: inline-block;
+
+    &.wolne {
+      color: color("free");
+    }
+
+    &.zajęte {
+      color: color("taken");
+    }
+
+    &.sprzedane {
+      color: color("sold");
+    }
+  }
 }
