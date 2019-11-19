@@ -131,13 +131,12 @@
             `
         }
 
-        setTimeout(()=>{
+        function initMyMap() {
             var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
-
             tooltip.each(function(index) {
-                console.log('test', index);
-                $(this).html(tooltipThame(bilding[index].name, bilding[index].free, bilding[index].sold, bilding[index].taken, bilding[index].size));
-            });
+            console.log('test', index);
+            $(this).html(tooltipThame(bilding[index].name, bilding[index].free, bilding[index].sold, bilding[index].taken, bilding[index].size));
+        });
 
             var bildingImages = $('.bildings-map__image--part');
 
@@ -149,6 +148,21 @@
                 $( this ).after(bildingImages[index])
                 console.log( index + ": " + $( this ) );
             });
+        }
+
+        
+
+        setTimeout(()=>{
+            initMyMap()
         }, 500);
+        setTimeout(()=>{
+            initMyMap()
+        }, 1500);
+        setTimeout(()=>{
+            initMyMap()
+        }, 2500);
+        setTimeout(()=>{
+            initMyMap()
+        }, 3500);
     });
 </script>

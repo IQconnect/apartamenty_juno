@@ -59,7 +59,6 @@
 
 
 <script>
-    $( document ).ready(function() {
         var tooltipThame =  (name, state, size, taras)  => {
             return `
             <h2>Mieszkanie ${name || ''}</h2>
@@ -73,42 +72,62 @@
             `
         }
 
-        setTimeout(()=>{
+        var made = false;
 
-            function getFlatByName(arr, value) {
-                var result = [];
-                arr.forEach(function(o){if (o.nr == value) result.push(o);} );
-                return result? result[0] : null; // or undefined
-            }
+        function getFlatByName(arr, value) {
+            var result = [];
+            arr.forEach(function(o){if (o.nr == value) result.push(o);} );
+            return result? result[0] : null; // or undefined
+        }
 
-            function getImageByName(arr, value) {
-                var result;
-                $(arr).each(function(e) {
-                    if($( this ).data('nr') == value) {
-                        result = $(this);
-                    }
-                })
-                return result? result[0] : null; // or undefined
-            }
-
-            var tooltips = [];
-            var flats = $('[data-flats]').data('flats');
-            var bildingImages = $('.bildings-map__image--part');
-            var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
-
-            $('.imp-shape').each(function( index ) {
-                var flat = getFlatByName(flats, $( this ).data('shape-title'));
-
-                if(flat) {
-                    $( this ).after(getImageByName(bildingImages,$( this ).data('shape-title')))
-                    var singleTooltip = tooltipThame(flat.nr, flat.status, flat.area, flat.tarace);
-                    tooltips.push(singleTooltip);
+        function getImageByName(arr, value) {
+            var result;
+            $(arr).each(function(e) {
+                if($( this ).data('nr') == value) {
+                    result = $(this);
                 }
-            });
+            })
+            return result? result[0] : null; // or undefined
+        }
 
-            tooltip.each(function(index) {
-                $(this).html(tooltips[index]);
-            });
+        function initMyMap() {
+            if($('.imp-shape')) {
+                made = true;
+                var tooltips = [];
+                var flats = $('[data-flats]').data('flats');
+                var bildingImages = $('.bildings-map__image--part');
+                var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
+
+                $('.imp-shape').each(function( index ) {
+                    var flat = getFlatByName(flats, $( this ).data('shape-title'));
+
+                    if(flat) {
+                        $( this ).after(getImageByName(bildingImages,$( this ).data('shape-title')))
+                        var singleTooltip = tooltipThame(flat.nr, flat.status, flat.area, flat.tarace);
+                        tooltips.push(singleTooltip);
+                    }
+                });
+
+                tooltip.each(function(index) {
+                    $(this).html(tooltips[index]);
+                });
+
+                console.log('init myMap');
+            }
+        }
+
+        setTimeout(()=>{
+            initMyMap();
         }, 500);
-    });
+        setTimeout(()=>{
+            initMyMap();
+        }, 1500);
+        setTimeout(()=>{
+            initMyMap();
+        }, 2500);
+        setTimeout(()=>{
+            initMyMap();
+        }, 3500);
+
+    
 </script>

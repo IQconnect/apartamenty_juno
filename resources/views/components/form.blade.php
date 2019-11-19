@@ -3,18 +3,18 @@
   <div class="form__row">
     <div class="form__col">
       <label for="name" class="form__label text">Imie i nazwisko</label>
-      <input id="name" name="name" type="text" class="form__input" />
+      <input required id="name" name="name" type="text" class="form__input" />
     </div>
   </div>
   <!-- form__row -->
   <div class="form__row">
     <div class="form__col">
       <label for="mail" class="form__label text">Mail</label>
-      <input id="mail" name="mail" type="mail" class="form__input" />
+      <input required id="mail" name="mail" type="mail" class="form__input" />
     </div>
     <div class="form__col">
       <label for="tel" class="form__label text">Telefon</label>
-      <input id="tel" name="tel" type="tel" class="form__input" />
+      <input required id="tel" name="tel" type="tel" class="form__input" />
     </div>
   </div>
   <!-- form__row-->
@@ -25,7 +25,7 @@
   <!-- form__checkcontainer -->
   <div class="form__checkcontainer">
     <div class="form__col-message">
-      <input id="checkbox" name="checkbox" class="form__check" type="checkbox" name="checkbox" />
+      <input required id="checkbox" name="checkbox" class="form__check" type="checkbox" name="checkbox" />
       <label
         class="form__labelcheck small-text form__label--textnearcheck "
         for="checkbox"
