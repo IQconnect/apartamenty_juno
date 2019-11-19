@@ -59,57 +59,56 @@
 
 
 <script>
-
-    var tooltipThame =  (name, state, size, taras)  => {
-        return `
-        <h2>Mieszkanie ${name || ''}</h2>
-        <p class="text text--light text--thin znajdz-mieszkanie">
-            <b> Status: </b><span class="${state}"> ${state || '-'}</span>
-            <br>
-            <b> Powierzchnia: </b> ${size || '-'} m²
-            <br>
-            <b> Taras / balkon: </b> ${taras || '-'} m²
-        </p>
-        `
-    }
-
-    setTimeout(()=>{
-
-        function getFlatByName(arr, value) {
-            var result = [];
-            arr.forEach(function(o){if (o.nr == value) result.push(o);} );
-            return result? result[0] : null; // or undefined
+    $( document ).ready(function() {
+        var tooltipThame =  (name, state, size, taras)  => {
+            return `
+            <h2>Mieszkanie ${name || ''}</h2>
+            <p class="text text--light text--thin znajdz-mieszkanie">
+                <b> Status: </b><span class="${state}"> ${state || '-'}</span>
+                <br>
+                <b> Powierzchnia: </b> ${size || '-'} m²
+                <br>
+                <b> Taras / balkon: </b> ${taras || '-'} m²
+            </p>
+            `
         }
 
-        function getImageByName(arr, value) {
-            var result;
-            $(arr).each(function(e) {
-                if($( this ).data('nr') == value) {
-                    result = $(this);
-                }
-            })
-            return result? result[0] : null; // or undefined
-        }
+        setTimeout(()=>{
 
-        var tooltips = [];
-        var flats = $('[data-flats]').data('flats');
-        var bildingImages = $('.bildings-map__image--part');
-        var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
-
-        $('.imp-shape').each(function( index ) {
-            var flat = getFlatByName(flats, $( this ).data('shape-title'));
-
-            if(flat) {
-                $( this ).after(getImageByName(bildingImages,$( this ).data('shape-title')))
-                var singleTooltip = tooltipThame(flat.nr, flat.status, flat.area, flat.tarace);
-                tooltips.push(singleTooltip);
+            function getFlatByName(arr, value) {
+                var result = [];
+                arr.forEach(function(o){if (o.nr == value) result.push(o);} );
+                return result? result[0] : null; // or undefined
             }
-        });
 
-        tooltip.each(function(index) {
-            $(this).html(tooltips[index]);
-        });
+            function getImageByName(arr, value) {
+                var result;
+                $(arr).each(function(e) {
+                    if($( this ).data('nr') == value) {
+                        result = $(this);
+                    }
+                })
+                return result? result[0] : null; // or undefined
+            }
 
-    }, 1500);
+            var tooltips = [];
+            var flats = $('[data-flats]').data('flats');
+            var bildingImages = $('.bildings-map__image--part');
+            var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
 
+            $('.imp-shape').each(function( index ) {
+                var flat = getFlatByName(flats, $( this ).data('shape-title'));
+
+                if(flat) {
+                    $( this ).after(getImageByName(bildingImages,$( this ).data('shape-title')))
+                    var singleTooltip = tooltipThame(flat.nr, flat.status, flat.area, flat.tarace);
+                    tooltips.push(singleTooltip);
+                }
+            });
+
+            tooltip.each(function(index) {
+                $(this).html(tooltips[index]);
+            });
+        }, 500);
+    });
 </script>
