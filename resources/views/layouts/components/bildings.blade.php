@@ -112,42 +112,57 @@
 @endphp
 
 <script>
+    $( document ).ready(function() {
+    
+        console.log(bilding[0].name);
 
-    console.log(bilding[0].name);
+        const tooltipThame =  (name, free, sold, taken, size)  => {
+            return `
+            <h2>${name}</h2>
+            <p class="text text--light text--thin">
+                <b> Wolnych mieszkań: </b> ${free}
+                <br>
+                <b> Sprzedanych mieszkań: </b> ${sold}
+                <br>
+                <b> Zarezerwowanych mieszkań: </b> ${taken}
+                <br>
+                <b> Mieszkania od: </b> ${size} m²
+            </p>
+            `
+        }
 
-    const tooltipThame =  (name, free, sold, taken, size)  => {
-        return `
-        <h2>${name}</h2>
-        <p class="text text--light text--thin">
-            <b> Wolnych mieszkań: </b> ${free}
-            <br>
-            <b> Sprzedanych mieszkań: </b> ${sold}
-            <br>
-            <b> Zarezerwowanych mieszkań: </b> ${taken}
-            <br>
-            <b> Mieszkania od: </b> ${size} m²
-        </p>
-        `
-    }
-
-    setTimeout(()=>{
-        var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
-
-        tooltip.each(function(index) {
+        function initMyMap() {
+            var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
+            tooltip.each(function(index) {
             console.log('test', index);
             $(this).html(tooltipThame(bilding[index].name, bilding[index].free, bilding[index].sold, bilding[index].taken, bilding[index].size));
         });
 
-        var bildingImages = $('.bildings-map__image--part');
+            var bildingImages = $('.bildings-map__image--part');
 
-        // $('.imp-shape-container').append(bildingImages);
+            // $('.imp-shape-container').append(bildingImages);
 
-        console.log('mp-shape', $('.imp-shape'));
+            console.log('mp-shape', $('.imp-shape'));
 
-        $('.imp-shape').each(function( index ) {
-            $( this ).after(bildingImages[index])
-            console.log( index + ": " + $( this ) );
-        });
-    }, 1000);
+            $('.imp-shape').each(function( index ) {
+                $( this ).after(bildingImages[index])
+                console.log( index + ": " + $( this ) );
+            });
+        }
 
+        
+
+        setTimeout(()=>{
+            initMyMap()
+        }, 500);
+        setTimeout(()=>{
+            initMyMap()
+        }, 1500);
+        setTimeout(()=>{
+            initMyMap()
+        }, 2500);
+        setTimeout(()=>{
+            initMyMap()
+        }, 3500);
+    });
 </script>

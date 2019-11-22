@@ -29,7 +29,6 @@
     @if($_GET['mieszkanie'])
     @foreach ($flats as $flat)
         @if ($flat['nr'] == $_GET['mieszkanie'])
-            @include('layouts.components.navigation')
             @include('layouts.components.house_gallery', ['flat'=>$flat])
         @endif
     @endforeach
@@ -60,21 +59,20 @@
 
 
 <script>
+        var tooltipThame =  (name, state, size, taras)  => {
+            return `
+            <h2>Mieszkanie ${name || ''}</h2>
+            <p class="text text--light text--thin znajdz-mieszkanie">
+                <b> Status: </b><span class="${state}"> ${state || '-'}</span>
+                <br>
+                <b> Powierzchnia: </b> ${size || '-'} m²
+                <br>
+                <b> Taras / balkon: </b> ${taras || '-'} m²
+            </p>
+            `
+        }
 
-    var tooltipThame =  (name, state, size, taras)  => {
-        return `
-        <h2>Mieszkanie ${name || ''}</h2>
-        <p class="text text--light text--thin znajdz-mieszkanie">
-            <b> Status: </b><span class="${state}"> ${state || '-'}</span>
-            <br>
-            <b> Powierzchnia: </b> ${size || '-'} m²
-            <br>
-            <b> Taras / balkon: </b> ${taras || '-'} m²
-        </p>
-        `
-    }
-
-    setTimeout(()=>{
+        var made = false;
 
         function getFlatByName(arr, value) {
             var result = [];
@@ -92,25 +90,44 @@
             return result? result[0] : null; // or undefined
         }
 
-        var tooltips = [];
-        var flats = $('[data-flats]').data('flats');
-        var bildingImages = $('.bildings-map__image--part');
-        var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
+        function initMyMap() {
+            if($('.imp-shape')) {
+                made = true;
+                var tooltips = [];
+                var flats = $('[data-flats]').data('flats');
+                var bildingImages = $('.bildings-map__image--part');
+                var tooltip = $('.imp-tooltip .imp-tooltip-plain-text');
 
-        $('.imp-shape').each(function( index ) {
-            var flat = getFlatByName(flats, $( this ).data('shape-title'));
+                $('.imp-shape').each(function( index ) {
+                    var flat = getFlatByName(flats, $( this ).data('shape-title'));
 
-            if(flat) {
-                $( this ).after(getImageByName(bildingImages,$( this ).data('shape-title')))
-                var singleTooltip = tooltipThame(flat.nr, flat.status, flat.area, flat.tarace);
-                tooltips.push(singleTooltip);
+                    if(flat) {
+                        $( this ).after(getImageByName(bildingImages,$( this ).data('shape-title')))
+                        var singleTooltip = tooltipThame(flat.nr, flat.status, flat.area, flat.tarace);
+                        tooltips.push(singleTooltip);
+                    }
+                });
+
+                tooltip.each(function(index) {
+                    $(this).html(tooltips[index]);
+                });
+
+                console.log('init myMap');
             }
-        });
+        }
 
-        tooltip.each(function(index) {
-            $(this).html(tooltips[index]);
-        });
+        setTimeout(()=>{
+            initMyMap();
+        }, 500);
+        setTimeout(()=>{
+            initMyMap();
+        }, 1500);
+        setTimeout(()=>{
+            initMyMap();
+        }, 2500);
+        setTimeout(()=>{
+            initMyMap();
+        }, 3500);
 
-    }, 1500);
-
+    
 </script>

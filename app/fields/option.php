@@ -50,6 +50,7 @@ $option_page
         ->addImage('footer_image', ['label'=>'Zdjęcie w tle'])
     ->addTab('Formularz kontaktowy', ['placement' => 'left'])
         ->addTextarea('form_title', ['label' => 'Tytuł sekcji', 'rows'=>2,'new_lines'=>'br'])
+        ->addTextarea('form_terms', ['label' => 'Term', 'rows'=>4,'new_lines'=>'br'])
         ->addLink('form_link', ['label' => 'Link'])
         ->addImage('form_image', ['label' => 'Zdjęcie w tle'])
         ->addText('office_title', ['label' => 'Tytuł biuro sprzedaży'])
