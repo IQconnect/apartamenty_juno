@@ -62,13 +62,14 @@
   padding: 0;
 
   button {
-    color: color(light);
+    filter: invert(1);
   }
 }
 
 .gm-style .gm-style-iw-t::after {
   top: -4px;
   box-shadow: none;
+  background: linear-gradient(45deg, rgb(54, 78, 162) 50%, rgba(255, 255, 255, 0) 51%, rgba(255, 255, 255, 0) 100%);
 }
 
 .locationinfo {
