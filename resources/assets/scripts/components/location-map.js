@@ -80,8 +80,14 @@ const locationMap = {
                 }
 
                 var contentString = `
-                <div id="marker-content">
-                    ${marker.name}
+                <div class="locationinfo" id="marker-content">
+                <p class="locationinfo__title">${marker.name}</p>
+                <div class="locationinfo__info">
+                    ${marker.atraction ? `<p>` + marker.atraction + `</p>`: ''}
+
+                    <p>${marker.away}km</p>
+                </div>
+                   <a class="locationinfo__button" href="${marker.drive}">Jak dojechać</a>
                 </div>`;
 
                 var infowindow = new googleMaps.InfoWindow({
@@ -103,13 +109,11 @@ const locationMap = {
                 markersArray.push(flag);
                 console.log('flag', flag.getPosition());
 
-                googleMaps.event.addListener(flag, 'mouseover', function () {
+                googleMaps.event.addListener(flag, 'click', function () {
                     infowindow.open(map,flag);
                 });
 
-                googleMaps.event.addListener(flag, 'mouseout', function () {
-                    infowindow.close(map,flag);
-                });
+
 
             });
         }).catch(function (error) {

@@ -45,11 +45,10 @@
 }
 
 #marker-content {
-  @extend .text;
-
-  font-weight: bold;
-  color: color("primary");
-  text-transform: uppercase;
+  //@extend .text;
+  //font-weight: bold;
+  // color: color("primary");
+  //text-transform: uppercase;
   padding: gutter(0.8) gutter(1.6);
 }
 
@@ -63,11 +62,54 @@
   padding: 0;
 
   button {
-    display: none !important;
+    color: color(light);
   }
 }
 
 .gm-style .gm-style-iw-t::after {
   top: -4px;
   box-shadow: none;
+}
+
+.locationinfo {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: color(primary);
+
+  &__title {
+    @extend .subtitle;
+
+    margin: 8px 0;
+    font-weight: bold;
+    color: color(light);
+    text-transform: uppercase;
+  }
+
+  &__info {
+    @extend .text;
+
+    color: color(light);
+    font-weight: 600;
+    margin: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__button {
+    @extend .small-text;
+
+    padding: gutter(1) gutter(5);
+    margin: 0 gutter(2) gutter(2);
+    color: color(special);
+    transition: $transition;
+    border: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+  }
 }

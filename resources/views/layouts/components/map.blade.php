@@ -19,6 +19,9 @@
 
             $mark = [
             'name'=> $marker['name'],
+            'atraction'=>$marker['atraction'],
+            'away'=>$marker['away'],
+            'drive'=>$marker['drive'],
             'lat'=> $marker['lat'],
             'lng'=> $marker['lng'],
             'icon'=> $icon,
